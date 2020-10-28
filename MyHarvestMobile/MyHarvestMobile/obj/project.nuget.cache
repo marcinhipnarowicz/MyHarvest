@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ddlESC4/uHc4KSWjBUbFH/VuCi1JSGDwZF7s8GayBqaamj1bCTBJ/lFAurAleWM2o45/aqw5cPAzsUgVpm/JPA==",
+  "dgSpecHash": "hVpCXcYbPLEs/uyvyckRVNpTWbmhZVyG4VeniUv+P/vYhoOpGWEkG/ZN54+MG1oi2K4g+BVLopCmbDPqFgjZGw==",
   "success": true,
-  "projectFilePath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj",
+  "projectFilePath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marhi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

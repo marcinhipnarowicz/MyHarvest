@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a0LgVhy7V0MUG7B/GwECuNwIH3MAIyklCAj/CFciNzNatpHsiL67jVSmNfeNSwBAQwhbYMFy5n7NUWP36T9qtg==",
+  "dgSpecHash": "oUqq/SAKaHrpIdyjYh9vYHtFm+HNQHhSjUO4Bu1/2oPur/B5XMScHeJNX++zBau7yivWmOiy/f4/NEiE4XqyCQ==",
   "success": true,
-  "projectFilePath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile.Android\\MyHarvestMobile.Android.csproj",
+  "projectFilePath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile.Android\\MyHarvestMobile.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",

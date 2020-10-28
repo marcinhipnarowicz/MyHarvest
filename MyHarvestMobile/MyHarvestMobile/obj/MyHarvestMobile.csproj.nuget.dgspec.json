@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj": {}
+    "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj": {}
   },
   "projects": {
-    "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj": {
+    "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj",
+        "projectUniqueName": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj",
         "projectName": "MyHarvestMobile",
-        "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj",
+        "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj",
         "packagesPath": "C:\\Users\\marhi\\.nuget\\packages\\",
-        "outputPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\obj\\",
+        "outputPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

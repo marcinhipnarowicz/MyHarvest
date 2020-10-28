@@ -1936,11 +1936,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile.Android\\MyHarvestMobile.Android.csproj",
+      "projectUniqueName": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile.Android\\MyHarvestMobile.Android.csproj",
       "projectName": "MyHarvestMobile.Android",
-      "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile.Android\\MyHarvestMobile.Android.csproj",
+      "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile.Android\\MyHarvestMobile.Android.csproj",
       "packagesPath": "C:\\Users\\marhi\\.nuget\\packages\\",
-      "outputPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile.Android\\obj\\",
+      "outputPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1961,8 +1961,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj": {
-              "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj"
+            "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj": {
+              "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestMobile\\MyHarvestMobile\\MyHarvestMobile.csproj"
             }
           }
         }
