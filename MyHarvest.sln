@@ -9,13 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile", "Mobile", "{E4A213
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHarvestMobile.Android", "MyHarvestMobile\MyHarvestMobile.Android\MyHarvestMobile.Android.csproj", "{4148DF39-1B91-4330-9DC6-CD2A93E9FA52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHarvestMobile", "MyHarvestMobile\MyHarvestMobile\MyHarvestMobile.csproj", "{32AA0BB2-74FF-4709-81B1-CD6094E101FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyHarvestMobile", "MyHarvestMobile\MyHarvestMobile\MyHarvestMobile.csproj", "{32AA0BB2-74FF-4709-81B1-CD6094E101FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHarvestApi.Repository", "MyHarvestApi.Repository\MyHarvestApi.Repository.csproj", "{279C8DC2-251D-444A-8B08-8B5A9DF94264}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHarvestApi.Service", "MyHarvestApi.Service\MyHarvestApi.Service.csproj", "{00FAB126-E523-4F14-A1F9-BBB11D7BB015}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHarvestApi.Entity", "MyHarvestApi.Entity\MyHarvestApi.Entity.csproj", "{53BDFFDE-061B-4470-A39B-631B4675B1BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHarvestApi.Api", "MyHarvestApi.Api\MyHarvestApi.Api.csproj", "{A81187A2-0DD0-436E-80FC-73918002E0B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{53BDFFDE-061B-4470-A39B-631B4675B1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53BDFFDE-061B-4470-A39B-631B4675B1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53BDFFDE-061B-4470-A39B-631B4675B1BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A81187A2-0DD0-436E-80FC-73918002E0B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A81187A2-0DD0-436E-80FC-73918002E0B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A81187A2-0DD0-436E-80FC-73918002E0B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A81187A2-0DD0-436E-80FC-73918002E0B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{279C8DC2-251D-444A-8B08-8B5A9DF94264} = {3D04444D-3593-4EC2-A122-D7B0C5E2E968}
 		{00FAB126-E523-4F14-A1F9-BBB11D7BB015} = {3D04444D-3593-4EC2-A122-D7B0C5E2E968}
 		{53BDFFDE-061B-4470-A39B-631B4675B1BC} = {3D04444D-3593-4EC2-A122-D7B0C5E2E968}
+		{A81187A2-0DD0-436E-80FC-73918002E0B1} = {3D04444D-3593-4EC2-A122-D7B0C5E2E968}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1B96E50-5811-42D8-BFE3-1085A54A1DA3}
