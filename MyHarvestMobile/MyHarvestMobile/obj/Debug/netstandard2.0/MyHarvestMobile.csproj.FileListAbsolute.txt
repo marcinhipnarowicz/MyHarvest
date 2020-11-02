@@ -1,0 +1,15 @@
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\bin\Debug\netstandard2.0\MyHarvestMobile.deps.json
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\bin\Debug\netstandard2.0\MyHarvestMobile.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\MyHarvestMobile.csprojAssemblyReference.cache
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\MyHarvestMobile.AssemblyInfoInputs.cache
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\MyHarvestMobile.AssemblyInfo.cs
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\bin\Debug\netstandard2.0\ref\MyHarvestMobile.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\bin\Debug\netstandard2.0\MyHarvestMobile.pdb
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\Login.xaml.g.cs
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\Register.xaml.g.cs
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\MyHarvestMobile.csproj.CoreCompileInputs.cache
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\XamlC.stamp
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\MyHarvestMobile.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\ref\MyHarvestMobile.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\MyHarvestMobile.pdb

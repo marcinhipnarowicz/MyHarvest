@@ -23,14 +23,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net461"
+          "net472"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net461": {
+          "net472": {
             "projectReferences": {
               "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Entity\\MyHarvestApi.Entity.csproj": {
                 "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Entity\\MyHarvestApi.Entity.csproj"
@@ -51,8 +51,12 @@
         }
       },
       "frameworks": {
-        "net461": {
+        "net472": {
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.AspNetCore": {
               "target": "Package",
               "version": "[2.1.7, )"
@@ -89,7 +93,16 @@
       "restore": {
         "projectUniqueName": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Repository\\MyHarvestApi.Repository.csproj",
         "projectName": "MyHarvestApi.Repository",
-        "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Repository\\MyHarvestApi.Repository.csproj"
+        "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Repository\\MyHarvestApi.Repository.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Entity\\MyHarvestApi.Entity.csproj": {
+                "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Entity\\MyHarvestApi.Entity.csproj"
+              }
+            }
+          }
+        }
       },
       "frameworks": {
         "net472": {}
@@ -99,7 +112,19 @@
       "restore": {
         "projectUniqueName": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Service\\MyHarvestApi.Service.csproj",
         "projectName": "MyHarvestApi.Service",
-        "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Service\\MyHarvestApi.Service.csproj"
+        "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Service\\MyHarvestApi.Service.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Entity\\MyHarvestApi.Entity.csproj": {
+                "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Entity\\MyHarvestApi.Entity.csproj"
+              },
+              "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Repository\\MyHarvestApi.Repository.csproj": {
+                "projectPath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Repository\\MyHarvestApi.Repository.csproj"
+              }
+            }
+          }
+        }
       },
       "frameworks": {
         "net472": {}
