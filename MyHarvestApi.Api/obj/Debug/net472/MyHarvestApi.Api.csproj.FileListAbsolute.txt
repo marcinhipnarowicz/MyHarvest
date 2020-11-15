@@ -139,3 +139,5 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\b
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Debug\net472\Properties\ServiceDependencies\local\mssql1.arm.json
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\obj\Debug\net472\MyHarvestApi.Api.csproj.CoreCompileInputs.cache
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\obj\Debug\net472\UserSecretsAssemblyInfo.cs
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Debug\net472\EntityFramework.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Debug\net472\EntityFramework.xml

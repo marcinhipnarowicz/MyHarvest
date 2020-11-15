@@ -29,8 +29,8 @@ namespace MyHarvestApi.Api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            //var dbContext = new ApplicationDbContext(Configuration.GetConnectionString("DbConnectionString"));
-            //services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DbConnectionString")));
+            var dbContext = new ApplicationDbContext(Configuration.GetConnectionString("DbConnectionString"));
+            //services.add<ApplicationDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DbConnectionString")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
