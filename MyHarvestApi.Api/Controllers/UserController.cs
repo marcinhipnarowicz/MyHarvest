@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyHarvestApi.Entity.Context;
 using MyHarvestApi.Entity.Model;
+using MyHarvestApi.Repository;
 
 namespace MyHarvestApi.Api.Controllers
 {
@@ -14,30 +15,34 @@ namespace MyHarvestApi.Api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private ApplicationDbContext _db;
+        //private ApplicationDbContext _db;
 
-        public UserController(ApplicationDbContext dbContext)
+        private IUserRepository _userRepository;
+
+        public UserController(IUserRepository userRepo) //ApplicationDbContext dbContext,
         {
-            _db = dbContext;
+            // _db = dbContext;
+            _userRepository = userRepo;//= new UserRepository(_db);
         }
 
-        //[Authorize]
-        [HttpPost]
-        [Route("Register")]
-        public async Task<ActionResult<Users>> Add(Users user)
-        {
-            //_db.Users.Add(user);
-
-            //await _db.SaveChangesAsync();
-
-            return Ok();
-        }
-
-        //[HttpGet]
+        ////[Authorize]
+        //[HttpPost]
         //[Route("Register")]
-        //public ActionResult<IEnumerable<string>> Get()
+        //public async Task<ActionResult<User>> Add(User user)
         //{
-        //    return new string[] { "elo", "ku" };
+        //    //_db.Users.Add(user);
+
+        //    //await _db.SaveChangesAsync();
+
+        //    return Ok();
         //}
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            //var usersDb = _db.Users.ToList();
+            var usersDb = _userRepository.GetUsers();
+            return Ok(usersDb); //sam konwertuje na jsona. Ok oznacza status 200
+        }
     }
 }

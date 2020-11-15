@@ -8,10 +8,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyHarvestApi.Entity.Model
 {
-    public class Users
+    [Table("Users")]
+    public class User
     {
         [Key]
-        public int IdUser { get; set; }
+        public int Id { get; set; }
 
         public string Login { get; set; }
         public string Password { get; set; }

@@ -18,6 +18,6 @@ namespace MyHarvestApi.Entity.Model
         [ForeignKey("Users")]
         public int IdUser { get; set; }
 
-        public Users User { get; set; }
+        public User User { get; set; }
     }
 }

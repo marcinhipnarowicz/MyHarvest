@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MyHarvestApi.Entity.Context;
+using MyHarvestApi.Repository;
 
 namespace MyHarvestApi.Api
 {
@@ -32,6 +33,8 @@ namespace MyHarvestApi.Api
 
             var cs = Configuration.GetConnectionString("DbConnectionString");
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs));
+
+            services.AddScoped<IUserRepository, UserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

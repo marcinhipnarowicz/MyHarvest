@@ -118,7 +118,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Context\ApplicationDbContext.cs" />
     <Compile Include="Model\Task.cs" />
-    <Compile Include="Model\Users.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
