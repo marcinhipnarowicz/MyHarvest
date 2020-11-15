@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,8 +30,8 @@ namespace MyHarvestApi.Api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            var dbContext = new ApplicationDbContext(Configuration.GetConnectionString("DbConnectionString"));
-            //services.add<ApplicationDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DbConnectionString")));
+            var cs = Configuration.GetConnectionString("DbConnectionString");
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

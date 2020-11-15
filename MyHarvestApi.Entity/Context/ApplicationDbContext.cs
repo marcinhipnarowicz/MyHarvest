@@ -1,8 +1,8 @@
-﻿using MyHarvestApi.Entity.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using MyHarvestApi.Entity.Model;
 using System;
 using System.Collections.Generic;
 
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +13,8 @@ namespace MyHarvestApi.Entity.Context
     {
         //public MobileServiceClient client = new MobileServiceClient("https://myharvestapp.azurewebsites.net");
 
-        public ApplicationDbContext(string connectionString) : base(connectionString)
+        //public ApplicationDbContext(string connectionString) : base(connectionString)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
             //System.Data.Entity.Database.SetInitializer<ApplicationDbContext>(null);
         }
