@@ -12,7 +12,7 @@ namespace MyHarvestApi.Entity.Model
     public class User
     {
         [Key]
-        public int Id { get; set; }
+        public int IdUser { get; set; }
 
         public string Login { get; set; }
         public string Password { get; set; }

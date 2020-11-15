@@ -35,6 +35,7 @@ namespace MyHarvestApi.Api
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs));
 
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ITaskRepository, TaskRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
