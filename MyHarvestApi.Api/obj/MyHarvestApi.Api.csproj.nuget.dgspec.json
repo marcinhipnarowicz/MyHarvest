@@ -53,10 +53,6 @@
       "frameworks": {
         "net472": {
           "dependencies": {
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[6.4.4, )"
-            },
             "Microsoft.AspNetCore": {
               "target": "Package",
               "version": "[2.1.7, )"

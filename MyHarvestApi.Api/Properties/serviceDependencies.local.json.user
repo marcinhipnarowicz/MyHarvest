@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2020-11-13T20:08:45.8081475Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-11-13T20:08:52.9456779Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Type": "subscription",
+      "Value": "8de7bedc-0582-40cd-adeb-cb3e6825d059"
+    },
+    "mssql1.resourceGroupName": {
+      "Type": "resourceGroup",
+      "Value": "AppMyHarvest"
+    }
+  }
+}

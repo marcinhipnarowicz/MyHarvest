@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "1eQv+Pqk6v0heGAhLAMZtlFi+1iw5U5DcJHIZPCKanjGwk1DUPSJw3AwuRcSjuRMviO2XrQHZpqNtwT2+XftDQ==",
+  "dgSpecHash": "35lPu1BoV/zSKeGMG8GC7330qyBvMyiADppJhhHCYs+vJ2zfFSKTAh7MycMh5MA2YXrFLe+V/9iQXP2YBRxN7w==",
   "success": true,
   "projectFilePath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Api\\MyHarvestApi.Api.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\marhi\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\microsoft.aspnetcore\\2.1.7\\microsoft.aspnetcore.2.1.7.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.antiforgery\\2.1.1\\microsoft.aspnetcore.antiforgery.2.1.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication.abstractions\\2.1.1\\microsoft.aspnetcore.authentication.abstractions.2.1.1.nupkg.sha512",

@@ -13,3 +13,5 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\My
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\MyHarvestMobile.dll
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\ref\MyHarvestMobile.dll
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\MyHarvestMobile.pdb
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\AddNewTask.xaml.g.cs
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestMobile\MyHarvestMobile\obj\Debug\netstandard2.0\TaskPage.xaml.g.cs

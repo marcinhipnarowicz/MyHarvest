@@ -17,6 +17,7 @@ namespace MyHarvestMobile
 
         private void loginButton_Clicked(object sender, EventArgs e)
         {
+            Navigation.PushAsync(new TasksPage());
         }
 
         private void registerUserButton_Clicked(object sender, EventArgs e)

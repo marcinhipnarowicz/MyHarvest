@@ -23,7 +23,7 @@ namespace MyHarvestMobile.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-            CurrentPlatform.Init();
+            CurrentPlatform.Init();// dodane
 
             LoadApplication(new App());
         }

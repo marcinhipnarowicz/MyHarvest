@@ -1,5 +1,4 @@
-﻿using SQLite;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -10,7 +9,6 @@ namespace MyHarvestApi.Entity.Model
 {
     public class Task
     {
-        [PrimaryKey, AutoIncrement]
         public int IdTask { get; set; }
 
         public string Name { get; set; }

@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyHarvestMobile.MainPage">
+             x:Class="MyHarvestMobile.MainPage"
+             BackgroundColor="{StaticResource backgroundColor}"
+             Title="Logowanie">
 
     <StackLayout VerticalOptions="Center"
                  Margin="20">
@@ -15,10 +17,14 @@
         <Button x:Name="loginButton"
                 Margin="0,50,0,0"
                 Text="Zaloguj"
+                CornerRadius="{StaticResource radiusCountButton}"
+                BackgroundColor="{StaticResource backgroundButtonColor}"
                 Clicked="loginButton_Clicked" />
         <Button x:Name="registerUserButton"
                 Text="Zarejestruj"
                 HorizontalOptions="End"
+                CornerRadius="{StaticResource radiusCountButton}"
+                BackgroundColor="{StaticResource backgroundButtonColor}"
                 Clicked="registerUserButton_Clicked" />
     </StackLayout>
 </ContentPage>
