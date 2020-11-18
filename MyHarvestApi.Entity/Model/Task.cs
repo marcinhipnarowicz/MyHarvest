@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyHarvestApi.Entity.Model
 {
+    [Table("Tasks")]
     public class Task
     {
         [Key]

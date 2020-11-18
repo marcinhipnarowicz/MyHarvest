@@ -144,5 +144,6 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\b
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Debug\net472\Remotion.Linq.dll
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Debug\net472\System.Data.SqlClient.dll
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Debug\net472\System.Interactive.Async.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Debug\net472\Microsoft.EntityFrameworkCore.Design.dll
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\obj\Debug\net472\MyHarvestApi.Api.csproj.CoreCompileInputs.cache
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\obj\Debug\net472\UserSecretsAssemblyInfo.cs
