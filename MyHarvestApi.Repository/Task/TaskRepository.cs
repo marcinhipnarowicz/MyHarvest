@@ -1,4 +1,5 @@
-﻿using MyHarvestApi.Entity.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using MyHarvestApi.Entity.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,10 +18,51 @@ namespace MyHarvestApi.Repository
             _db = db;
         }
 
+        public async void Add(Task task)
+        {
+            _db.Task.Add(task);
+            await _db.SaveChangesAsync();
+        }
+
+        public async Task EditTask(int id, Task task)
+        {
+            _db.Entry(task).State = EntityState.Modified;
+
+            try
+            {
+                await _db.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!MovieExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+        }
+
+        public Task GetOneTask(int id)
+        {
+            var task = _db.Task.FirstOrDefault(x => x.IdTask == id);
+            return task;
+        }
+
         public List<Task> GetTasks()
         {
             var tasksDb = _db.Task.ToList();
             return tasksDb;
         }
+
+        public bool IfTaskExist(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool MovieExists(long id) =>
+         _db.Task.Any(e => e.IdTask == id);
     }
 }

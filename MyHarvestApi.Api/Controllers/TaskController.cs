@@ -4,7 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MyHarvestApi.Entity.Context;
 using MyHarvestApi.Repository;
+using Task = MyHarvestApi.Entity.Model.Task;
 
 namespace MyHarvestApi.Api.Controllers
 {
@@ -24,6 +27,50 @@ namespace MyHarvestApi.Api.Controllers
         {
             var tasksDb = _taskRepository.GetTasks();
             return Ok(tasksDb);
+        }
+
+        // GET api/task/1
+        [HttpGet("{id}")]
+        public IActionResult GetOne(int id)
+        {
+            var singleTask = _taskRepository.GetOneTask(id);
+            return Ok(singleTask);
+        }
+
+        //[HttpPost]
+        //public Task<IActionResult> Add(Task task)
+        //{
+        //    _taskRepository.Add(task);
+
+        //    return Ok();
+        //}
+
+        //PUT api/task/1
+        [HttpPut]
+        public async Task<ActionResult<Task>> Edit(int id, Task task)
+        {
+            if (id != task.IdTask)
+            {
+                return BadRequest();
+            }
+
+            try
+            {
+                _taskRepository.EditTask(id, task);
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!_taskRepository.IfTaskExist(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return Ok();
         }
     }
 }

@@ -10,5 +10,13 @@ namespace MyHarvestApi.Repository
     public interface ITaskRepository
     {
         List<Task> GetTasks();
+
+        Task GetOneTask(int id);
+
+        void Add(Task task);
+
+        void EditTask(int id, Task task);
+
+        bool IfTaskExist(int id);
     }
 }
