@@ -24,25 +24,11 @@ namespace MyHarvestApi.Repository
             await _db.SaveChangesAsync();
         }
 
-        public async Task EditTask(int id, Task task)
+        public async void EditTask(int id, Task task)
         {
             _db.Entry(task).State = EntityState.Modified;
 
-            try
-            {
-                await _db.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MovieExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _db.SaveChangesAsync();
         }
 
         public Task GetOneTask(int id)

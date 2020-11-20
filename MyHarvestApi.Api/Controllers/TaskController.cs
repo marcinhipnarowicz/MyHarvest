@@ -37,26 +37,26 @@ namespace MyHarvestApi.Api.Controllers
             return Ok(singleTask);
         }
 
-        //[HttpPost]
-        //public Task<IActionResult> Add(Task task)
-        //{
-        //    _taskRepository.Add(task);
+        [HttpPost("{id}")]
+        public IActionResult Add(Task task)
+        {
+            _taskRepository.Add(task);
 
-        //    return Ok();
-        //}
+            return Ok();
+        }
 
         //PUT api/task/1
-        [HttpPut]
-        public async Task<ActionResult<Task>> Edit(int id, Task task)
+        [HttpPut("{id}")]
+        public ActionResult<Task> Edit(int id, Task task)
         {
             if (id != task.IdTask)
             {
                 return BadRequest();
             }
+            _taskRepository.EditTask(id, task);
 
             try
             {
-                _taskRepository.EditTask(id, task);
             }
             catch (DbUpdateConcurrencyException)
             {
