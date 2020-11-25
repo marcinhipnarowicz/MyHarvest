@@ -18,17 +18,17 @@ namespace MyHarvestApi.Repository
             _db = db;
         }
 
-        public async void Add(Task task)
+        public void Add(Task task)
         {
             _db.Task.Add(task);
-            await _db.SaveChangesAsync();
+            _db.SaveChanges();
         }
 
-        public async void EditTask(int id, Task task)
+        public void EditTask(int id, Task task)
         {
             _db.Entry(task).State = EntityState.Modified;
 
-            await _db.SaveChangesAsync();
+            _db.SaveChanges();
         }
 
         public Task GetOneTask(int id)
