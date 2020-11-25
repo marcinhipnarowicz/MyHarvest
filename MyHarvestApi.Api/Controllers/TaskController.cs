@@ -40,7 +40,7 @@ namespace MyHarvestApi.Api.Controllers
         [HttpPost("{id}")]
         public IActionResult Add(Task task)
         {
-            _taskRepository.Add(task);
+            _taskRepository.AddTask(task);
 
             return Ok();
         }

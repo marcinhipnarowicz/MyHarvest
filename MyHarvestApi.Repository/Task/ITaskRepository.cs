@@ -13,7 +13,7 @@ namespace MyHarvestApi.Repository
 
         Task GetOneTask(int id);
 
-        void Add(Task task);
+        void AddTask(Task task);
 
         void EditTask(int id, Task task);
 

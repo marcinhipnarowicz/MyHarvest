@@ -40,7 +40,6 @@ namespace MyHarvestApi.Api.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            //var usersDb = _db.Users.ToList();
             var usersDb = _userRepository.GetUsers();
             return Ok(usersDb); //sam konwertuje na jsona. Ok oznacza status 200
         }

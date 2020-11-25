@@ -18,7 +18,7 @@ namespace MyHarvestApi.Repository
             _db = db;
         }
 
-        public void Add(Task task)
+        public void AddTask(Task task)
         {
             _db.Task.Add(task);
             _db.SaveChanges();
