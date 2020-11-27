@@ -11,5 +11,10 @@ namespace MyHarvest.Views
         {
             InitializeComponent();
         }
+
+        private void mapsButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MapPage());
+        }
     }
 }

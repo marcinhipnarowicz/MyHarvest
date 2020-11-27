@@ -1,21 +1,21 @@
-@string/appbar_scrolling_view_behavior;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\flyoutcontent.xml
-@string/appbar_scrolling_view_behavior;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\rootlayout.xml
+@string/appbar_scrolling_view_behavior;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
+@string/appbar_scrolling_view_behavior;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-alpha;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\anim\enterfromleft.xml
-alpha;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\anim\exittoleft.xml
-android.support.design.widget.AppBarLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.AppBarLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\rootlayout.xml
-android.support.design.widget.AppBarLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\shellcontent.xml
-android.support.design.widget.BottomNavigationView;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\bottomtablayout.xml
-android.support.design.widget.CoordinatorLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.CoordinatorLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\rootlayout.xml
-android.support.design.widget.CoordinatorLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\shellcontent.xml
-android.support.design.widget.TabLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\rootlayout.xml
+alpha;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
+alpha;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
+android.support.design.widget.AppBarLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.AppBarLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+android.support.design.widget.AppBarLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
+android.support.design.widget.BottomNavigationView;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
+android.support.design.widget.CoordinatorLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.CoordinatorLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+android.support.design.widget.CoordinatorLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
+android.support.design.widget.TabLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
 android.support.design.widget.TabLayout;obj\Debug\90\res\layout\tabbar.xml
-android.support.v7.widget.RecyclerView;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\flyoutcontent.xml
-android.support.v7.widget.Toolbar;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\rootlayout.xml
-android.support.v7.widget.Toolbar;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\shellcontent.xml
+android.support.v7.widget.RecyclerView;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
+android.support.v7.widget.Toolbar;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+android.support.v7.widget.Toolbar;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\toolbar.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
@@ -25,21 +25,21 @@ external-cache-path;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarves
 external-path;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-FrameLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\bottomtablayout.xml
-item;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\values\styles.xml
-LinearLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\bottomtablayout.xml
+FrameLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
+item;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
+LinearLayout;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
 paths;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\38\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-resources;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\values\styles.xml
+resources;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\styles.xml
-set;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\anim\enterfromleft.xml
-set;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\anim\enterfromright.xml
-set;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\anim\exittoleft.xml
-set;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\anim\exittoright.xml
-style;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\values\styles.xml
+set;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
+set;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromright.xml
+set;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
+set;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\anim\exittoright.xml
+style;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\styles.xml
-translate;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\anim\enterfromleft.xml
-translate;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\anim\enterfromright.xml
-translate;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\anim\exittoleft.xml
-translate;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\anim\exittoright.xml
-xamarin.forms.platform.android.appcompat.FormsViewPager;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\39\jl\res\layout\rootlayout.xml
+translate;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
+translate;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromright.xml
+translate;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
+translate;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\anim\exittoright.xml
+xamarin.forms.platform.android.appcompat.FormsViewPager;D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml

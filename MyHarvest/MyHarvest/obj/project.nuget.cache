@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YHF6FD5kVl4b5pxZ5j6LEZF6sZPAyEVeAhNEEiX0H0L+DOhGzeYTOX8BxO0JZgLItapDriSc+xzznmiG2CxMlQ==",
+  "dgSpecHash": "mt/vQuc5PGLYsd29YYLu6MOqtfrG+BuJI7ruRHFdxD4ZQm/eALTtLqgh6fBS6RCtzI+9Ay7Wbv4TfHd0v6vdlA==",
   "success": true,
   "projectFilePath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvest\\MyHarvest\\MyHarvest.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512",
+    "C:\\Users\\marhi\\.nuget\\packages\\xamarin.forms.maps\\4.6.0.1141\\xamarin.forms.maps.4.6.0.1141.nupkg.sha512"
   ],
   "logs": []
 }
