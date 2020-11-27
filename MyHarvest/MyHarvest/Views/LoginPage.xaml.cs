@@ -38,14 +38,25 @@ namespace MyHarvest.Views
 
         private async void loginButton_Clicked(object sender, EventArgs e)
         {
-            if (IsValidEmail(emailEntry.Text))
+            bool isEmailEntry = string.IsNullOrEmpty(emailEntry.Text);
+            bool isPasswordEntry = string.IsNullOrEmpty(passwordEntry.Text);
+
+            if (isEmailEntry || isPasswordEntry)
             {
-                await Shell.Current.GoToAsync("//AboutPage");
+                await DisplayAlert("Uwaga!", "Adres email lub hasło nie zostały wprowadzone", "Ok");
             }
             else
             {
-                message.Text = "Niepoprawny adres email";
-                message.IsVisible = true;
+                if (IsValidEmail(emailEntry.Text))
+                {
+                    await Shell.Current.GoToAsync("//AboutPage");
+                }
+                else
+                {
+                    await DisplayAlert("Uwaga!", "Niepoprawny adres email", "Ok");
+                    //message.Text = "Niepoprawny adres email";
+                    //message.IsVisible = true;
+                }
             }
         }
     }

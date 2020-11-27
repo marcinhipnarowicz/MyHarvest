@@ -15,6 +15,9 @@
                Placeholder="Powtórz hasło"
                Keyboard="Email"
                IsPassword="True" />
+        <Label x:Name="message"
+               IsVisible="false"
+               TextColor="Red" />
         <Button x:Name="registerButton"
                 Margin="0,50,0,0"
                 Text="Zarejestruj"
