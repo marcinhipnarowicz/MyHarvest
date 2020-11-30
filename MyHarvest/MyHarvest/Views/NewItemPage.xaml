@@ -11,8 +11,7 @@
             <Editor x:Name="taskName"
                    Text="{Binding Text, Mode=TwoWay}"
                    FontSize="Medium"
-                   AutoSize="TextChanges"
-                   BackgroundColor="{StaticResource entryBackgroundColor}" />
+                   AutoSize="TextChanges" />
             <Label Text="Opis"
                    FontSize="Medium" />
             <Editor x:Name="taskDescription"
@@ -23,7 +22,6 @@
             <Label Text="Powierzchnia"
                    FontSize="Medium" />
             <Editor x:Name="taskArea"
-                    Text="{Binding Description, Mode=TwoWay}"
                     AutoSize="TextChanges"
                     FontSize="Medium"
                     Margin="0" />
@@ -35,7 +33,7 @@
                     </x:Array>
                 </ListView.ItemsSource>
             </ListView>
-            <Button Text="Wybierz komabjniste"
+            <Button Text="Wybierz kombajniste"
                     HorizontalOptions="Start"
                     CornerRadius="{StaticResource radiusCountButton}"
                     BackgroundColor="{StaticResource backgroundButtonColor}" />
