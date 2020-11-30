@@ -14,12 +14,12 @@ namespace MyHarvest.Services
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Kamil Nowak", Description="Koszenie pola w miejscowości X, powierzchnia 0.5 ha." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Beata Sadło", Description="Koszenie pola w miejscowości Warszawa, powierzchnia 10 ha." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Michał Kowalski", Description="Koszenie pola w miejscowości Opole, powierzchnia 5.5 ha." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Test", Description="xxxxxxxxxxxxxxxxxxxxxx" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Test1", Description="yyyyyyyyyyyyyyyy" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Test2", Description="coś" }
             };
         }
 
