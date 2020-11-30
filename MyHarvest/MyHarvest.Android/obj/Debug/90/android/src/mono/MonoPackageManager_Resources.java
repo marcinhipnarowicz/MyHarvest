@@ -5,6 +5,8 @@ public class MonoPackageManager_Resources {
 		"MyHarvest.Android.dll",
 		"FormsViewGroup.dll",
 		"MyHarvest.dll",
+		"Plugin.Geolocator.dll",
+		"Plugin.Permissions.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

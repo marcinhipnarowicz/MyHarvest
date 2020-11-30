@@ -6,6 +6,8 @@
              Title="Mapa">
 
     <maps:Map x:Name="locationsMap"
+              IsShowingUser="True"
               HorizontalOptions="FillAndExpand"
-              VerticalOptions="FillAndExpand" />
+              VerticalOptions="FillAndExpand"
+              MapType="Hybrid" />
 </ContentPage>

@@ -519,3 +519,8 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarves
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\src\mono\com\google\android\gms\tasks\OnFailureListenerImplementor.java
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\src\mono\com\google\android\gms\tasks\OnSuccessListenerImplementor.java
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\src\mono\com\google\android\gms\tasks\OnTokenCanceledListenerImplementor.java
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\assets\Plugin.Geolocator.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\assets\Plugin.Permissions.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\assets\Plugin.Permissions.pdb
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\src\crc649efb5bdbf2d8cfa5\GeolocationContinuousListener.java
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\src\crc649efb5bdbf2d8cfa5\GeolocationSingleListener.java
