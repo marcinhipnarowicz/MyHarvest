@@ -15,15 +15,6 @@ namespace MyHarvestApi.Entity.Model
         [Key]
         public int IdPlot { get; set; }
 
-        public string AreaPlot { get; set; }
-
-        public string Route { get; set; }
-
-        public DbGeography Location { get; set; }
-
-        [ForeignKey("Tasks")]
-        public int IdTask { get; set; }
-
-        public Task Task { get; set; }
+        public DbGeography Coordinates { get; set; }
     }
 }

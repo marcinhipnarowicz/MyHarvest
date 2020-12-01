@@ -123,7 +123,8 @@
     <Compile Include="Model\Task.cs" />
     <Compile Include="Model\StatusOfTask.cs" />
     <Compile Include="Model\User.cs" />
-    <Compile Include="Model\Workers.cs" />
+    <Compile Include="Model\UserInformation.cs" />
+    <Compile Include="Model\UsersTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

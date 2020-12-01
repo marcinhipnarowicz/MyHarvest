@@ -16,10 +16,5 @@ namespace MyHarvestApi.Entity.Model
 
         [Required]
         public string Name { get; set; }
-
-        [ForeignKey("Users")]
-        public int IdAccountTpe { get; set; }
-
-        public User User { get; set; }
     }
 }

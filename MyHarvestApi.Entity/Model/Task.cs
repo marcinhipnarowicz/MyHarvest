@@ -16,16 +16,10 @@ namespace MyHarvestApi.Entity.Model
 
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Area { get; set; }
 
-        [ForeignKey("Users")]
-        public int IdUser { get; set; }
+        [ForeignKey("Plots")]
+        public int IdPlot { get; set; }
 
-        public User User { get; set; }
-
-        [ForeignKey("StatusOfTasks")]
-        public int IdStatus { get; set; }
-
-        public StatusOfTask StatusOfTask { get; set; }
+        public Plot Plot { get; set; }
     }
 }
