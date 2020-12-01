@@ -14,10 +14,18 @@ namespace MyHarvestApi.Entity.Model
         [Key]
         public int IdUser { get; set; }
 
-        public string Login { get; set; }
+        [Required]
+        public string Email { get; set; }//zmienic na email
+
+        [Required]
         public string Password { get; set; }
+
         public string FirstName { get; set; }
         public string Name { get; set; }
-        public string AccountType { get; set; }
+
+        [ForeignKey("AccountTypes")]
+        public int IdAccountType { get; set; }
+
+        public AccountType AccountType { get; set; }
     }
 }

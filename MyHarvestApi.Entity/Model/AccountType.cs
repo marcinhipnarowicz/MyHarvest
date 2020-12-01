@@ -8,24 +8,18 @@ using System.Threading.Tasks;
 
 namespace MyHarvestApi.Entity.Model
 {
-    [Table("Tasks")]
-    public class Task
+    [Table("AccountTypes")]
+    public class AccountType
     {
         [Key]
-        public int IdTask { get; set; }
+        public int IdAccountType { get; set; }
 
+        [Required]
         public string Name { get; set; }
-        public string Description { get; set; }
-        public string Area { get; set; }
 
         [ForeignKey("Users")]
-        public int IdUser { get; set; }
+        public int IdAccountTpe { get; set; }
 
         public User User { get; set; }
-
-        [ForeignKey("StatusOfTasks")]
-        public int IdStatus { get; set; }
-
-        public StatusOfTask StatusOfTask { get; set; }
     }
 }
