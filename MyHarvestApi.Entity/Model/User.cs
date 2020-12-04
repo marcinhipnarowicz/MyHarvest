@@ -22,6 +22,7 @@ namespace MyHarvestApi.Entity.Model
 
         public string FirstName { get; set; }
         public string Surname { get; set; }
+        public string Token { get; set; }
 
         [ForeignKey("AccountTypes")]
         public int IdAccountType { get; set; }
