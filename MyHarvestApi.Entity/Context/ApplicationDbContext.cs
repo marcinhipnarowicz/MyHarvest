@@ -21,7 +21,6 @@ namespace MyHarvestApi.Entity.Context
         public DbSet<Plot> Plots { get; set; }
         public DbSet<StatusOfTask> StatusOfTasks { get; set; }
         public DbSet<UserInformation> UsersInformation { get; set; }
-
         public DbSet<UserTask> UsersTasks { get; set; }
     }
 }

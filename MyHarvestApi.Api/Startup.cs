@@ -14,6 +14,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MyHarvestApi.Entity.Context;
 using MyHarvestApi.Repository;
+using MyHarvestApi.Repository.AccountType;
+using MyHarvestApi.Repository.Plot;
+using MyHarvestApi.Repository.StatusOfTask;
+using MyHarvestApi.Repository.UserInformation;
+using MyHarvestApi.Repository.UserTask;
 
 namespace MyHarvestApi.Api
 {
@@ -36,6 +41,11 @@ namespace MyHarvestApi.Api
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ITaskRepository, TaskRepository>();
+            services.AddScoped<IAccountTypeRepository, AccountTypeRepository>();
+            services.AddScoped<IPlotRepository, PlotRepository>();
+            services.AddScoped<IStatusOfTaskRepository, StatusOfTaskRepository>();
+            services.AddScoped<IUserInformationRepository, UserInformationRepository>();
+            services.AddScoped<IUserTaskRepository, UserTaskRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
