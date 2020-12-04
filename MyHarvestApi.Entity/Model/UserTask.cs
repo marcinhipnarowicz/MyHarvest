@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace MyHarvestApi.Entity.Model
 {
     [Table("UsersTasks")]
-    public class UsersTask
+    public class UserTask
     {
         [ForeignKey("Users")]
         public int IdUser { get; set; }

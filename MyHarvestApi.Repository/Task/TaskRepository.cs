@@ -20,7 +20,7 @@ namespace MyHarvestApi.Repository
 
         public void AddTask(Task task)
         {
-            _db.Task.Add(task);
+            _db.Tasks.Add(task);
             _db.SaveChanges();
         }
 
@@ -33,13 +33,13 @@ namespace MyHarvestApi.Repository
 
         public Task GetOneTask(int id)
         {
-            var task = _db.Task.FirstOrDefault(x => x.IdTask == id);
+            var task = _db.Tasks.FirstOrDefault(x => x.IdTask == id);
             return task;
         }
 
         public List<Task> GetTasks()
         {
-            var tasksDb = _db.Task.ToList();
+            var tasksDb = _db.Tasks.ToList();
             return tasksDb;
         }
 
@@ -49,6 +49,6 @@ namespace MyHarvestApi.Repository
         }
 
         private bool MovieExists(long id) =>
-         _db.Task.Any(e => e.IdTask == id);
+         _db.Tasks.Any(e => e.IdTask == id);
     }
 }

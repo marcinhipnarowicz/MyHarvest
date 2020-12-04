@@ -124,7 +124,7 @@
     <Compile Include="Model\StatusOfTask.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserInformation.cs" />
-    <Compile Include="Model\UsersTask.cs" />
+    <Compile Include="Model\UserTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
