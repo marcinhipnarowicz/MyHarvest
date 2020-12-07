@@ -49,3 +49,14 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entit
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\System.Memory.xml
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\System.Numerics.Vectors.xml
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\System.Spatial.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\System.Spatial.xml
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\de\System.Spatial.resources.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\es\System.Spatial.resources.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\fr\System.Spatial.resources.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\it\System.Spatial.resources.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\ja\System.Spatial.resources.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\ko\System.Spatial.resources.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\ru\System.Spatial.resources.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\zh-Hans\System.Spatial.resources.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\zh-Hant\System.Spatial.resources.dll

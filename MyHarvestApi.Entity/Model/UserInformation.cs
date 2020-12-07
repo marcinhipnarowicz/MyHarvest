@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Spatial;
 using System.Linq;
+using System.Spatial;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +17,7 @@ namespace MyHarvestApi.Entity.Model
         public int IdUserInformation { get; set; }
 
         //public DbGeography Route { get; set; }
+        //public Geography Route { get; set; }//dla tego typu dodany nugget system.Spatial
 
         public string Area { get; set; }
 
