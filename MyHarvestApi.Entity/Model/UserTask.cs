@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,9 @@ namespace MyHarvestApi.Entity.Model
     [Table("UsersTasks")]
     public class UserTask
     {
+        [Key]
+        public int IdUserTask { get; set; }
+
         [ForeignKey("Users")]
         public int IdUser { get; set; }
 

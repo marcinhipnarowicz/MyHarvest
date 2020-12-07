@@ -15,7 +15,7 @@ namespace MyHarvestApi.Entity.Model
         [Key]
         public int IdUserInformation { get; set; }
 
-        public DbGeography Route { get; set; }
+        //public DbGeography Route { get; set; }
 
         public string Area { get; set; }
 

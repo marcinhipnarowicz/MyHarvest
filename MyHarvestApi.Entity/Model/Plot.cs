@@ -15,6 +15,6 @@ namespace MyHarvestApi.Entity.Model
         [Key]
         public int IdPlot { get; set; }
 
-        public DbGeography Coordinates { get; set; }
+        //public DbGeography Coordinates { get; set; }
     }
 }

@@ -37,7 +37,8 @@ namespace MyHarvestApi.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             var cs = Configuration.GetConnectionString("DbConnectionString");
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs, b => b.MigrationsAssembly("MyHarvestApi.Api")));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs, b => b.MigrationsAssembly("MyHarvestApi.Api"))); //pierwsza wersja działająca
+            //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs, x => x.UseNetTopologySuite()));
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ITaskRepository, TaskRepository>();
