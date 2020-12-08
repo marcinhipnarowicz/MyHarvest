@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyHarvestApi.Repository.UserTask
+namespace MyHarvestApi.Repository
 {
     public class UserTaskRepository : IUserTaskRepository
     {

@@ -21,19 +21,19 @@ namespace MyHarvestApi.Entity.Model
 
         public string Area { get; set; }
 
-        [ForeignKey("Users")]
-        public int IdUser { get; set; }
+        public int? IdUser { get; set; }
 
-        public User User { get; set; }
+        [ForeignKey("IdUser")]
+        public virtual User User { get; set; }
 
-        [ForeignKey("Tasks")]
-        public int IdTask { get; set; }
+        public int? IdTask { get; set; }
 
-        public Task Task { get; set; }
+        [ForeignKey("IdTask")]
+        public virtual Task Task { get; set; }
 
-        [ForeignKey("StatusOfTasks")]
-        public int IdTaskStatus { get; set; }
+        public int? IdTaskStatus { get; set; }
 
-        public StatusOfTask StatusOfTask { get; set; }
+        [ForeignKey("IdTaskStatus")]
+        public virtual StatusOfTask StatusOfTask { get; set; }
     }
 }

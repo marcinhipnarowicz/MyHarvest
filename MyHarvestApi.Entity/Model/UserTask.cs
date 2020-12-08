@@ -14,14 +14,14 @@ namespace MyHarvestApi.Entity.Model
         [Key]
         public int IdUserTask { get; set; }
 
-        [ForeignKey("Users")]
-        public int IdUser { get; set; }
+        public int? IdUser { get; set; }
 
-        public User User { get; set; }
+        [ForeignKey("IdUser")]
+        public virtual User User { get; set; }
 
-        [ForeignKey("Tasks")]
-        public int IdTask { get; set; }
+        public int? IdTask { get; set; }
 
-        public Task Task { get; set; }
+        [ForeignKey("IdTask")]
+        public virtual Task Task { get; set; }
     }
 }

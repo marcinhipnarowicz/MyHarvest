@@ -10,8 +10,8 @@ using MyHarvestApi.Entity.Context;
 namespace MyHarvestApi.Api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201207162209_NewDatabase")]
-    partial class NewDatabase
+    [Migration("20201208184831_InitialNewDatabase2")]
+    partial class InitialNewDatabase2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -68,7 +68,7 @@ namespace MyHarvestApi.Api.Migrations
 
                     b.Property<string>("Description");
 
-                    b.Property<int>("IdPlot");
+                    b.Property<int?>("IdPlot");
 
                     b.Property<string>("Name");
 
@@ -85,8 +85,6 @@ namespace MyHarvestApi.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("BossIdUser");
-
                     b.Property<string>("Email")
                         .IsRequired();
 
@@ -94,20 +92,18 @@ namespace MyHarvestApi.Api.Migrations
 
                     b.Property<int>("IdAccountType");
 
-                    b.Property<int>("IdBoss");
+                    b.Property<int?>("IdBoss");
 
                     b.Property<string>("Password")
                         .IsRequired();
 
                     b.Property<string>("Surname");
 
-                    b.Property<string>("Token");
-
                     b.HasKey("IdUser");
 
-                    b.HasIndex("BossIdUser");
-
                     b.HasIndex("IdAccountType");
+
+                    b.HasIndex("IdBoss");
 
                     b.ToTable("Users");
                 });
@@ -120,21 +116,19 @@ namespace MyHarvestApi.Api.Migrations
 
                     b.Property<string>("Area");
 
-                    b.Property<int>("IdTask");
+                    b.Property<int?>("IdTask");
 
-                    b.Property<int>("IdTaskStatus");
+                    b.Property<int?>("IdTaskStatus");
 
-                    b.Property<int>("IdUser");
-
-                    b.Property<int?>("StatusOfTaskIdStatus");
+                    b.Property<int?>("IdUser");
 
                     b.HasKey("IdUserInformation");
 
                     b.HasIndex("IdTask");
 
-                    b.HasIndex("IdUser");
+                    b.HasIndex("IdTaskStatus");
 
-                    b.HasIndex("StatusOfTaskIdStatus");
+                    b.HasIndex("IdUser");
 
                     b.ToTable("UsersInformation");
                 });
@@ -145,9 +139,9 @@ namespace MyHarvestApi.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("IdTask");
+                    b.Property<int?>("IdTask");
 
-                    b.Property<int>("IdUser");
+                    b.Property<int?>("IdUser");
 
                     b.HasKey("IdUserTask");
 
@@ -162,50 +156,45 @@ namespace MyHarvestApi.Api.Migrations
                 {
                     b.HasOne("MyHarvestApi.Entity.Model.Plot", "Plot")
                         .WithMany()
-                        .HasForeignKey("IdPlot")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("IdPlot");
                 });
 
             modelBuilder.Entity("MyHarvestApi.Entity.Model.User", b =>
                 {
-                    b.HasOne("MyHarvestApi.Entity.Model.User", "Boss")
-                        .WithMany()
-                        .HasForeignKey("BossIdUser");
-
                     b.HasOne("MyHarvestApi.Entity.Model.AccountType", "AccountType")
                         .WithMany()
                         .HasForeignKey("IdAccountType")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("MyHarvestApi.Entity.Model.User", "Boss")
+                        .WithMany("Replies")
+                        .HasForeignKey("IdBoss");
                 });
 
             modelBuilder.Entity("MyHarvestApi.Entity.Model.UserInformation", b =>
                 {
                     b.HasOne("MyHarvestApi.Entity.Model.Task", "Task")
                         .WithMany()
-                        .HasForeignKey("IdTask")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("MyHarvestApi.Entity.Model.User", "User")
-                        .WithMany()
-                        .HasForeignKey("IdUser")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("IdTask");
 
                     b.HasOne("MyHarvestApi.Entity.Model.StatusOfTask", "StatusOfTask")
                         .WithMany()
-                        .HasForeignKey("StatusOfTaskIdStatus");
+                        .HasForeignKey("IdTaskStatus");
+
+                    b.HasOne("MyHarvestApi.Entity.Model.User", "User")
+                        .WithMany()
+                        .HasForeignKey("IdUser");
                 });
 
             modelBuilder.Entity("MyHarvestApi.Entity.Model.UserTask", b =>
                 {
                     b.HasOne("MyHarvestApi.Entity.Model.Task", "Task")
                         .WithMany()
-                        .HasForeignKey("IdTask")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("IdTask");
 
                     b.HasOne("MyHarvestApi.Entity.Model.User", "User")
                         .WithMany()
-                        .HasForeignKey("IdUser")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("IdUser");
                 });
 #pragma warning restore 612, 618
         }

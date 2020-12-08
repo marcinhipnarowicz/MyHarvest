@@ -11,6 +11,7 @@ using MyHarvestApi.Repository;
 
 namespace MyHarvestApi.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase

@@ -11,6 +11,11 @@ namespace MyHarvestApi.Entity.Model
     [Table("Users")]
     public class User
     {
+        public User()
+        {
+            Replies = new HashSet<User>();
+        }
+
         [Key]
         public int IdUser { get; set; }
 
@@ -22,16 +27,17 @@ namespace MyHarvestApi.Entity.Model
 
         public string FirstName { get; set; }
         public string Surname { get; set; }
-        public string Token { get; set; }
 
-        [ForeignKey("AccountTypes")]
         public int IdAccountType { get; set; }
 
-        public AccountType AccountType { get; set; }
+        [ForeignKey("IdAccountType")]
+        public virtual AccountType AccountType { get; set; }
 
-        [ForeignKey("Users")]
-        public int IdBoss { get; set; }
+        //[ForeignKey("Users")]
+        public int? IdBoss { get; set; }
 
-        public User Boss { get; set; }
+        public virtual User Boss { get; set; }
+
+        public virtual ICollection<User> Replies { get; set; }
     }
 }

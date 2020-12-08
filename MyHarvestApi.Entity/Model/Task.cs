@@ -17,9 +17,9 @@ namespace MyHarvestApi.Entity.Model
         public string Name { get; set; }
         public string Description { get; set; }
 
-        [ForeignKey("Plots")]
-        public int IdPlot { get; set; }
+        public int? IdPlot { get; set; }
 
-        public Plot Plot { get; set; }
+        [ForeignKey("IdPlot")]
+        public virtual Plot Plot { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyHarvestApi.Repository.Plot
+namespace MyHarvestApi.Repository
 {
     public class PlotRepository : IPlotRepository
     {

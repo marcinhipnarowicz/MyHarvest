@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyHarvestApi.Repository.AccountType
+namespace MyHarvestApi.Repository
 {
     public class AccountTypeRepository : IAccountTypeRepository
     {

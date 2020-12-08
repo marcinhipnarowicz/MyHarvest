@@ -14,11 +14,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MyHarvestApi.Entity.Context;
 using MyHarvestApi.Repository;
-using MyHarvestApi.Repository.AccountType;
-using MyHarvestApi.Repository.Plot;
-using MyHarvestApi.Repository.StatusOfTask;
-using MyHarvestApi.Repository.UserInformation;
-using MyHarvestApi.Repository.UserTask;
+using MyHarvestApi.Api.Token;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using MyHarvestApi.Api.Controllers.NewToken;
 
 namespace MyHarvestApi.Api
 {
@@ -47,6 +47,31 @@ namespace MyHarvestApi.Api
             services.AddScoped<IStatusOfTaskRepository, StatusOfTaskRepository>();
             services.AddScoped<IUserInformationRepository, UserInformationRepository>();
             services.AddScoped<IUserTaskRepository, UserTaskRepository>();
+
+            //autoryzacja tokenu
+            services.Configure<TokenManagement>(Configuration.GetSection("tokenManagement"));
+            var token = Configuration.GetSection("tokenManagement").Get<TokenManagement>();
+            var secret = Encoding.ASCII.GetBytes(token.Secret);
+
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(secret),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };//możliwe,że trzeba wyrzucić ValidIssuer i ValidAudience bo tam mam ustawione na false
+            });
+
+            services.AddScoped<IAuthenticateService, TokenAuthenticationService>();
+            services.AddScoped<IUserManagementService, UserManagementService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,6 +86,10 @@ namespace MyHarvestApi.Api
                 app.UseHsts();
             }
 
+            //nie wiem czy potrzebne
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseAuthentication();
+            //do tego miejsca
             app.UseHttpsRedirection();
             app.UseMvc();
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyHarvestApi.Repository.StatusOfTask
+namespace MyHarvestApi.Repository
 {
     public interface IStatusOfTaskRepository
     {

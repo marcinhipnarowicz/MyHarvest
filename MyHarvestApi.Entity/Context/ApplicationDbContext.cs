@@ -16,6 +16,15 @@ namespace MyHarvestApi.Entity.Context
         }
 
         public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.Replies)
+                .WithOne(e => e.Boss)
+                .HasForeignKey(e => e.IdBoss);
+        }
+
         public DbSet<Task> Tasks { get; set; }
         public DbSet<AccountType> AccountTypes { get; set; }
         public DbSet<Plot> Plots { get; set; }
