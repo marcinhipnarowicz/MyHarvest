@@ -17,6 +17,12 @@ namespace MyHarvestApi.Repository
             _db = db;
         }
 
+        public User GetUserByEmail(string email)
+        {
+            var user = _db.Users.FirstOrDefault(u => u.Email.Equals(email));//napisz w pracy różnicę pomiędzy == a Equals()
+            return user;
+        }
+
         public List<User> GetUsers()
         {
             var usersDb = _db.Users.ToList();

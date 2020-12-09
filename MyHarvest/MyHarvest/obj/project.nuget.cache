@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "JjSs0zoSdhHlKDA362W/zGFHcgYNFeF0rFkCJ5MrdTBwi4NKiRoysmTizL6YWbeCwIWYNeiaCQ+uV/aBUOhCgw==",
+  "dgSpecHash": "oRaj9bawiqf1CjmBcLE0dnFEgM7eaayetXtnBFq4Q3Mq4oIrHKeC2gWQlU4LobowEMiKL5po/HgHOmUwKxMZjw==",
   "success": true,
   "projectFilePath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvest\\MyHarvest\\MyHarvest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marhi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\plugin.permissions\\6.0.1\\plugin.permissions.6.0.1.nupkg.sha512",
+    "C:\\Users\\marhi\\.nuget\\packages\\plugin.toast\\2.2.0\\plugin.toast.2.2.0.nupkg.sha512",
+    "C:\\Users\\marhi\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\xam.plugin.geolocator\\4.5.0.6\\xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",

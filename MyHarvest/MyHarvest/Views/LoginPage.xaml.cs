@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyHarvest.Base;
+using MyHarvest.Services;
 using MyHarvest.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -49,7 +51,22 @@ namespace MyHarvest.Views
             {
                 if (IsValidEmail(emailEntry.Text))
                 {
-                    await Shell.Current.GoToAsync("//AboutPage");
+                    var loginVm = new LoginVm()
+                    {
+                        Email = emailEntry.Text,
+                        Password = passwordEntry.Text
+                    };
+
+                    var data = await UserService.Login(loginVm);
+                    if (data != null)
+                    {
+                        LocalConfig.LoginModel = data;
+                        await Shell.Current.GoToAsync("//AboutPage");
+                    }
+                    else
+                    {
+                        await DisplayAlert("Uwaga!", "Logowanie nie powiodło się", "Ok");
+                    }
                 }
                 else
                 {

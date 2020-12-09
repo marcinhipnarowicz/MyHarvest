@@ -17,5 +17,8 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarves
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\MyHarvest.csprojAssemblyReference.cache
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\Views\TaskPage.xaml.g.cs
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\Views\MapPage.xaml.g.cs
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\bin\Debug\netstandard2.0\Newtonsoft.Json.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\bin\Debug\netstandard2.0\Newtonsoft.Json.xml
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\MyHarvest.csproj.CopyComplete
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\MyHarvest.csproj.CoreCompileInputs.cache
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\XamlC.stamp

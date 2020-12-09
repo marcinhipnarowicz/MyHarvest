@@ -147,3 +147,16 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\b
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\Remotion.Linq.dll
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\System.Data.SqlClient.dll
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\System.Interactive.Async.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\GeoAPI.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\Microsoft.AspNetCore.Authentication.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\Microsoft.IdentityModel.Logging.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\Microsoft.IdentityModel.Protocols.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\Microsoft.IdentityModel.Tokens.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\NetTopologySuite.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\NetTopologySuite.IO.SqlServerBytes.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\System.IdentityModel.Tokens.Jwt.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\obj\Release\net472\EFCoreSqlServerNetTopologySuite.cs

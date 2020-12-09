@@ -38,6 +38,29 @@
           "lib/netstandard2.0/Plugin.Permissions.dll": {}
         }
       },
+      "Plugin.Toast/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard/Plugin.Toast.Abstractions.dll": {},
+          "lib/netstandard/Plugin.Toast.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard/Plugin.Toast.Abstractions.dll": {},
+          "lib/netstandard/Plugin.Toast.dll": {}
+        }
+      },
+      "RestSharp/106.11.7": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -271,6 +294,56 @@
         "plugin.permissions.6.0.1.nupkg.sha512",
         "plugin.permissions.nuspec",
         "readme.txt"
+      ]
+    },
+    "Plugin.Toast/2.2.0": {
+      "sha512": "PDq+r0P/WRu4YZimpwwfeLaTpHCVWlcw3MjJRC1be6Cg4ORfXL8YDz3HchnrRssRueUgP9ouwzLaQ4tLCD3Q4w==",
+      "type": "package",
+      "path": "plugin.toast/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/MonoAndroid10/Plugin.Toast.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Toast.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Toast.dll",
+        "lib/MonoAndroid10/Plugin.Toast.dll.mdb",
+        "lib/MonoAndroid10/Plugin.Toast.pdb",
+        "lib/MonoAndroid10/Plugin.Toast.xml",
+        "lib/UAP10/Plugin.Toast.Abstractions.dll",
+        "lib/UAP10/Plugin.Toast.Abstractions.pdb",
+        "lib/UAP10/Plugin.Toast.dll",
+        "lib/UAP10/Plugin.Toast.pdb",
+        "lib/UAP10/Plugin.Toast.pri",
+        "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Toast.dll",
+        "lib/Xamarin.iOS10/Plugin.Toast.dll.mdb",
+        "lib/Xamarin.iOS10/Plugin.Toast.pdb",
+        "lib/Xamarin.iOS10/Plugin.Toast.xml",
+        "lib/netstandard/Plugin.Toast.Abstractions.dll",
+        "lib/netstandard/Plugin.Toast.Abstractions.pdb",
+        "lib/netstandard/Plugin.Toast.deps.json",
+        "lib/netstandard/Plugin.Toast.dll",
+        "lib/netstandard/Plugin.Toast.pdb",
+        "plugin.toast.2.2.0.nupkg.sha512",
+        "plugin.toast.nuspec"
+      ]
+    },
+    "RestSharp/106.11.7": {
+      "sha512": "NzndH096CTulvq+ihr7u1mBJ29oukdi9A8bypQJk+kaHxbRzTTrtgsEEQAb04ptTUZmQa7cgo7uF5z7NuEPX1Q==",
+      "type": "package",
+      "path": "restsharp/106.11.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.11.7.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
       ]
     },
     "System.Numerics.Vectors/4.5.0": {
@@ -749,6 +822,8 @@
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
       "Plugin.Permissions >= 6.0.1",
+      "Plugin.Toast >= 2.2.0",
+      "RestSharp >= 106.11.7",
       "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Forms >= 4.6.0.1141",
@@ -808,6 +883,14 @@
           "Plugin.Permissions": {
             "target": "Package",
             "version": "[6.0.1, )"
+          },
+          "Plugin.Toast": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "RestSharp": {
+            "target": "Package",
+            "version": "[106.11.7, )"
           },
           "Xam.Plugin.Geolocator": {
             "target": "Package",

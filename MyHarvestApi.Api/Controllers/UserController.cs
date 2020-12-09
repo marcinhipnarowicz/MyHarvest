@@ -8,10 +8,12 @@ using Microsoft.AspNetCore.Mvc;
 using MyHarvestApi.Entity.Context;
 using MyHarvestApi.Entity.Model;
 using MyHarvestApi.Repository;
+using MyHarvestApi.Service;
+using MyHarvestApi.Service.ViewModel;
 
 namespace MyHarvestApi.Api.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -19,11 +21,44 @@ namespace MyHarvestApi.Api.Controllers
         //private ApplicationDbContext _db;
 
         private IUserRepository _userRepository;
+        private IUserService _userService;
 
-        public UserController(IUserRepository userRepo) //ApplicationDbContext dbContext,
+        public UserController(IUserRepository userRepo, IUserService userService) //ApplicationDbContext dbContext,
         {
             // _db = dbContext;
             _userRepository = userRepo;//= new UserRepository(_db);
+            _userService = userService;
+        }
+
+        //[AllowAnonymous]
+        //[HttpPost("authenticate")]
+        //public IActionResult Authenticate([FromBody] User userParam)
+        //{
+        //    var user = _userService.Authenticate(userParam.Email, userParam.Password);
+
+        //    if (user == null)
+        //        return BadRequest(new { message = "Email lub hasło są niepoprawne" });
+
+        //    return Ok(user);
+        //}
+
+        [HttpPost]
+        [Route("Login")]
+        public IActionResult Login(LoginVm loginVm)
+        {
+            if (ModelState.IsValid)
+            {
+                UserVm user = _userService.GetByEmail(loginVm.Email);
+                if (user != null)
+                {
+                    if (user.Password == loginVm.Password)
+                    {
+                        return Ok();
+                    }
+                }
+            }
+
+            return BadRequest(new { message = "Email lub hasło są niepoprawne" });
         }
 
         ////[Authorize]
@@ -39,6 +74,7 @@ namespace MyHarvestApi.Api.Controllers
         //}
 
         [HttpGet]
+        [Route("Get")]
         public IActionResult Get()
         {
             var usersDb = _userRepository.GetUsers();

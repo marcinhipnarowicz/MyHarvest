@@ -8,6 +8,7 @@ namespace MyHarvest.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
+        //ta klase wyrzucić potem
         public Command LoginCommand { get; }
 
         public LoginViewModel()

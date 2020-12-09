@@ -10,5 +10,7 @@ namespace MyHarvestApi.Repository
     public interface IUserRepository
     {
         List<User> GetUsers();
+
+        User GetUserByEmail(string email);
     }
 }

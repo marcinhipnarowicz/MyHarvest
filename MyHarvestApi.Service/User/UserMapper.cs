@@ -10,16 +10,34 @@ namespace MyHarvestApi.Service
 {
     public class UserMapper
     {
-        public static UserVm Map(User user)
+        public static UserVm MapToVm(User user)
         {
-            return new UserVm
+            UserVm userVm = new UserVm();
+
+            userVm.Id = user.IdUser;
+            userVm.Email = user.Email;
+            userVm.Password = user.Password;
+            userVm.FirstName = user.FirstName;
+            userVm.Surename = user.FirstName;
+            userVm.IdAccountType = user.IdAccountType;
+
+            if (user.IdBoss != null)
             {
-                Id = user.IdUser,
-                Email = user.Email,
-                Password = user.Password,
-                FirstName = user.FirstName,
-                Surename = user.FirstName
-            };
+                userVm.IdBoss = (int)user.IdBoss;
+            }
+
+            return userVm;
+
+            //return new UserVm
+            //{
+            //    Id = user.IdUser,
+            //    Email = user.Email,
+            //    Password = user.Password,
+            //    FirstName = user.FirstName,
+            //    Surename = user.FirstName,
+            //    IdAccountType = user.IdAccountType,
+            //    IdBoss = (int)user.IdBoss
+            //};
         }
     }
 }

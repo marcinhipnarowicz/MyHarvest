@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using MyHarvestApi.Api.Controllers.NewToken;
+using MyHarvestApi.Service;
 
 namespace MyHarvestApi.Api
 {
@@ -40,6 +41,7 @@ namespace MyHarvestApi.Api
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs, b => b.MigrationsAssembly("MyHarvestApi.Api"))); //pierwsza wersja działająca
             //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs, x => x.UseNetTopologySuite()));
 
+            //reposytory
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ITaskRepository, TaskRepository>();
             services.AddScoped<IAccountTypeRepository, AccountTypeRepository>();
@@ -47,6 +49,9 @@ namespace MyHarvestApi.Api
             services.AddScoped<IStatusOfTaskRepository, StatusOfTaskRepository>();
             services.AddScoped<IUserInformationRepository, UserInformationRepository>();
             services.AddScoped<IUserTaskRepository, UserTaskRepository>();
+
+            //service
+            services.AddScoped<IUserService, UserService>();
 
             //autoryzacja tokenu
             services.Configure<TokenManagement>(Configuration.GetSection("tokenManagement"));

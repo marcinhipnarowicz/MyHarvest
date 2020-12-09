@@ -7,6 +7,9 @@ public class MonoPackageManager_Resources {
 		"MyHarvest.dll",
 		"Plugin.Geolocator.dll",
 		"Plugin.Permissions.dll",
+		"Plugin.Toast.Abstractions.dll",
+		"Plugin.Toast.dll",
+		"RestSharp.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
@@ -55,6 +58,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.GooglePlayServices.Basement.dll",
 		"Xamarin.GooglePlayServices.Maps.dll",
 		"Xamarin.GooglePlayServices.Tasks.dll",
+		"Newtonsoft.Json.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

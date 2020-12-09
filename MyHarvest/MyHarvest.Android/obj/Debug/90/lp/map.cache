@@ -1,6 +1,7 @@
 FormsViewGroup
 Plugin.Geolocator
 Plugin.Permissions
+Plugin.Toast
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common

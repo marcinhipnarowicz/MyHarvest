@@ -526,3 +526,11 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarves
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\src\crc649efb5bdbf2d8cfa5\GeolocationSingleListener.java
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\res\drawable\map_icon.png
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\res\drawable\myharvest_logo.png
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\bin\Debug\Newtonsoft.Json.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\bin\Debug\Newtonsoft.Json.xml
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\assets\Plugin.Toast.Abstractions.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\assets\Plugin.Toast.Abstractions.pdb
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\assets\Plugin.Toast.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\assets\Plugin.Toast.dll.mdb
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest.Android\obj\Debug\90\android\assets\RestSharp.dll
