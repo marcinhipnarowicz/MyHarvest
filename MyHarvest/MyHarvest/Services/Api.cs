@@ -62,41 +62,20 @@ namespace MyHarvest.Services
             if (!BaseService.InternetConnection())
                 return responseContent;
 
-            //var client = new RestClient(apiAddress);
-            //client.Timeout = -1;
-            //var request = new RestRequest(requestMethod);
-
-            //request.AddHeader("Content-Type", "application/json; charset=utf-8");
-
-            //if (data != null)
-            //{
-            //    request.Parameters.Clear();
-            //    var json = JsonConvert.SerializeObject(data);
-            //    request.AddParameter("application/json", json, ParameterType.RequestBody);
-            //}
-
-            //IRestResponse response = await client.ExecuteAsync(request);
-
-            var client = new RestClient("http://myharvestapp.azurewebsites.net/api/user/Login");
+            var client = new RestClient(apiAddress);
             client.Timeout = -1;
-            var request = new RestRequest(Method.POST);
-            request.AddHeader("Content-Type", "application/json");
-            request.AddHeader("Cookie", "ARRAffinity=22a7daa836b64a8ce56c907737553d08297ff2e76cd06a1f52c29956b9a85c17");
+            var request = new RestRequest(requestMethod);
 
-            request.AddParameter("application/json", "{\r\n    \"email\": \"marcin@op.pl\",\r\n    \"password\": \"marcin\"\r\n}", ParameterType.RequestBody);
-            IRestResponse response = client.Execute(request);
+            request.AddHeader("Content-Type", "application/json; charset=utf-8");
 
-            response.Content = 1.ToString();
-
-            if (!response.IsSuccessful || response.StatusCode != System.Net.HttpStatusCode.OK)
+            if (data != null)
             {
-                Xamarin.Forms.Device.BeginInvokeOnMainThread(async () =>
-                {
-                    ToastMessage.ShowToastError("Serwer niedostępny");
-                });
-
-                return null;
+                request.Parameters.Clear();
+                var json = JsonConvert.SerializeObject(data);
+                request.AddParameter("application/json", json, ParameterType.RequestBody);
             }
+
+            IRestResponse response = client.Execute(request);
 
             if (!String.IsNullOrEmpty(response.Content))
             {

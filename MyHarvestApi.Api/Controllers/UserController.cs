@@ -9,6 +9,7 @@ using MyHarvestApi.Entity.Context;
 using MyHarvestApi.Entity.Model;
 using MyHarvestApi.Repository;
 using MyHarvestApi.Service;
+using MyHarvestApi.Service.Enum;
 using MyHarvestApi.Service.ViewModel;
 
 namespace MyHarvestApi.Api.Controllers
@@ -53,7 +54,7 @@ namespace MyHarvestApi.Api.Controllers
                 {
                     if (user.Password == loginVm.Password)
                     {
-                        return Ok();
+                        return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, loginVm));
                     }
                 }
             }
