@@ -20,6 +20,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using MyHarvestApi.Api.Controllers.NewToken;
 using MyHarvestApi.Service;
+using MyHarvestApi.Entity.AppSettingsHelp;
 
 namespace MyHarvestApi.Api
 {
@@ -52,6 +53,10 @@ namespace MyHarvestApi.Api
 
             //service
             services.AddScoped<IUserService, UserService>();
+
+            //do tokenu
+            var appSettingsSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettingsSection);
 
             //autoryzacja tokenu
             services.Configure<TokenManagement>(Configuration.GetSection("tokenManagement"));

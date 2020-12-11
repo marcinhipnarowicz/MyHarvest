@@ -29,9 +29,9 @@ namespace MyHarvestApi.Service
             _appSettings = appSettings.Value;
         }
 
-        public User Authenticate(string email, string password)
+        public string Authenticate(string email)
         {
-            var user = _users.SingleOrDefault(x => x.Email.Equals(email) && x.Password.Equals(password));
+            var user = _users.SingleOrDefault(x => x.Email.Equals(email));
             if (user == null)
                 return null;
 
@@ -48,11 +48,11 @@ namespace MyHarvestApi.Service
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            //user.Token = tokenHandler.WriteToken(token);//tutaj trzeba by to zmeinić na loginVm
+            return tokenHandler.WriteToken(token);//tutaj trzeba by to zmeinić na loginVm
 
-            user.Password = null;
+            //user.Password = null;
 
-            return user;
+            //return user;
         }
 
         public IEnumerable<User> GetAll()

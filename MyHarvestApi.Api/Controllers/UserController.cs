@@ -14,46 +14,44 @@ using MyHarvestApi.Service.ViewModel;
 
 namespace MyHarvestApi.Api.Controllers
 {
-    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
-        //private ApplicationDbContext _db;
-
         private IUserRepository _userRepository;
         private IUserService _userService;
 
-        public UserController(IUserRepository userRepo, IUserService userService) //ApplicationDbContext dbContext,
+        public UserController(IUserRepository userRepo, IUserService userService)
         {
-            // _db = dbContext;
-            _userRepository = userRepo;//= new UserRepository(_db);
+            _userRepository = userRepo;
             _userService = userService;
         }
 
         //[AllowAnonymous]
-        //[HttpPost("authenticate")]
-        //public IActionResult Authenticate([FromBody] User userParam)
-        //{
-        //    var user = _userService.Authenticate(userParam.Email, userParam.Password);
+        [HttpPost("authenticate")]
+        public IActionResult Authenticate([FromBody] User userParam)
+        {
+            var user = _userService.Authenticate(userParam.Email);
 
-        //    if (user == null)
-        //        return BadRequest(new { message = "Email lub hasło są niepoprawne" });
+            if (user == null)
+                return BadRequest(new { message = "Email lub hasło są niepoprawne" });
 
-        //    return Ok(user);
-        //}
+            return Ok(user);
+        }
 
         [HttpPost]
         [Route("Login")]
-        public IActionResult Login(LoginVm loginVm)
+        public IActionResult Login(LoginVm login)
         {
             if (ModelState.IsValid)
             {
-                UserVm user = _userService.GetByEmail(loginVm.Email);
+                UserVm user = _userService.GetByEmail(login.Email);
                 if (user != null)
                 {
-                    if (user.Password == loginVm.Password)
+                    if (user.Password == login.Password)
                     {
+                        var token = _userService.Authenticate(user.Email);
+                        LoginVm loginVm = LoginMapper.Map(user, token);
                         return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, loginVm));
                     }
                 }

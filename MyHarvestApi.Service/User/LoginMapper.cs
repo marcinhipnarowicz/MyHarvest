@@ -10,12 +10,13 @@ namespace MyHarvestApi.Service
 {
     public class LoginMapper
     {
-        public static LoginVm Map(User user)
+        public static LoginVm Map(UserVm user, string token)
         {
             return new LoginVm
             {
                 Email = user.Email,
-                Password = user.Password
+                Password = user.Password,
+                Token = token
             };
 
             //return new LoginVm // w metodzie przekazywać jeszcze , string token

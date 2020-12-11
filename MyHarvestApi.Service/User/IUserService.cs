@@ -10,7 +10,7 @@ namespace MyHarvestApi.Service
 {
     public interface IUserService
     {
-        User Authenticate(string email, string password);
+        string Authenticate(string email);
 
         IEnumerable<User> GetAll();
 
