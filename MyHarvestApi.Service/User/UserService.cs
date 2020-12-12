@@ -48,11 +48,7 @@ namespace MyHarvestApi.Service
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);//tutaj trzeba by to zmeinić na loginVm
-
-            //user.Password = null;
-
-            //return user;
+            return tokenHandler.WriteToken(token);
         }
 
         public IEnumerable<User> GetAll()

@@ -27,7 +27,6 @@ namespace MyHarvestApi.Api.Controllers
             _userService = userService;
         }
 
-        //[AllowAnonymous]
         [HttpPost("authenticate")]
         public IActionResult Authenticate([FromBody] User userParam)
         {
