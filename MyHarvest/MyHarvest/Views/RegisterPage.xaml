@@ -15,6 +15,17 @@
         <Entry x:Name="confirmPasswordEntry"
                Placeholder="Powtórz hasło"
                IsPassword="True" />
+        <Entry x:Name="firstNameEntry"
+               Placeholder="Imie" />
+        <Entry x:Name="surnameEntry"
+               Placeholder="Nazwisko" />
+        <Picker x:Name="accountTypePicker"
+                Title="Wybierz typ konta"
+                SelectedIndexChanged="AccountTypePicker_SelectedIndexChanged">
+        </Picker>
+        <Entry x:Name="bossKeyEntry"
+               Placeholder="Ciąg znaków szefa"
+               IsVisible="false" />
         <Label x:Name="message"
                IsVisible="false"
                TextColor="Red" />

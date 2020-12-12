@@ -59,6 +59,13 @@ namespace MyHarvestApi.Api.Controllers
             return BadRequest(new { message = "Email lub hasło są niepoprawne" });
         }
 
+        [HttpPost]
+        [Route("Register")]
+        public IActionResult Register(UserVm user)
+        {
+            return Ok();
+        }
+
         ////[Authorize]
         //[HttpPost]
         //[Route("Register")]

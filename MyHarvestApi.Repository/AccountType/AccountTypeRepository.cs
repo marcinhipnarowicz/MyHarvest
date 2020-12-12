@@ -1,4 +1,5 @@
 ﻿using MyHarvestApi.Entity.Context;
+using MyHarvestApi.Entity.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,12 @@ namespace MyHarvestApi.Repository
         public AccountTypeRepository(ApplicationDbContext db)
         {
             _db = db;
+        }
+
+        List<AccountType> IAccountTypeRepository.GetAllAccountType()
+        {
+            var accountTypedb = _db.AccountTypes.ToList();
+            return accountTypedb;
         }
     }
 }

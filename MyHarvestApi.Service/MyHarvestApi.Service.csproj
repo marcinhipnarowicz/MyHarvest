@@ -214,6 +214,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountType\AccountTypeService.cs" />
+    <Compile Include="AccountType\IAccountTypeService.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Enum\Enum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -52,6 +52,7 @@ namespace MyHarvestApi.Api
 
             //service
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IAccountTypeService, AccountTypeService>();
 
             //do tokenu
             var appSettingsSection = Configuration.GetSection("AppSettings");

@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MyHarvest.Services;
+using MyHarvest.ViewModels;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +15,24 @@ namespace MyHarvest.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterPage : ContentPage
     {
+        private List<AccountTypeVm> accountTypeVmList;
+
         public RegisterPage()
         {
             InitializeComponent();
+
+            SetValueInPickerAsync();
+        }
+
+        public async void SetValueInPickerAsync()
+        {
+            List<AccountTypeVm> accountTypeVm = new List<AccountTypeVm>();
+            accountTypeVm = await AccountTypeService.GetAccountTypeList();
+
+            foreach (var item in accountTypeVm)
+            {
+                accountTypePicker.Items.Add(item.Name);
+            }
         }
 
         private bool IsValidEmail(string text)
@@ -159,6 +177,16 @@ namespace MyHarvest.Views
                     {
                         if (passwordEntry.Text == confirmPasswordEntry.Text)
                         {
+                            var userVm = new UserVm()
+                            {
+                                Email = emailEntry.Text,
+                                Password = passwordEntry.Text,
+                                FirstName = firstNameEntry.Text,
+                                Surname = surnameEntry.Text,
+                                AccountType = accountTypePicker.SelectedIndex,
+                                BossKey = bossKeyEntry.Text
+                            };
+
                             Shell.Current.GoToAsync("//AboutPage");
                         }
                         else
@@ -179,6 +207,22 @@ namespace MyHarvest.Views
                     //message.Text = "Niepoprawny adres email";
                     //message.IsVisible = true;
                 }
+            }
+        }
+
+        private void AccountTypePicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picker = (Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
+
+            if (selectedIndex == 0)
+            {
+                bossKeyEntry.IsVisible = false;
+            }
+
+            if (selectedIndex == 1)
+            {
+                bossKeyEntry.IsVisible = true;
             }
         }
     }

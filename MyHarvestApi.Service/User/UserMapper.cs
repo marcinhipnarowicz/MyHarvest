@@ -18,7 +18,8 @@ namespace MyHarvestApi.Service
             userVm.Email = user.Email;
             userVm.Password = user.Password;
             userVm.FirstName = user.FirstName;
-            userVm.Surename = user.FirstName;
+            userVm.Surname = user.Surname;
+            //userVm.BossKey = user.BossKey;
             userVm.IdAccountType = user.IdAccountType;
 
             if (user.IdBoss != null)
