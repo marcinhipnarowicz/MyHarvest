@@ -69,5 +69,17 @@ namespace MyHarvestApi.Service
             UserVm userVm = UserMapper.MapToVm(user);
             return userVm;
         }
+
+        public void AddUser(UserVm userVm)
+        {
+            var user = UserMapper.MapFromVm(userVm);
+            _repo.AddUser(user);
+        }
+
+        public bool IfExists(string email)
+        {
+            var check = _repo.IfExists(email);
+            return check;
+        }
     }
 }

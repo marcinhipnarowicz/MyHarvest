@@ -15,5 +15,9 @@ namespace MyHarvestApi.Service
         IEnumerable<User> GetAll();
 
         UserVm GetByEmail(string email);
+
+        void AddUser(UserVm userVm);
+
+        bool IfExists(string email);
     }
 }

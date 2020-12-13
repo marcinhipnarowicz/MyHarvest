@@ -13,9 +13,9 @@ namespace MyHarvestApi.Service.ViewModel
         public string Password { get; set; }
         public string FirstName { get; set; }
         public string Surname { get; set; }
+        public bool IsVerified { get; set; }
+        public string BossKey { get; set; }
 
-        //public bool IsVerified { get; set; }
-        //public string BossKey { get; set; }
         public int IdAccountType { get; set; }
 
         public int? IdBoss { get; set; }

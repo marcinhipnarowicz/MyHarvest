@@ -12,5 +12,9 @@ namespace MyHarvestApi.Repository
         List<User> GetUsers();
 
         User GetUserByEmail(string email);
+
+        void AddUser(User user);
+
+        bool IfExists(string email);
     }
 }

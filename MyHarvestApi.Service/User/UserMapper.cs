@@ -19,7 +19,7 @@ namespace MyHarvestApi.Service
             userVm.Password = user.Password;
             userVm.FirstName = user.FirstName;
             userVm.Surname = user.Surname;
-            //userVm.BossKey = user.BossKey;
+            userVm.BossKey = user.BossKey;
             userVm.IdAccountType = user.IdAccountType;
 
             if (user.IdBoss != null)
@@ -28,17 +28,22 @@ namespace MyHarvestApi.Service
             }
 
             return userVm;
+        }
 
-            //return new UserVm
-            //{
-            //    Id = user.IdUser,
-            //    Email = user.Email,
-            //    Password = user.Password,
-            //    FirstName = user.FirstName,
-            //    Surename = user.FirstName,
-            //    IdAccountType = user.IdAccountType,
-            //    IdBoss = (int)user.IdBoss
-            //};
+        public static User MapFromVm(UserVm userVm)
+        {
+            return new User
+            {
+                IdUser = userVm.Id,
+                Email = userVm.Email,
+                Password = userVm.Password,
+                FirstName = userVm.FirstName,
+                Surname = userVm.Surname,
+                BossKey = userVm.BossKey,
+                IsVerified = userVm.IsVerified,
+                IdAccountType = userVm.IdAccountType,
+                IdBoss = userVm.IdBoss
+            };
         }
     }
 }

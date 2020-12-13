@@ -17,6 +17,12 @@ namespace MyHarvestApi.Repository
             _db = db;
         }
 
+        public void AddUser(User user)
+        {
+            _db.Users.Add(user);
+            _db.SaveChanges();
+        }
+
         public User GetUserByEmail(string email)
         {
             var user = _db.Users.FirstOrDefault(u => u.Email.Equals(email));//napisz w pracy różnicę pomiędzy == a Equals()
@@ -27,6 +33,16 @@ namespace MyHarvestApi.Repository
         {
             var usersDb = _db.Users.ToList();
             return usersDb;
+        }
+
+        public bool IfExists(string email)
+        {
+            var check = _db.Users.FirstOrDefault(x => x.Email == email);
+            if (check == null)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

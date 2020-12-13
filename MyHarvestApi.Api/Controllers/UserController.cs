@@ -63,7 +63,26 @@ namespace MyHarvestApi.Api.Controllers
         [Route("Register")]
         public IActionResult Register(UserVm user)
         {
-            return Ok();
+            try
+            {
+                if (user != null)
+                {
+                    if (_userService.IfExists(user.Email))
+                    {
+                        return BadRequest(new { message = "Użytkownik o podanym emailu już istnieje" });
+                    }
+                    else
+                    {
+                        _userService.AddUser(user);
+                        return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, null));
+                    }
+                }
+                return BadRequest(new { message = "Podany użytkownik jest pusty" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = "Błąd" } + ex.Message);
+            }
         }
 
         ////[Authorize]
@@ -71,9 +90,9 @@ namespace MyHarvestApi.Api.Controllers
         //[Route("Register")]
         //public async Task<ActionResult<User>> Add(User user)
         //{
-        //    //_db.Users.Add(user);
+        //    _db.Users.Add(user);
 
-        //    //await _db.SaveChangesAsync();
+        //    await _db.SaveChangesAsync();
 
         //    return Ok();
         //}
