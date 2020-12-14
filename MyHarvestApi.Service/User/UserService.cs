@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -97,7 +98,7 @@ namespace MyHarvestApi.Service
 
         public string GetBossKey()
         {
-            bool badKey = true;
+            bool badKey = false;
             string result;
 
             do
@@ -105,7 +106,7 @@ namespace MyHarvestApi.Service
                 result = RandomBossKey();
 
                 if (IfExistsBoss(result))
-                    badKey = false;
+                    badKey = true;
             } while (badKey);
 
             return result;
@@ -115,6 +116,29 @@ namespace MyHarvestApi.Service
         {
             var check = _repo.IfExistsBoss(bossKey);
             return check;
+        }
+
+        public string GetHash(HashAlgorithm hashAlgorithm, string password)
+        {
+            byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+            var sBuilder = new StringBuilder(); //nowy string builder aby zebrac bajty i utworzyć ciąg
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            return sBuilder.ToString();//zwraca hexadecymalny string
+        }
+
+        public bool VeryfiHash(HashAlgorithm hashAlgorithm, string password, string hash)
+        {
+            var hashOfPassword = GetHash(hashAlgorithm, password);
+
+            StringComparer comparer = StringComparer.OrdinalIgnoreCase; //tworzenie StringCompareer w celu porownania z hashowanym
+
+            return comparer.Compare(hashOfPassword, hash) == 0;
         }
     }
 }

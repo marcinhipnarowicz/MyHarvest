@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -42,46 +43,58 @@ namespace MyHarvestApi.Api.Controllers
         [Route("Login")]
         public IActionResult Login(LoginVm login)
         {
-            if (ModelState.IsValid)
+            using (SHA256 sha256Hash = SHA256.Create())
             {
-                UserVm user = _userService.GetByEmail(login.Email);
-                if (user != null)
+                if (ModelState.IsValid)
                 {
-                    if (user.Password == login.Password)
+                    UserVm user = _userService.GetByEmail(login.Email);
+                    if (user != null)
                     {
-                        var token = _userService.Authenticate(user.Email);
-                        LoginVm loginVm = LoginMapper.Map(user, token);
-                        return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, loginVm));
+                        var hashPassord = _userService.GetHash(sha256Hash, login.Password);
+
+                        if (user.Password == hashPassord)
+                        {
+                            //user.Password = login.Password;
+                            var token = _userService.Authenticate(user.Email);
+                            LoginVm loginVm = LoginMapper.Map(user, token);
+                            return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, loginVm));
+                        }
                     }
                 }
-            }
 
-            return BadRequest(new { message = "Email lub hasło są niepoprawne" });
+                return BadRequest(new { message = "Email lub hasło są niepoprawne" });
+            }
         }
 
         [HttpPost]
         [Route("Register")]
         public IActionResult Register(UserVm user)
         {
-            if (user != null)
+            using (SHA256 sha256Hash = SHA256.Create())
             {
-                if (_userService.IfExistsUser(user.Email))
+                if (user != null)
                 {
-                    return BadRequest(new { message = "Użytkownik o podanym emailu już istnieje" });
-                }
-                else
-                {
-                    if (user.IdAccountType == 1)
+                    if (_userService.IfExistsUser(user.Email))
                     {
-                        user.BossKey = _userService.GetBossKey();
+                        return BadRequest(new { message = "Użytkownik o podanym emailu już istnieje" });
                     }
+                    else
+                    {
+                        if (user.IdAccountType == 1)
+                        {
+                            user.BossKey = _userService.GetBossKey();
+                        }
 
-                    _userService.AddUser(user);
+                        var hash = _userService.GetHash(sha256Hash, user.Password);
+                        user.Password = hash;
 
-                    return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, user));
+                        _userService.AddUser(user);
+
+                        return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, user));
+                    }
                 }
+                return BadRequest(new { message = "Podany użytkownik jest pusty" });
             }
-            return BadRequest(new { message = "Podany użytkownik jest pusty" });
         }
 
         [HttpGet]
