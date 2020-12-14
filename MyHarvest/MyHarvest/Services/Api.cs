@@ -80,7 +80,6 @@ namespace MyHarvest.Services
                 request.AddParameter("application/json", json, ParameterType.RequestBody);
             }
 
-            //request.AddParameter("application/json", "{\r\n    \"email\": \"dddddad@op.pl\",\r\n    \"password\": \"marcin2\",\r\n    \"firstname\": \"marcin\",\r\n    \"surname\": \"h\",\r\n    \"isverified\": true,\r\n    \"idaccounttype\": 2\r\n}", ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
 
             if (!String.IsNullOrEmpty(response.Content))

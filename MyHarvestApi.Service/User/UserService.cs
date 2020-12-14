@@ -76,9 +76,44 @@ namespace MyHarvestApi.Service
             _repo.AddUser(user);
         }
 
-        public bool IfExists(string email)
+        public bool IfExistsUser(string email)
         {
-            var check = _repo.IfExists(email);
+            var check = _repo.IfExistsUser(email);
+            return check;
+        }
+
+        public string RandomBossKey()
+        {
+            var chars = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            var rand = new Random();
+
+            var result = new string(
+        Enumerable.Repeat(chars, 6)
+                    .Select(s => s[rand.Next(s.Length)])
+                    .ToArray());
+
+            return result;
+        }
+
+        public string GetBossKey()
+        {
+            bool badKey = true;
+            string result;
+
+            do
+            {
+                result = RandomBossKey();
+
+                if (IfExistsBoss(result))
+                    badKey = false;
+            } while (badKey);
+
+            return result;
+        }
+
+        public bool IfExistsBoss(string bossKey)
+        {
+            var check = _repo.IfExistsBoss(bossKey);
             return check;
         }
     }

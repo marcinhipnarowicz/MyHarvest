@@ -65,13 +65,19 @@ namespace MyHarvestApi.Api.Controllers
         {
             if (user != null)
             {
-                if (_userService.IfExists(user.Email))
+                if (_userService.IfExistsUser(user.Email))
                 {
                     return BadRequest(new { message = "Użytkownik o podanym emailu już istnieje" });
                 }
                 else
                 {
+                    if (user.IdAccountType == 1)
+                    {
+                        user.BossKey = _userService.GetBossKey();
+                    }
+
                     _userService.AddUser(user);
+
                     return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, user));
                 }
             }

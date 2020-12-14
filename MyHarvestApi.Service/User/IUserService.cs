@@ -18,6 +18,12 @@ namespace MyHarvestApi.Service
 
         void AddUser(UserVm userVm);
 
-        bool IfExists(string email);
+        bool IfExistsUser(string email);
+
+        bool IfExistsBoss(string bossKey);
+
+        string GetBossKey();
+
+        string RandomBossKey();
     }
 }

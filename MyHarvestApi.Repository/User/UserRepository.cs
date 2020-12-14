@@ -35,9 +35,19 @@ namespace MyHarvestApi.Repository
             return usersDb;
         }
 
-        public bool IfExists(string email)
+        public bool IfExistsUser(string email)
         {
             var check = _db.Users.FirstOrDefault(x => x.Email == email);
+            if (check == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool IfExistsBoss(string bossKey)
+        {
+            var check = _db.Users.FirstOrDefault(x => x.BossKey == bossKey);
             if (check == null)
             {
                 return false;
