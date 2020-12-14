@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyHarvestApi.Repository
+namespace MyHarvestApi.Service
 {
-    public interface IStatusOfTaskRepository
+    public interface IStatusOfTaskService
     {
-        List<StatusOfTask> GetAllAStatusOfTask();
+        List<StatusOfTask> GetAllStatusOfTask();
     }
 }

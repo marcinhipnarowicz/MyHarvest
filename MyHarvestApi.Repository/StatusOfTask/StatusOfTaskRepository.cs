@@ -1,4 +1,5 @@
 ﻿using MyHarvestApi.Entity.Context;
+using MyHarvestApi.Entity.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,12 @@ namespace MyHarvestApi.Repository
         public StatusOfTaskRepository(ApplicationDbContext db)
         {
             _db = db;
+        }
+
+        public List<StatusOfTask> GetAllAStatusOfTask()
+        {
+            var statusOfTaskdb = _db.StatusOfTasks.ToList();
+            return statusOfTaskdb;
         }
     }
 }
