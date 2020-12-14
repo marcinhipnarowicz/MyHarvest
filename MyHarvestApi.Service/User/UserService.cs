@@ -89,7 +89,7 @@ namespace MyHarvestApi.Service
             var rand = new Random();
 
             var result = new string(
-        Enumerable.Repeat(chars, 6)
+          Enumerable.Repeat(chars, 6)
                     .Select(s => s[rand.Next(s.Length)])
                     .ToArray());
 
@@ -112,6 +112,18 @@ namespace MyHarvestApi.Service
             return result;
         }
 
+        public int GetIdBoss(string bossKey)
+        {
+            User user = _repo.GetUserByBossKey(bossKey);
+
+            if (user != null)
+            {
+                int idBoss = user.IdUser;
+                return idBoss;
+            }
+            return 0;
+        }
+
         public bool IfExistsBoss(string bossKey)
         {
             var check = _repo.IfExistsBoss(bossKey);
@@ -132,6 +144,7 @@ namespace MyHarvestApi.Service
             return sBuilder.ToString();//zwraca hexadecymalny string
         }
 
+        //chyba tego nie użyje
         public bool VeryfiHash(HashAlgorithm hashAlgorithm, string password, string hash)
         {
             var hashOfPassword = GetHash(hashAlgorithm, password);

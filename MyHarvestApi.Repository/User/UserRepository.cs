@@ -54,5 +54,18 @@ namespace MyHarvestApi.Repository
             }
             return true;
         }
+
+        public User GetUserByBossKey(string bossKey)
+        {
+            if (IfExistsBoss(bossKey))
+            {
+                var userDb = _db.Users.FirstOrDefault(x => x.BossKey == bossKey);
+                if (userDb == null)
+                {
+                }
+                return userDb;
+            }
+            return null;
+        }
     }
 }

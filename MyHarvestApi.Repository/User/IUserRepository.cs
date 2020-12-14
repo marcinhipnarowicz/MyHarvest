@@ -18,5 +18,7 @@ namespace MyHarvestApi.Repository
         bool IfExistsUser(string email);
 
         bool IfExistsBoss(string bossKey);
+
+        User GetUserByBossKey(string bossKey);
     }
 }

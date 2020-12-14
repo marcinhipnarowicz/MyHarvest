@@ -62,7 +62,8 @@ namespace MyHarvestApi.Api.Controllers
                     }
                 }
 
-                return BadRequest(new { message = "Email lub hasło są niepoprawne" });
+                //return BadRequest(new { message = "Email lub hasło są niepoprawne" });
+                return Ok(ResponseManager.GenerateResponse("Błąd: Email lub hasło są niepoprawne", (int)MessageType.Error, null));
             }
         }
 
@@ -76,13 +77,27 @@ namespace MyHarvestApi.Api.Controllers
                 {
                     if (_userService.IfExistsUser(user.Email))
                     {
-                        return BadRequest(new { message = "Użytkownik o podanym emailu już istnieje" });
+                        //return BadRequest(new { message = "Użytkownik o podanym emailu już istnieje" });
+                        return Ok(ResponseManager.GenerateResponse("Błąd: Użytkownik o podanym emailu już istnieje", (int)MessageType.Error, null));
                     }
                     else
                     {
                         if (user.IdAccountType == 1)
                         {
                             user.BossKey = _userService.GetBossKey();
+                        }
+
+                        if (user.IdAccountType == 2)
+                        {
+                            if (_userService.GetIdBoss(user.BossKey) == 0)
+                            {
+                                //return BadRequest(new { message = "Nie istnieje szef o podanym kodzie" });
+                                return Ok(ResponseManager.GenerateResponse("Błąd: Nie istnieje szef o podanym kodzie", (int)MessageType.Error, null));
+                            }
+                            else
+                            {
+                                user.IdBoss = _userService.GetIdBoss(user.BossKey);
+                            }
                         }
 
                         var hash = _userService.GetHash(sha256Hash, user.Password);
@@ -93,7 +108,8 @@ namespace MyHarvestApi.Api.Controllers
                         return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, user));
                     }
                 }
-                return BadRequest(new { message = "Podany użytkownik jest pusty" });
+                //return BadRequest(new { message = "Podany użytkownik jest pusty" });
+                return Ok(ResponseManager.GenerateResponse("Błąd: Podany użytkownik jest pusty", (int)MessageType.Error, null));
             }
         }
 

@@ -27,6 +27,8 @@ namespace MyHarvestApi.Service
 
         string RandomBossKey();
 
+        int GetIdBoss(string bossKey);
+
         string GetHash(HashAlgorithm hashAlgorithm, string password);
     }
 }
