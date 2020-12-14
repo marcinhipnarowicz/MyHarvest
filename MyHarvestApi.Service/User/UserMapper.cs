@@ -10,7 +10,7 @@ namespace MyHarvestApi.Service
 {
     public class UserMapper
     {
-        public static UserVm MapToVm(User user)
+        public static UserVm MapToVm(User user, string token)
         {
             UserVm userVm = new UserVm();
 
@@ -26,6 +26,8 @@ namespace MyHarvestApi.Service
             {
                 userVm.IdBoss = (int)user.IdBoss;
             }
+
+            userVm.Token = token;
 
             return userVm;
         }

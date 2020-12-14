@@ -32,7 +32,8 @@ namespace MyHarvestApi.Service
 
         public string Authenticate(string email)
         {
-            var user = _users.SingleOrDefault(x => x.Email.Equals(email));
+            _users = _repo.GetUsers();
+            var user = _users.FirstOrDefault(x => x.Email.Equals(email));
             if (user == null)
                 return null;
 
@@ -67,7 +68,7 @@ namespace MyHarvestApi.Service
             if (user == null)
                 return null;
 
-            UserVm userVm = UserMapper.MapToVm(user);
+            UserVm userVm = UserMapper.MapToVm(user, null);
             return userVm;
         }
 

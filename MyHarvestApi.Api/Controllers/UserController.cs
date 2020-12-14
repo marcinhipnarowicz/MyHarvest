@@ -105,7 +105,10 @@ namespace MyHarvestApi.Api.Controllers
 
                         _userService.AddUser(user);
 
-                        return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, user));
+                        var token = _userService.Authenticate(user.Email);
+                        RegisterVm registerVm = RegisterMapper.MapToVm(user, token);
+
+                        return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, registerVm));
                     }
                 }
                 //return BadRequest(new { message = "Podany użytkownik jest pusty" });

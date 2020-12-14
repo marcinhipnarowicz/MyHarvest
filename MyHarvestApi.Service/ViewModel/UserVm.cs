@@ -19,5 +19,7 @@ namespace MyHarvestApi.Service.ViewModel
         public int IdAccountType { get; set; }
 
         public int? IdBoss { get; set; }
+
+        public string Token { get; set; }
     }
 }
