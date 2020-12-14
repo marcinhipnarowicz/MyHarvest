@@ -49,7 +49,7 @@ namespace MyHarvestApi.Api
             services.AddScoped<IStatusOfTaskRepository, StatusOfTaskRepository>();
             services.AddScoped<IUserInformationRepository, UserInformationRepository>();
             services.AddScoped<IUserTaskRepository, UserTaskRepository>();
-
+            //a
             //service
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAccountTypeService, AccountTypeService>();

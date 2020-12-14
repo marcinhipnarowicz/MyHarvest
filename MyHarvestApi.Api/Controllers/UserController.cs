@@ -63,39 +63,20 @@ namespace MyHarvestApi.Api.Controllers
         [Route("Register")]
         public IActionResult Register(UserVm user)
         {
-            try
+            if (user != null)
             {
-                if (user != null)
+                if (_userService.IfExists(user.Email))
                 {
-                    if (_userService.IfExists(user.Email))
-                    {
-                        return BadRequest(new { message = "Użytkownik o podanym emailu już istnieje" });
-                    }
-                    else
-                    {
-                        _userService.AddUser(user);
-                        return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, null));
-                    }
+                    return BadRequest(new { message = "Użytkownik o podanym emailu już istnieje" });
                 }
-                return BadRequest(new { message = "Podany użytkownik jest pusty" });
+                else
+                {
+                    _userService.AddUser(user);
+                    return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, user));
+                }
             }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = "Błąd" } + ex.Message);
-            }
+            return BadRequest(new { message = "Podany użytkownik jest pusty" });
         }
-
-        ////[Authorize]
-        //[HttpPost]
-        //[Route("Register")]
-        //public async Task<ActionResult<User>> Add(User user)
-        //{
-        //    _db.Users.Add(user);
-
-        //    await _db.SaveChangesAsync();
-
-        //    return Ok();
-        //}
 
         [HttpGet]
         [Route("Get")]

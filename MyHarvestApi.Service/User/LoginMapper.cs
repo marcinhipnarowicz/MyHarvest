@@ -18,14 +18,6 @@ namespace MyHarvestApi.Service
                 Password = user.Password,
                 Token = token
             };
-
-            //return new LoginVm // w metodzie przekazywać jeszcze , string token
-            //{
-            //    Id = user.IdUser,
-            //    Email = user.Email,
-            //    Password = user.Password,
-            //    Token = token
-            //};
         }
     }
 }

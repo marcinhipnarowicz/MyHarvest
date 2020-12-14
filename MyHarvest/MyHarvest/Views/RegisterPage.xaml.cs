@@ -1,4 +1,5 @@
-﻿using MyHarvest.Services;
+﻿using MyHarvest.Base;
+using MyHarvest.Services;
 using MyHarvest.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -160,14 +161,14 @@ namespace MyHarvest.Views
             return true;
         }
 
-        private void registerButton_Clicked(object sender, EventArgs e)
+        private async void registerButton_Clicked(object sender, EventArgs e)
         {
             bool isEmailEntry = string.IsNullOrEmpty(emailEntry.Text);
             bool isPasswordEntry = string.IsNullOrEmpty(passwordEntry.Text);
 
             if (isEmailEntry || isPasswordEntry)
             {
-                DisplayAlert("Uwaga!", "Adres email lub hasło nie zostały wprowadzone", "Ok");
+                await DisplayAlert("Uwaga!", "Adres email lub hasło nie zostały wprowadzone", "Ok");
             }
             else
             {
@@ -183,27 +184,36 @@ namespace MyHarvest.Views
                                 Password = passwordEntry.Text,
                                 FirstName = firstNameEntry.Text,
                                 Surname = surnameEntry.Text,
-                                AccountType = accountTypePicker.SelectedIndex,
+                                IdAccountType = accountTypePicker.SelectedIndex + 1,
                                 BossKey = bossKeyEntry.Text
                             };
 
-                            Shell.Current.GoToAsync("//AboutPage");
+                            var data = await UserService.Register(userVm);
+                            if (data != null)
+                            {
+                                LocalConfig.UserModel = data;
+                                await Shell.Current.GoToAsync("//AboutPage");
+                            }
+                            else
+                            {
+                                await DisplayAlert("Uwaga!", "Rejestracja nie powiodła się", "Ok");
+                            }
                         }
                         else
                         {
-                            DisplayAlert("Uwaga!", "Hasła nie są identyczne", "Ok");
+                            await DisplayAlert("Uwaga!", "Hasła nie są identyczne", "Ok");
                         }
                     }
                     else
                     {
-                        DisplayAlert("Uwaga!", "Hasło musi zawierac osiem znaków, jedną dużą i małą literę, jedną cyfrę i  jeden znak specjalny", "Ok");
+                        await DisplayAlert("Uwaga!", "Hasło musi zawierac osiem znaków, jedną dużą i małą literę, jedną cyfrę i  jeden znak specjalny", "Ok");
                         //message.Text = "Hasło musi zawierac osiem znaków, jedną dużą i małą literę, jedną cyfrę i  jeden znak specjalny.";
                         //message.IsVisible = true;
                     }
                 }
                 else
                 {
-                    DisplayAlert("Uwaga!", "Niepoprawny adres email", "Ok");
+                    await DisplayAlert("Uwaga!", "Niepoprawny adres email", "Ok");
                     //message.Text = "Niepoprawny adres email";
                     //message.IsVisible = true;
                 }
