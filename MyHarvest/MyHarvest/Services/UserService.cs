@@ -11,6 +11,7 @@ namespace MyHarvest.Services
         private const string userControler = "User/";
         private const string login = "Login";
         private const string register = "Register";
+        private const string getUserFromBoss = "GetForBoss";
 
         public async static Task<LoginVm> Login(LoginVm user)
         {
@@ -24,6 +25,13 @@ namespace MyHarvest.Services
         {
             var address = Api.LoginAdress(userControler, register);
             var response = await Api.RequestAndSerialize<UserVm>(RestSharp.Method.POST, address, user);
+            return response;
+        }
+
+        public async static Task<List<UserVm>> GeUserFromBossList()
+        {
+            var address = Api.BuildAdress(userControler, getUserFromBoss);
+            var response = await Api.RequestAndSerialize<List<UserVm>>(RestSharp.Method.GET, address);
             return response;
         }
     }

@@ -16,8 +16,6 @@ namespace MyHarvest.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterPage : ContentPage
     {
-        private List<AccountTypeVm> accountTypeVmList;
-
         public RegisterPage()
         {
             InitializeComponent();

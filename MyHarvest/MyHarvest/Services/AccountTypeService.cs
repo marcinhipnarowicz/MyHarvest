@@ -9,11 +9,11 @@ namespace MyHarvest.Services
     public static class AccountTypeService
     {
         private const string accountTypeController = "AccountType/";
-        private const string get_all_accountType = "GetAccountType";
+        private const string getAllAccountType = "GetAccountType";
 
         public static async Task<List<AccountTypeVm>> GetAccountTypeList()
         {
-            var address = Api.BuildAdress(accountTypeController, get_all_accountType);
+            var address = Api.BuildAdress(accountTypeController, getAllAccountType);
             var response = await Api.RequestAndSerialize<List<AccountTypeVm>>(RestSharp.Method.GET, address);
             return response;
         }
