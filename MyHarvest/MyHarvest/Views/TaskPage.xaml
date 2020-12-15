@@ -8,7 +8,9 @@
              x:Name="BrowseTaskPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+" Command="{Binding AddItemCommand}" />
+        <ToolbarItem Text="+"
+
+                     Clicked="ToolbarItem_Clicked" />
     </ContentPage.ToolbarItems>
     <!--
       x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.

@@ -36,6 +36,7 @@ namespace MyHarvest.Views
         private async void registerUserButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new RegisterPage());
+            //await Navigation.PushAsync(new AddTaskPage());
         }
 
         private async void loginButton_Clicked(object sender, EventArgs e)

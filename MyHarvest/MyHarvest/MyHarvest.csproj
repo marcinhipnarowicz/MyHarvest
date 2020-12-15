@@ -22,13 +22,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\AddTaskPage.xaml.cs">
+      <DependentUpon>AddTaskPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\TaskPage.xaml.cs">
       <DependentUpon>TaskPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\AddTask.xaml">
+    <EmbeddedResource Update="Views\AddTaskPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MapPage.xaml">

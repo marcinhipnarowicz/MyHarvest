@@ -29,5 +29,10 @@ namespace MyHarvest.Views
             base.OnAppearing();
             _viewModel.OnAppearing();
         }
+
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddTaskPage());
+        }
     }
 }
