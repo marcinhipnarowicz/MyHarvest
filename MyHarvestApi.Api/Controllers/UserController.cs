@@ -22,6 +22,8 @@ namespace MyHarvestApi.Api.Controllers
         private IUserRepository _userRepository;
         private IUserService _userService;
 
+        public int FromQuery { get; private set; }
+
         public UserController(IUserRepository userRepo, IUserService userService)
         {
             _userRepository = userRepo;
@@ -104,7 +106,7 @@ namespace MyHarvestApi.Api.Controllers
                         user.Password = hash;
 
                         _userService.AddUser(user);
-
+                        user.Id = _userService.GetMaxId();
                         var token = _userService.Authenticate(user.Email);
                         RegisterVm registerVm = RegisterMapper.MapToVm(user, token);
 
@@ -122,6 +124,23 @@ namespace MyHarvestApi.Api.Controllers
         {
             var usersDb = _userRepository.GetUsers();
             return Ok(usersDb); //sam konwertuje na jsona. Ok oznacza status 200
+        }
+
+        [HttpGet]
+        [Route("GetForBoss")]//user/getForBoss?idboss=54
+        //[TokenAuthoriseAttribute]
+        public IActionResult GetUserFromBossList([FromQuery] int idBoss, string token)
+        {
+            try
+            {
+                var usersVm = _userService.GetEmployeeForBoss(idBoss);
+
+                return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, usersVm));
+            }
+            catch (Exception ex)
+            {
+                return Ok(ResponseManager.GenerateResponse("Błąd: \n" + ex.Message, (int)MessageType.Error, null));
+            }
         }
     }
 }

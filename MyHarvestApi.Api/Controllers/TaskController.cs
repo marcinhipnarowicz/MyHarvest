@@ -13,6 +13,7 @@ namespace MyHarvestApi.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [TokenAuthoriseAttribute]
     public class TaskController : ControllerBase
     {
         private ITaskRepository _taskRepository;

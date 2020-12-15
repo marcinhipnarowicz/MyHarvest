@@ -67,5 +67,17 @@ namespace MyHarvestApi.Repository
             }
             return null;
         }
+
+        public List<User> GetUsers(int idUser)
+        {
+            var usersDb = _db.Users.Where(x => x.IdBoss.Equals(idUser)).ToList();
+            return usersDb;
+        }
+
+        public int GetMaxId()
+        {
+            var maxIdUser = _db.Users.OrderByDescending(m => m.IdUser).FirstOrDefault();
+            return maxIdUser.IdUser;
+        }
     }
 }

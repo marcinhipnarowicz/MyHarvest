@@ -45,7 +45,8 @@
                 <Label Text="Lista pracowników"
                        FontAttributes="Bold"
                        FontSize="Title" />
-                <ListView x:Name="employeesListView">
+                <ListView x:Name="employeesListView"
+                          ItemsSource="{Binding Employees}">
                 </ListView>
 
                 <Button x:Name="mapsButton"

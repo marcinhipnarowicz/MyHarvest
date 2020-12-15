@@ -154,5 +154,19 @@ namespace MyHarvestApi.Service
 
             return comparer.Compare(hashOfPassword, hash) == 0;
         }
+
+        public List<UserVm> GetEmployeeForBoss(int idUser)
+        {
+            var employeeList = new List<UserVm>();
+            _users = _repo.GetUsers(idUser);
+            employeeList = UserMapper.MapList(_users.ToList());
+            return employeeList;
+        }
+
+        public int GetMaxId()
+        {
+            int nextId = _repo.GetMaxId();
+            return nextId;
+        }
     }
 }

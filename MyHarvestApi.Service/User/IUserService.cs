@@ -15,6 +15,8 @@ namespace MyHarvestApi.Service
 
         IEnumerable<User> GetAll();
 
+        List<UserVm> GetEmployeeForBoss(int idUser);
+
         UserVm GetByEmail(string email);
 
         void AddUser(UserVm userVm);
@@ -30,5 +32,7 @@ namespace MyHarvestApi.Service
         int GetIdBoss(string bossKey);
 
         string GetHash(HashAlgorithm hashAlgorithm, string password);
+
+        int GetMaxId();
     }
 }

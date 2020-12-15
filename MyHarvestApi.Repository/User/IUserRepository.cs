@@ -11,6 +11,8 @@ namespace MyHarvestApi.Repository
     {
         List<User> GetUsers();
 
+        List<User> GetUsers(int idUser);
+
         User GetUserByEmail(string email);
 
         void AddUser(User user);
@@ -20,5 +22,7 @@ namespace MyHarvestApi.Repository
         bool IfExistsBoss(string bossKey);
 
         User GetUserByBossKey(string bossKey);
+
+        int GetMaxId();
     }
 }

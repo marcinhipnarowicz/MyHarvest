@@ -28,9 +28,9 @@ namespace MyHarvest.Services
             return response;
         }
 
-        public async static Task<List<UserVm>> GeUserFromBossList()
+        public async static Task<List<UserVm>> GeUserFromBossList(int idUser)
         {
-            var address = Api.BuildAdress(userControler, getUserFromBoss);
+            var address = Api.BuildAdress(userControler, getUserFromBoss, "?idBoss=", idUser.ToString());
             var response = await Api.RequestAndSerialize<List<UserVm>>(RestSharp.Method.GET, address);
             return response;
         }

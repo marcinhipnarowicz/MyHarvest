@@ -14,6 +14,7 @@ namespace MyHarvestApi.Service
         {
             return new LoginVm
             {
+                Id = user.Id,
                 Email = user.Email,
                 Password = user.Password,
                 Token = token
