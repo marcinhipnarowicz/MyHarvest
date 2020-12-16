@@ -168,5 +168,12 @@ namespace MyHarvestApi.Service
             int nextId = _repo.GetMaxId();
             return nextId;
         }
+
+        public UserVm GetBossFromUser(int idUser)
+        {
+            User boss = _repo.GetBossFromUser(idUser);
+            UserVm bossVm = UserMapper.MapToVm(boss, null);
+            return bossVm;
+        }
     }
 }

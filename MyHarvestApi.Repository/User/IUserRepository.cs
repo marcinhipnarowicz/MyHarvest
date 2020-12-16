@@ -13,6 +13,8 @@ namespace MyHarvestApi.Repository
 
         List<User> GetUsers(int idUser);
 
+        User GetBossFromUser(int idUser);
+
         User GetUserByEmail(string email);
 
         void AddUser(User user);

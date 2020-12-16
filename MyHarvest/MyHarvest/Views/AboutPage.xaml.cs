@@ -48,12 +48,24 @@ namespace MyHarvest.Views
                 }
                 else
                 {
-                    _employeeList.Employees.Add("Nie posiadasz żadnych pracowników JESZCZE");
+                    _employeeList.Employees.Add("Nie posiadasz żadnych pracowników");
                 }
             }
             else if (LocalConfig.LoginModel.IdAccountType == 2)
             {
+                var data = await GetBossFormUser();
+
+                _employeeList.Employees.Clear();
                 lvTitleLabel.Text = "Twój szef to:";
+
+                if (data != null)
+                {
+                    _employeeList.Employees.Add(data.FirstName + " " + data.Surname);
+                }
+                else
+                {
+                    _employeeList.Employees.Add("Nie jesteś przypisany do żadnego szefa");
+                }
             }
         }
 
@@ -69,6 +81,8 @@ namespace MyHarvest.Views
         protected async virtual Task<UserVm> GetBossFormUser()
         {
             UserVm boss = new UserVm();
+
+            boss = await UserService.GetBossFormUser(LocalConfig.LoginModel.Id);
 
             return boss;
         }

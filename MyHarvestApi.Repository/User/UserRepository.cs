@@ -62,8 +62,22 @@ namespace MyHarvestApi.Repository
                 var userDb = _db.Users.FirstOrDefault(x => x.BossKey == bossKey);
                 if (userDb == null)
                 {
+                    return null;
                 }
                 return userDb;
+            }
+            return null;
+        }
+
+        public User GetBossFromUser(int idUser)
+        {
+            var userDb = _db.Users.FirstOrDefault(x => x.IdUser.Equals(idUser));
+
+            var bossDb = _db.Users.FirstOrDefault(x => x.IdUser.Equals(userDb.IdBoss));
+
+            if (bossDb != null)
+            {
+                return bossDb;
             }
             return null;
         }

@@ -17,6 +17,8 @@ namespace MyHarvestApi.Service
 
         List<UserVm> GetEmployeeForBoss(int idUser);
 
+        UserVm GetBossFromUser(int idUser);
+
         UserVm GetByEmail(string email);
 
         void AddUser(UserVm userVm);

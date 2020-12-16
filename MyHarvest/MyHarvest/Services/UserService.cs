@@ -12,6 +12,7 @@ namespace MyHarvest.Services
         private const string login = "Login";
         private const string register = "Register";
         private const string getUserFromBoss = "GetForBoss";
+        private const string getBossForUser = "GetBossForUser";
 
         public async static Task<LoginVm> Login(LoginVm user)
         {
@@ -32,6 +33,13 @@ namespace MyHarvest.Services
         {
             var address = Api.BuildAdress(userControler, getUserFromBoss, "?idBoss=", idUser.ToString());
             var response = await Api.RequestAndSerialize<List<UserVm>>(RestSharp.Method.GET, address);
+            return response;
+        }
+
+        public async static Task<UserVm> GetBossFormUser(int idUser)
+        {
+            var address = Api.BuildAdress(userControler, getBossForUser, "?idUser=", idUser.ToString());
+            var response = await Api.RequestAndSerialize<UserVm>(RestSharp.Method.GET, address);
             return response;
         }
     }

@@ -143,5 +143,22 @@ namespace MyHarvestApi.Api.Controllers
                 return Ok(ResponseManager.GenerateResponse("Błąd: \n" + ex.Message, (int)MessageType.Error, null));
             }
         }
+
+        [HttpGet]
+        [Route("GetBossForUser")]//user/getBossForUser?iduser=54
+        //[TokenAuthoriseAttribute]
+        public IActionResult GetBossForUser([FromQuery] int idUser, string token)
+        {
+            try
+            {
+                var usersVm = _userService.GetBossFromUser(idUser);
+
+                return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, usersVm));
+            }
+            catch (Exception ex)
+            {
+                return Ok(ResponseManager.GenerateResponse("Błąd: \n" + ex.Message, (int)MessageType.Error, null));
+            }
+        }
     }
 }
