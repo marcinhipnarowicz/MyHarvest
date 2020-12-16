@@ -190,7 +190,9 @@ namespace MyHarvest.Views
                             if (data != null)
                             {
                                 LocalConfig.UserModel = data;
-                                await Shell.Current.GoToAsync("//AboutPage");
+                                //await Shell.Current.GoToAsync("//AboutPage");
+                                await DisplayAlert("OK!", "Rejestracja powiodła się. Zaloguj się do swojego konta", "Ok");
+                                await Shell.Current.GoToAsync("//LoginPage");
                             }
                             else
                             {

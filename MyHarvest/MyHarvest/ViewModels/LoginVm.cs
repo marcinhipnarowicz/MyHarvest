@@ -9,6 +9,8 @@ namespace MyHarvest.ViewModels
         public int Id { get; set; }
         public string Email { get; set; }
 
+        public int IdAccountType { get; set; }
+
         public string Password { get; set; }
         public string Token { get; set; }
     }

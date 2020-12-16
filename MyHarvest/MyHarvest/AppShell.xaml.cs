@@ -11,6 +11,8 @@ namespace MyHarvest
         public AppShell()
         {
             InitializeComponent();
+            //Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+            Navigation.PushAsync(new LoginPage());
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
         }

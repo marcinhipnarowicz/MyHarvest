@@ -17,6 +17,7 @@ namespace MyHarvestApi.Service
                 Id = user.Id,
                 Email = user.Email,
                 Password = user.Password,
+                IdAccountType = user.IdAccountType,
                 Token = token
             };
         }

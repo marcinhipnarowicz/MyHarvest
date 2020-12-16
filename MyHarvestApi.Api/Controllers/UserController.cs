@@ -99,6 +99,7 @@ namespace MyHarvestApi.Api.Controllers
                             else
                             {
                                 user.IdBoss = _userService.GetIdBoss(user.BossKey);
+                                user.BossKey = null;
                             }
                         }
 
@@ -107,8 +108,8 @@ namespace MyHarvestApi.Api.Controllers
 
                         _userService.AddUser(user);
                         user.Id = _userService.GetMaxId();
-                        var token = _userService.Authenticate(user.Email);
-                        RegisterVm registerVm = RegisterMapper.MapToVm(user, token);
+                        //var token = _userService.Authenticate(user.Email);
+                        RegisterVm registerVm = RegisterMapper.MapToVm(user);
 
                         return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, registerVm));
                     }

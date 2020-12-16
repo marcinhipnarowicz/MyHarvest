@@ -10,7 +10,7 @@ namespace MyHarvestApi.Service
 {
     public class RegisterMapper
     {
-        public static RegisterVm MapToVm(UserVm user, string token)
+        public static RegisterVm MapToVm(UserVm user)
         {
             return new RegisterVm
             {
@@ -23,7 +23,6 @@ namespace MyHarvestApi.Service
                 IsVerified = user.IsVerified,
                 IdAccountType = user.IdAccountType,
                 IdBoss = user.IdBoss,
-                Token = token
             };
         }
     }

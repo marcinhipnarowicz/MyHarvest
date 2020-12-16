@@ -12,8 +12,9 @@ namespace MyHarvest
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            //DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
+            //MainPage = new LoginPage();
             //{
             //    BarBackgroundColor = Color.FromHex("#6eaa5e")
             //    //#20991a

@@ -1,4 +1,5 @@
-﻿using MyHarvest.Services;
+﻿using MyHarvest.Base;
+using MyHarvest.Services;
 using MyHarvest.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -30,39 +31,46 @@ namespace MyHarvest.Views
 
         public async void SetValueInListViewAsync()
         {
-            var data = await GetData();
-
-            _userVm = data;
-            _employeeList.Employees.Clear();
-
-            if (data != null)
+            if (LocalConfig.LoginModel.IdAccountType == 1)
             {
-                foreach (var item in data)
+                var data = await GetData();
+
+                _userVm = data;
+                _employeeList.Employees.Clear();
+                lvTitleLabel.Text = "Lista pracowników";
+
+                if (data != null)
                 {
-                    _employeeList.Employees.Add(item.FirstName + " " + item.Surname);
+                    foreach (var item in data)
+                    {
+                        _employeeList.Employees.Add(item.FirstName + " " + item.Surname);
+                    }
+                }
+                else
+                {
+                    _employeeList.Employees.Add("Nie posiadasz żadnych pracowników JESZCZE");
                 }
             }
-
-            //List<UserVm> userVm = new List<UserVm>();
-            ////userVm = await UserService.GeUserFromBossList();//pobrać wszystkich użytkowników dla danego szefa
-
-            //userVm = await UserService.GeUserFromBossList(54);
-
-            ////employeesListView.ItemsSource = new string[] { "marcin H", "mmmm aaaa" };
-
-            //foreach (var item in userVm)
-            //{
-            //    employeesListView.ItemsSource = new string[] { item.FirstName + " " + item.Surname };
-            //}
+            else if (LocalConfig.LoginModel.IdAccountType == 2)
+            {
+                lvTitleLabel.Text = "Twój szef to:";
+            }
         }
 
         protected async virtual Task<List<UserVm>> GetData()
         {
             List<UserVm> data = new List<UserVm>();
 
-            data = await UserService.GeUserFromBossList(54);
+            data = await UserService.GeUserFromBossList(LocalConfig.LoginModel.Id);//dodać pobieranie id zalogowanego użytkownika
 
             return data;
+        }
+
+        protected async virtual Task<UserVm> GetBossFormUser()
+        {
+            UserVm boss = new UserVm();
+
+            return boss;
         }
 
         private void mapsButton_Clicked(object sender, EventArgs e)
