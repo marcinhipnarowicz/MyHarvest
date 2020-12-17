@@ -14,9 +14,16 @@ namespace MyHarvest.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+        private bool isTest = true;
+
         public LoginPage()
         {
             InitializeComponent();
+            if (isTest)
+            {
+                emailEntry.Text = "t1@op.pl";
+                passwordEntry.Text = "marcin";
+            }
         }
 
         private bool IsValidEmail(string text)

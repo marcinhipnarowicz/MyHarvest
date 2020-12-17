@@ -13,7 +13,7 @@ namespace MyHarvest.Services
 
         public static async Task<List<StatusOfTaskVm>> GetStatusOfTaskList()
         {
-            var address = Api.BuildAdress(statusOfTaskController, get_all_statusOfTask, null, null, "&token=");
+            var address = Api.BuildAdress(statusOfTaskController, get_all_statusOfTask, null, null);//, "&token="
             var response = await Api.RequestAndSerialize<List<StatusOfTaskVm>>(RestSharp.Method.GET, address);
             return response;
         }

@@ -26,17 +26,18 @@
                     AutoSize="TextChanges"
                     FontSize="Medium"
                     Margin="0" />
-            <Label Text="Zadanie dla"
+            <Label Text="Zadanie dla:"
                    FontSize="Medium" />
             <StackLayout x:Name="employeesStackLayout">
             </StackLayout>
 
-            <Button Text="Dodaj"
-                    Command="{Binding SaveCommand}"
+            <Button x:Name="addButton"
+                    Text="Zapisz"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="EndAndExpand"
                     CornerRadius="{StaticResource radiusCountButton}"
-                    BackgroundColor="{StaticResource backgroundButtonColor}" />
+                    BackgroundColor="{StaticResource backgroundButtonColor}"
+                    Clicked="addButton_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
