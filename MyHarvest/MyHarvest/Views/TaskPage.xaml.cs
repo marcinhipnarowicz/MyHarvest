@@ -35,7 +35,8 @@ namespace MyHarvest.Views
         {
             if (LocalConfig.LoginModel.IdAccountType == 1)
             {
-                await Navigation.PushAsync(new AddTaskPage());
+                //await Navigation.PushAsync(new AddTaskPage());
+                await Shell.Current.GoToAsync("AddTaskPage");
             }
             else
             {

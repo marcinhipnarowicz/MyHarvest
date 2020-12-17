@@ -15,6 +15,7 @@ namespace MyHarvest
             Navigation.PushAsync(new LoginPage());
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(AddTaskPage), typeof(AddTaskPage));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
