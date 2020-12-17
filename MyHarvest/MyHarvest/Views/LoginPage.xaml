@@ -18,6 +18,7 @@
         <Label x:Name="message"
                IsVisible="false"
                TextColor="Red" />
+
         <Button x:Name="loginButton"
                 Margin="0,50,0,0"
                 Text="Zaloguj"

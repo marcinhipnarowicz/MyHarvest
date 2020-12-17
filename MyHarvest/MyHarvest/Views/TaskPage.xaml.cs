@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 using MyHarvest.Models;
 using MyHarvest.Views;
 using MyHarvest.ViewModels;
+using MyHarvest.Base;
 
 namespace MyHarvest.Views
 {
@@ -32,7 +33,14 @@ namespace MyHarvest.Views
 
         private async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddTaskPage());
+            if (LocalConfig.LoginModel.IdAccountType == 1)
+            {
+                await Navigation.PushAsync(new AddTaskPage());
+            }
+            else
+            {
+                await DisplayAlert("Uwaga!", "Nie masz uprawnień do dodawania zadań", "Ok");
+            }
         }
     }
 }
