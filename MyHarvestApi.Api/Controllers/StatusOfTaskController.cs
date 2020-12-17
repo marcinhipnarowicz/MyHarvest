@@ -10,6 +10,7 @@ namespace MyHarvestApi.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [TokenAuthoriseAttribute]
     public class StatusOfTaskController : ControllerBase
     {
         private IStatusOfTaskService _service;
@@ -21,7 +22,7 @@ namespace MyHarvestApi.Api.Controllers
 
         [HttpGet]
         [Route("GetStatusOfTask")]
-        public IActionResult Get()
+        public IActionResult Get(string token)
         {
             var statusOfTaskDb = _service.GetAllStatusOfTask();
             return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, statusOfTaskDb));

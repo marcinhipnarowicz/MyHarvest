@@ -16,13 +16,10 @@ namespace MyHarvest.Views
     public partial class AddTaskPage : ContentPage
     {
         private List<UserVm> _userVm;
-        private EmployeeListVm _employeeList;
 
         public AddTaskPage()
         {
             InitializeComponent();
-            //SetValueInPickerAsync();
-            //SetValueInListViewAsync();
             Init();
         }
 
@@ -31,15 +28,13 @@ namespace MyHarvest.Views
             var data = await GetData();
             _userVm = data;
 
-            //employeesStackLayout.Children.Add(a);
-
             employeesStackLayout.Orientation = StackOrientation.Vertical;
 
             if (data != null)
             {
                 foreach (var item in data)
                 {
-                    var label = new Label();
+                    var label = new Label() { FontSize = 17 };
                     var checkbox = new CheckBox();
                     StackLayout stackLayoutLine = new StackLayout();
 
@@ -48,45 +43,26 @@ namespace MyHarvest.Views
 
                     label.Text = item.FirstName + " " + item.Surname;
 
-                    stackLayoutLine.Children.Add(label);
                     stackLayoutLine.Children.Add(checkbox);
+                    stackLayoutLine.Children.Add(label);
                 }
             }
             else
             {
-                employeesStackLayout.Children.Add(new Label { Text = "Nie posiadasz żadnych pracowników" });
+                employeesStackLayout.Children.Add(new Label { Text = "Nie posiadasz żadnych pracowników", TextColor = Color.Red }); ;
             }
+
+            //var check = new CheckBox();
+            //var labelTap = new TapGestureRecognizer();
+            //labelTap.Tapped += (s, e) =>
+            //{
+            //};
+            //var label1 = new Label();
+            //label1.GestureRecognizers.Add(labelTap);
         }
 
-        public async void SetValueInPickerAsync()
+        private void OnCheckBoxcheckBox(object sender, CheckedChangedEventArgs e)
         {
-            List<StatusOfTaskVm> statusOfTaskVm = new List<StatusOfTaskVm>();
-            statusOfTaskVm = await StatusOfTaskService.GetStatusOfTaskList();
-
-            foreach (var item in statusOfTaskVm)
-            {
-                //statusOfTaskPicker.Items.Add(item.Name);
-            }
-        }
-
-        public async void SetValueInListViewAsync()
-        {
-            var data = await GetData();
-
-            _userVm = data;
-            _employeeList.Employees.Clear();
-
-            if (data != null)
-            {
-                foreach (var item in data)
-                {
-                    _employeeList.Employees.Add(item.FirstName + " " + item.Surname);
-                }
-            }
-            else
-            {
-                _employeeList.Employees.Add("Nie posiadasz żadnych pracowników");
-            }
         }
 
         protected async virtual Task<List<UserVm>> GetData()
@@ -96,17 +72,6 @@ namespace MyHarvest.Views
             data = await UserService.GeUserFromBossList(LocalConfig.LoginModel.Id);//dodać pobieranie id zalogowanego użytkownika
 
             return data;
-        }
-
-        private void StatusOfTaskPicker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var picker = (Picker)sender;
-            int selectedIndex = picker.SelectedIndex;
-        }
-
-        private void employeesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var selectEmployee = e.SelectedItem as EmployeeListVm;
         }
     }
 }

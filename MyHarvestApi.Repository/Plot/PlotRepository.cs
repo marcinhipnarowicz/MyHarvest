@@ -1,4 +1,5 @@
 ﻿using MyHarvestApi.Entity.Context;
+using MyHarvestApi.Entity.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,12 @@ namespace MyHarvestApi.Repository
         public PlotRepository(ApplicationDbContext db)
         {
             _db = db;
+        }
+
+        public void AddPlot(Plot plot)
+        {
+            _db.Plots.Add(plot);
+            _db.SaveChanges();
         }
     }
 }

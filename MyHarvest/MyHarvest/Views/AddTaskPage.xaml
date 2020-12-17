@@ -26,18 +26,8 @@
                     AutoSize="TextChanges"
                     FontSize="Medium"
                     Margin="0" />
-            <!--<Label Text="Status zadania"
-                   FontSize="Medium" />-->
-            <!--<Picker x:Name="statusOfTaskPicker"
-                    SelectedIndexChanged="StatusOfTaskPicker_SelectedIndexChanged">
-            </Picker>-->
             <Label Text="Zadanie dla"
                    FontSize="Medium" />
-
-            <!--<ListView x:Name="employeesListView"
-                      ItemsSource="{Binding Employees}"
-                      ItemSelected ="employeesListView_ItemSelected">
-            </ListView>-->
             <StackLayout x:Name="employeesStackLayout">
             </StackLayout>
 

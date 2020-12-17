@@ -129,7 +129,7 @@ namespace MyHarvestApi.Api.Controllers
 
         [HttpGet]
         [Route("GetForBoss")]//user/getForBoss?idboss=54
-        //[TokenAuthoriseAttribute]
+        [TokenAuthoriseAttribute]
         public IActionResult GetUserFromBossList([FromQuery] int idBoss, string token)
         {
             try
@@ -146,7 +146,7 @@ namespace MyHarvestApi.Api.Controllers
 
         [HttpGet]
         [Route("GetBossForUser")]//user/getBossForUser?iduser=54
-        //[TokenAuthoriseAttribute]
+        [TokenAuthoriseAttribute]
         public IActionResult GetBossForUser([FromQuery] int idUser, string token)
         {
             try
