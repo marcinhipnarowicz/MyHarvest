@@ -224,6 +224,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatusOfTask\IStatusOfTaskService.cs" />
     <Compile Include="StatusOfTask\StatusOfTaskService.cs" />
+    <Compile Include="Task\ITaskService.cs" />
+    <Compile Include="Task\TaskMapper.cs" />
+    <Compile Include="Task\TaskService.cs" />
+    <Compile Include="Task\TaskVm.cs" />
     <Compile Include="User\IUserService.cs" />
     <Compile Include="User\LoginMapper.cs" />
     <Compile Include="User\RegisterMapper.cs" />

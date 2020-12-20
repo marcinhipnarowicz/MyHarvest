@@ -165,8 +165,8 @@ namespace MyHarvestApi.Service
 
         public int GetMaxId()
         {
-            int nextId = _repo.GetMaxId();
-            return nextId;
+            int maxId = _repo.GetMaxId();
+            return maxId;
         }
 
         public UserVm GetBossFromUser(int idUser)

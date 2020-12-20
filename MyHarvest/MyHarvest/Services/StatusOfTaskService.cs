@@ -9,11 +9,11 @@ namespace MyHarvest.Services
     public static class StatusOfTaskService
     {
         private const string statusOfTaskController = "StatusOfTask/";
-        private const string get_all_statusOfTask = "GetStatusOfTask";
+        private const string getAllStatusOfTask = "GetStatusOfTask";
 
         public static async Task<List<StatusOfTaskVm>> GetStatusOfTaskList()
         {
-            var address = Api.BuildAdress(statusOfTaskController, get_all_statusOfTask, null, null);//, "&token="
+            var address = Api.BuildAdress(statusOfTaskController, getAllStatusOfTask, null, null);//, "&token="
             var response = await Api.RequestAndSerialize<List<StatusOfTaskVm>>(RestSharp.Method.GET, address);
             return response;
         }

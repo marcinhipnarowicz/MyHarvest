@@ -7,20 +7,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyHarvestApi.Entity.Context;
 using MyHarvestApi.Repository;
+using MyHarvestApi.Service;
+using MyHarvestApi.Service.Enum;
 using Task = MyHarvestApi.Entity.Model.Task;
 
 namespace MyHarvestApi.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [TokenAuthoriseAttribute]
+    //[TokenAuthoriseAttribute]
     public class TaskController : ControllerBase
     {
-        private ITaskRepository _taskRepository;
+        private ITaskRepository _taskRepository;//wyrzucić
+        private ITaskService _taskService;
 
-        public TaskController(ITaskRepository taskRepo)
+        public TaskController(ITaskRepository taskRepo, ITaskService taskService)
         {
             _taskRepository = taskRepo;
+            _taskService = taskService;
         }
 
         [HttpGet]
@@ -38,12 +42,20 @@ namespace MyHarvestApi.Api.Controllers
             return Ok(singleTask);
         }
 
-        [HttpPost("{id}")]
-        public IActionResult Add(Task task)
+        [HttpPost]
+        [Route("AddTask")]
+        public IActionResult Add(TaskVm task)
         {
-            _taskRepository.AddTask(task);
-
-            return Ok();
+            if (task == null)
+            {
+                return Ok(ResponseManager.GenerateResponse("Błąd: podane zadanie jest puste", (int)MessageType.Error, null));
+            }
+            else
+            {
+                _taskService.AddTask(task);
+                task.IdTask = _taskService.GetMaxId();
+                return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, task));
+            }
         }
 
         //PUT api/task/1

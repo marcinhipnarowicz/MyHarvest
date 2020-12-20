@@ -39,6 +39,8 @@ namespace MyHarvestApi.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Name");
+
                     b.HasKey("IdPlot");
 
                     b.ToTable("Plots");

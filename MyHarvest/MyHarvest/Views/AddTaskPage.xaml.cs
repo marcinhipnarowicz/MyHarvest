@@ -91,9 +91,51 @@ namespace MyHarvest.Views
             return result;
         }
 
-        private void addButton_Clicked(object sender, EventArgs e)
+        private async void addButton_Clicked(object sender, EventArgs e)
         {
-            GetCheckEmployees();
+            bool isTaskNameEditor = string.IsNullOrEmpty(taskNameEditor.Text);
+            List<int> IdEmployeesList = GetCheckEmployees();
+
+            if (IdEmployeesList.Count != 0)
+            {
+                if (isTaskNameEditor)
+                {
+                    await DisplayAlert("Uwaga!", "Nazwa zadania jest pusta", "Ok");
+                }
+                else
+                {
+                    var taskVm = new TaskVm()
+                    {
+                        Name = taskNameEditor.Text,
+                        Description = taskDescriptionEditor.Text
+                    };
+
+                    var data = await TaskService.AddTask(taskVm);
+
+                    if (IdEmployeesList.Count == 0)
+                    {
+                        await DisplayAlert("Uwaga!", "Nie wybrałeś pracownika do wykonania zadania", "Ok");
+                    }
+                    else
+                    {
+                        foreach (var item in IdEmployeesList)
+                        {
+                            var userInformationVm = new UserInformationVm
+                            {
+                                IdUser = item,
+                                IdTask = data.IdTask,
+                                Area = taskAreaEditor.Text,
+                                IdTaskStatus = 1
+                            };
+                            var a = userInformationVm;//w tej linijce musiałbym dodać do bazy userInformation
+                        }
+                    }
+                }
+            }
+            else
+            {
+                await DisplayAlert("Uwaga!", "Nie wybrałeś pracownika do wykonania zadania", "Ok");
+            }
         }
     }
 }

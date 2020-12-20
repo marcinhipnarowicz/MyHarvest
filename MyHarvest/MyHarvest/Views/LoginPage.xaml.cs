@@ -19,6 +19,9 @@ namespace MyHarvest.Views
         public LoginPage()
         {
             InitializeComponent();
+
+            Shell.SetTabBarIsVisible(this, false);
+
             if (isTest)
             {
                 emailEntry.Text = "t1@op.pl";
@@ -53,7 +56,7 @@ namespace MyHarvest.Views
 
             if (isEmailEntry || isPasswordEntry)
             {
-                await DisplayAlert("Uwaga!", "Adres email lub hasło nie zostały wprowadzone", "Ok");
+                await DisplayAlert("Uwaga!", "Login lub hasło są puste", "Ok");
             }
             else
             {

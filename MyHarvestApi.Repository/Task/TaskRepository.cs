@@ -31,6 +31,12 @@ namespace MyHarvestApi.Repository
             _db.SaveChanges();
         }
 
+        public int GetMaxId()
+        {
+            var maxIdTask = _db.Tasks.OrderByDescending(t => t.IdTask).FirstOrDefault();
+            return maxIdTask.IdTask;
+        }
+
         public Task GetOneTask(int id)
         {
             var task = _db.Tasks.FirstOrDefault(x => x.IdTask == id);

@@ -18,5 +18,7 @@ namespace MyHarvestApi.Repository
         void EditTask(int id, Task task);
 
         bool IfTaskExist(int id);
+
+        int GetMaxId();
     }
 }
