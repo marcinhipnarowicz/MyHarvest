@@ -1,4 +1,5 @@
 ﻿using MyHarvestApi.Entity.Context;
+using MyHarvestApi.Entity.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,12 @@ namespace MyHarvestApi.Repository
         public UserInformationRepository(ApplicationDbContext db)
         {
             _db = db;
+        }
+
+        public void AddUserInformation(UserInformation userInformation)
+        {
+            _db.UsersInformation.Add(userInformation);
+            _db.SaveChanges();
         }
     }
 }

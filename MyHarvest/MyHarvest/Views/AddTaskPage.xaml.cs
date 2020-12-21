@@ -127,7 +127,10 @@ namespace MyHarvest.Views
                                 Area = taskAreaEditor.Text,
                                 IdTaskStatus = 1
                             };
-                            var a = userInformationVm;//w tej linijce musiałbym dodać do bazy userInformation
+
+                            UserInformationService.AddUserInformation(userInformationVm);
+                            await DisplayAlert("OK!", "Pomyślnie dodano zadania!", "Ok");
+                            await Shell.Current.GoToAsync("//TaskPage");
                         }
                     }
                 }

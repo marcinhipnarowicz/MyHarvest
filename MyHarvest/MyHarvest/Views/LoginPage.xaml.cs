@@ -87,5 +87,10 @@ namespace MyHarvest.Views
                 }
             }
         }
+
+        private async void forgetPasswordButton_Clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Błąd!", "Zadanie nieobsługiwane", "Ok");
+        }
     }
 }

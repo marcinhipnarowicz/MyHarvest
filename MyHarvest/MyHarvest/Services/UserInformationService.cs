@@ -11,11 +11,10 @@ namespace MyHarvest.Services
         private const string userInformationController = "UserInformation/";
         private const string addUserInformation = "AddUserInformation";
 
-        public async static Task<UserInformationVm> AddTask(UserInformationVm userInformation)
+        public async static void AddUserInformation(UserInformationVm userInformation)
         {
             var address = Api.LoginAdress(userInformationController, addUserInformation);
-            var response = await Api.RequestAndSerialize<UserInformationVm>(RestSharp.Method.POST, address, userInformation);
-            return response;
+            await Api.Request(RestSharp.Method.POST, address, userInformation);
         }
     }
 }

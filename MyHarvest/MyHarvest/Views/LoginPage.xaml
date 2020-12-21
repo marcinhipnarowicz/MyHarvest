@@ -32,6 +32,12 @@
                 CornerRadius="{StaticResource radiusCountButton}"
                 BackgroundColor="{StaticResource backgroundButtonColor}"
                 Clicked="registerUserButton_Clicked" />
+        <Button x:Name="forgetPasswordButton"
+                HorizontalOptions="Start"
+                Text="Nie pamiętasz hasła?"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                TextColor="Red"
+                Clicked="forgetPasswordButton_Clicked" />
     </StackLayout>
 </ContentPage>
-<!--nie wiem co to Command="{Binding LoginCommand}"-->
