@@ -15,7 +15,8 @@
 
             <Color x:Key="entryBackgroundColor">#c0c0c0</Color>
 
-            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Primary">#C98721</Color>
+            <!--kolor łącznie paska głownego, paska na dole i menu rozwijane-->
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
