@@ -28,9 +28,14 @@ namespace MyHarvest.Services
             return BuildAdress(controller, controllerMethod, null, null);
         }
 
-        public static string BuildAdress(string controller, string controllerMethod, string parameterName, string parameterValue)//, string secondParameterName = "&token="
+        public static string BuildAdress(string controller, string controllerMethod, string parameterName, string parameterValue)
         {
-            return $"{ApiConfig.ConnectionString + controller + controllerMethod + parameterName + parameterValue }";//+ secondParameterName + LocalConfig.LoginModel.Token
+            return $"{ApiConfig.ConnectionString + controller + controllerMethod + parameterName + parameterValue}";
+        }
+
+        public static string BuildAdress(string controller, string controllerMethod, string parameterName, string parameterValue, string secondParameterName = "&token=")//, string secondParameterName = "&token="
+        {
+            return $"{ApiConfig.ConnectionString + controller + controllerMethod + parameterName + parameterValue + secondParameterName + LocalConfig.LoginModel.Token}";//+ secondParameterName + LocalConfig.LoginModel.Token
         }
 
         //public static string BuildAdress(string controller, string controllerMethod)

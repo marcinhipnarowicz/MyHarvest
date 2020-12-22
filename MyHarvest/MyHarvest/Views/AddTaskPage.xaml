@@ -5,37 +5,39 @@
 
              Title="Nowe zadanie">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center"
+        <ScrollView>
+
+            <StackLayout VerticalOptions="Center"
                  Margin="20">
-            <Label Text="Nazwa"
+                <Label Text="Nazwa"
                    FontSize="Medium" />
-            <Editor x:Name="taskNameEditor"
+                <Editor x:Name="taskNameEditor"
                    FontSize="Medium"
                    AutoSize="TextChanges" />
-            <Label Text="Opis"
+                <Label Text="Opis"
                    FontSize="Medium" />
-            <Editor x:Name="taskDescriptionEditor"
+                <Editor x:Name="taskDescriptionEditor"
                     AutoSize="TextChanges"
                     FontSize="Medium"
                     Margin="0" />
-            <Label Text="Powierzchnia"
+                <Label Text="Powierzchnia"
                    FontSize="Medium" />
-            <Editor x:Name="taskAreaEditor"
-                    AutoSize="TextChanges"
+                <Entry x:Name="taskAreaEditor"
                     FontSize="Medium"
                     Margin="0" />
-            <Label Text="Zadanie dla:"
+                <Label Text="Zadanie dla:"
                    FontSize="Medium" />
-            <StackLayout x:Name="employeesStackLayout">
-            </StackLayout>
+                <StackLayout x:Name="employeesStackLayout">
+                </StackLayout>
 
-            <Button x:Name="addButton"
+                <Button x:Name="addButton"
                     Text="Zapisz"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="EndAndExpand"
                     CornerRadius="{StaticResource radiusCountButton}"
                     BackgroundColor="{StaticResource backgroundButtonColor}"
                     Clicked="addButton_Clicked" />
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

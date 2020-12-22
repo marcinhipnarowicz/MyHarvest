@@ -15,7 +15,6 @@ namespace MyHarvestApi.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[TokenAuthoriseAttribute]
     public class TaskController : ControllerBase
     {
         private ITaskRepository _taskRepository;//wyrzucić
@@ -44,7 +43,8 @@ namespace MyHarvestApi.Api.Controllers
 
         [HttpPost]
         [Route("AddTask")]
-        public IActionResult Add(TaskVm task)
+        [TokenAuthoriseAttribute]
+        public IActionResult Add(TaskVm task, string token)
         {
             if (task == null)
             {

@@ -13,7 +13,7 @@ namespace MyHarvest.Services
 
         public async static void AddUserInformation(UserInformationVm userInformation)
         {
-            var address = Api.LoginAdress(userInformationController, addUserInformation);
+            var address = Api.BuildAdress(userInformationController, addUserInformation, null, null, "&token=");//
             await Api.Request(RestSharp.Method.POST, address, userInformation);
         }
     }

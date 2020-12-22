@@ -130,7 +130,7 @@ namespace MyHarvest.Views
 
                             UserInformationService.AddUserInformation(userInformationVm);
                             await DisplayAlert("OK!", "Pomyślnie dodano zadania!", "Ok");
-                            await Shell.Current.GoToAsync("//TaskPage");
+                            await Shell.Current.GoToAsync("..");//cofajnie do poprzedniej strony
                         }
                     }
                 }

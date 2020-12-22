@@ -13,7 +13,7 @@ namespace MyHarvest.Services
 
         public async static Task<TaskVm> AddTask(TaskVm task)
         {
-            var address = Api.BuildAdress(taskController, addTask, null, null);
+            var address = Api.BuildAdress(taskController, addTask, null, null, "?token=");//
             var response = await Api.RequestAndSerialize<TaskVm>(RestSharp.Method.POST, address, task);
             return response;
         }

@@ -11,6 +11,7 @@ namespace MyHarvestApi.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [TokenAuthoriseAttribute]
     public class UserInformationController : ControllerBase
     {
         private IUserInformationService _service;
@@ -22,7 +23,7 @@ namespace MyHarvestApi.Api.Controllers
 
         [HttpPost]
         [Route("AddUserInformation")]
-        public IActionResult Add(UserInformationVm userInformation)
+        public IActionResult Add(UserInformationVm userInformation, string token)
         {
             if (userInformation == null)
             {

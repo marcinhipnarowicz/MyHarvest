@@ -31,14 +31,14 @@ namespace MyHarvest.Services
 
         public async static Task<List<UserVm>> GeUserFromBossList(int idUser)
         {
-            var address = Api.BuildAdress(userControler, getUserFromBoss, "?idBoss=", idUser.ToString());//, "&token="
+            var address = Api.BuildAdress(userControler, getUserFromBoss, "?idBoss=", idUser.ToString(), "&token=");//
             var response = await Api.RequestAndSerialize<List<UserVm>>(RestSharp.Method.GET, address);
             return response;
         }
 
         public async static Task<UserVm> GetBossFormUser(int idUser)
         {
-            var address = Api.BuildAdress(userControler, getBossForUser, "?idUser=", idUser.ToString());//, "&token="
+            var address = Api.BuildAdress(userControler, getBossForUser, "?idUser=", idUser.ToString(), "&token=");//
             var response = await Api.RequestAndSerialize<UserVm>(RestSharp.Method.GET, address);
             return response;
         }

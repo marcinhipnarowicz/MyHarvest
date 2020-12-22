@@ -10,7 +10,7 @@ namespace MyHarvestApi.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[TokenAuthoriseAttribute]
+    [TokenAuthoriseAttribute]
     public class StatusOfTaskController : ControllerBase
     {
         private IStatusOfTaskService _service;
