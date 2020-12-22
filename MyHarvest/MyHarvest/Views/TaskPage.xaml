@@ -7,7 +7,7 @@
              xmlns:model="clr-namespace:MyHarvest.Models"
              x:Name="BrowseTaskPage">
 
-    <ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems >
         <ToolbarItem Text="+"
                      Clicked="ToolbarItem_Clicked" />
     </ContentPage.ToolbarItems>
