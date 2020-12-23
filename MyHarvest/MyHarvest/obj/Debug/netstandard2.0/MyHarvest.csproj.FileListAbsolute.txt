@@ -23,3 +23,4 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarves
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\Views\ProfilPage.xaml.g.cs
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\MyHarvest.csproj.CoreCompileInputs.cache
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\XamlC.stamp
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\MyHarvest.csprojAssemblyReference.cache

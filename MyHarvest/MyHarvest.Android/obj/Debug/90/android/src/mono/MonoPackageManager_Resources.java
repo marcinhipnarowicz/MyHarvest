@@ -3,6 +3,8 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "MyHarvest.Android.dll" comes first in this list. */
 		"MyHarvest.Android.dll",
+		"Acr.UserDialogs.dll",
+		"AndHUD.dll",
 		"FormsViewGroup.dll",
 		"MyHarvest.dll",
 		"Plugin.Geolocator.dll",

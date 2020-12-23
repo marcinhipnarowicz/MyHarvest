@@ -1,3 +1,5 @@
+Acr.UserDialogs
+AndHUD
 FormsViewGroup
 Plugin.Geolocator
 Plugin.Permissions
@@ -47,5 +49,3 @@ Xamarin.GooglePlayServices.Base
 Xamarin.GooglePlayServices.Basement
 Xamarin.GooglePlayServices.Maps
 Xamarin.GooglePlayServices.Tasks
-Acr.UserDialogs
-AndHUD

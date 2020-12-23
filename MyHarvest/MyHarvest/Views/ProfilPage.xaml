@@ -21,13 +21,6 @@
                 BackgroundColor="Red"
                 Clicked="DeleteBossButton_Clicked"
                 IsVisible="False" />
-
-        <Button x:Name="changePasswordButton"
-                Margin="0,20,0,0"
-                Text="Zmień hasło"
-                CornerRadius="{StaticResource radiusCountButton}"
-                BackgroundColor="{StaticResource backgroundButtonColor}"
-                Clicked="changePasswordButton_Clicked" />
         <Entry x:Name="passwordEntry"
                Placeholder="Hasło"
                IsPassword="True"
@@ -36,5 +29,12 @@
                Placeholder="Powtórz hasło"
                IsPassword="True"
                IsVisible="False" />
+
+        <Button x:Name="changePasswordButton"
+                Margin="0,20,0,0"
+                Text="Zmień hasło"
+                CornerRadius="{StaticResource radiusCountButton}"
+                BackgroundColor="{StaticResource backgroundButtonColor}"
+                Clicked="changePasswordButton_Clicked" />
     </StackLayout>
 </ContentPage>

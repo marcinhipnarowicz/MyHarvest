@@ -19,6 +19,8 @@ namespace MyHarvest.Views
         public ProfilPage()
         {
             InitializeComponent();
+            GetData();
+            SetData();
         }
 
         private void SetData()
@@ -42,7 +44,15 @@ namespace MyHarvest.Views
             SurnameEntry.Text = worker.Surname;
         }
 
-        private void DeleteBossButton_Clicked(object sender, EventArgs e)
+        private async void DeleteBossButton_Clicked(object sender, EventArgs e)
+        {
+            if (await UserDialogs.Instance.ConfirmAsync("Czy na pewno chcesz opuścić brygadę szefa?", "Potwierdź", "Tak", "Anuluj"))
+            {
+                UserService.RemoveBossOfEmployee(LocalConfig.LoginModel.Id);
+            }
+        }
+
+        private async void changePasswordButton_Clicked(object sender, EventArgs e)
         {
             if (!passwordEntry.IsVisible)
             {
@@ -51,14 +61,19 @@ namespace MyHarvest.Views
             }
             else
             {
-            }
-        }
+                if (passwordEntry.Text == confirmPasswordEntry.Text)
+                {
+                    var userVm = new UserVm()
+                    {
+                        Password = passwordEntry.Text
+                    };
 
-        private async void changePasswordButton_Clicked(object sender, EventArgs e)
-        {
-            if (await UserDialogs.Instance.ConfirmAsync("Czy na pewno chcesz opuścić brygadę szefa?", "Potwierdź", "Tak", "Anuluj"))
-            {
-                UserService.RemoveBossOfEmployee(LocalConfig.LoginModel.Id);
+                    //metoda z UserService, która zmieni hasło w bazie
+                }
+                else
+                {
+                    await DisplayAlert("Uwaga!", "Hasła nie są identyczne", "Ok");
+                }
             }
         }
     }

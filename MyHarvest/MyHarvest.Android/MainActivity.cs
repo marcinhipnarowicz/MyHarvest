@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using MyHarvest.Views;
+using Acr.UserDialogs;
 
 namespace MyHarvest.Droid
 {
@@ -23,6 +24,9 @@ namespace MyHarvest.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.FormsMaps.Init(this, savedInstanceState);
+
+            UserDialogs.Init(this);
+
             LoadApplication(new App());
         }
 
