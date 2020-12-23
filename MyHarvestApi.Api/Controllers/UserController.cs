@@ -170,5 +170,21 @@ namespace MyHarvestApi.Api.Controllers
             _userService.RemoveBossOfEmployee(id);
             return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, null));
         }
+
+        [HttpPost]
+        [Route("AddNewBossForEmployee")]
+        [TokenAuthoriseAttribute]
+        public IActionResult AddNewBossForEmployee(UserVm user, int id, string token)
+        {
+            if (user == null)
+            {
+                return Ok(ResponseManager.GenerateResponse("Błąd: podane zadanie jest puste", (int)MessageType.Error, null));
+            }
+            else
+            {
+                _userService.AddNewBossForEmployee(user, id);
+                return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, null));
+            }
+        }
     }
 }

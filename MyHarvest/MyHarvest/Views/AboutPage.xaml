@@ -48,12 +48,12 @@
                        FontSize="Title" />
                 <ListView x:Name="employeesListView"
                     ItemsSource="{Binding Employees}">
-                    <ListView.ItemTemplate>
+                    <!--<ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="Cos"
                                       Detail="Cos2" />
                         </DataTemplate>
-                    </ListView.ItemTemplate>
+                    </ListView.ItemTemplate>-->
                 </ListView>
 
                 <Button x:Name="mapsButton"

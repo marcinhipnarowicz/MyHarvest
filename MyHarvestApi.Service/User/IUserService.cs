@@ -38,5 +38,7 @@ namespace MyHarvestApi.Service
         int GetMaxId();
 
         void RemoveBossOfEmployee(int id);
+
+        void AddNewBossForEmployee(UserVm userVm, int id);
     }
 }

@@ -184,7 +184,22 @@ namespace MyHarvestApi.Service
             {
                 user.IdBoss = null;
                 user.IsVerified = false;
-                //dać metodę z Repo, która będzie zmieniała te dane.
+                _repo.EditUser(user);
+            }
+        }
+
+        public void AddNewBossForEmployee(UserVm userVm, int id)
+        {
+            var user = _repo.GetUserById(id);
+
+            //var newUser = UserMapper.MapToVm(user);
+            var newUser = UserMapper.MapFromVm(userVm);
+
+            if (user != null)
+            {
+                user.IdBoss = GetIdBoss(newUser.BossKey);
+                user.BossKey = null;
+                _repo.EditUser(user);
             }
         }
     }

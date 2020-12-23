@@ -100,10 +100,11 @@ namespace MyHarvestApi.Repository
             return userDb;
         }
 
-        public void EditUser(User user, int id)
+        public void EditUser(User user)
         {
-            //_db.Users.Add(user);
-            //_db.SaveChanges();
+            _db.Entry(user).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+
+            _db.SaveChanges();
         }
     }
 }

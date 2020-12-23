@@ -30,11 +30,21 @@ namespace MyHarvest.Views
             }
             else if (LocalConfig.LoginModel.IdAccountType == 2)
             {
-                DeleteBossButton.IsVisible = true;
+                if (GetData().Result.IdBoss != null)
+                {
+                    DeleteBossButton.IsVisible = true;
+                }
+                else
+                {
+                    DeleteBossButton.IsVisible = false;
+                    BossKeyLabel.IsVisible = true;
+                    BossKeyEntry.IsVisible = true;
+                    AddBossButton.IsVisible = true;
+                }
             }
         }
 
-        protected async virtual void GetData()
+        protected async virtual Task<UserVm> GetData()
         {
             UserVm worker = new UserVm();
 
@@ -42,6 +52,8 @@ namespace MyHarvest.Views
 
             FirstNameEntry.Text = worker.FirstName;
             SurnameEntry.Text = worker.Surname;
+
+            return worker;
         }
 
         private async void DeleteBossButton_Clicked(object sender, EventArgs e)
@@ -49,6 +61,8 @@ namespace MyHarvest.Views
             if (await UserDialogs.Instance.ConfirmAsync("Czy na pewno chcesz opuścić brygadę szefa?", "Potwierdź", "Tak", "Anuluj"))
             {
                 UserService.RemoveBossOfEmployee(LocalConfig.LoginModel.Id);
+
+                await DisplayAlert("Potwierdzenie", "Nie należysz już do szefa", "Ok");
             }
         }
 
@@ -74,6 +88,25 @@ namespace MyHarvest.Views
                 {
                     await DisplayAlert("Uwaga!", "Hasła nie są identyczne", "Ok");
                 }
+            }
+        }
+
+        private async void AddBossButton_Clicked(object sender, EventArgs e)
+        {
+            if (BossKeyEntry.Text != null)
+            {
+                var userVm = new UserVm()
+                {
+                    Id = LocalConfig.LoginModel.Id,
+                    BossKey = BossKeyEntry.Text
+                };
+
+                await UserService.AddNewBossForEmployee(userVm, LocalConfig.LoginModel.Id);
+                await DisplayAlert("Ok!", "Dodano nowego szefa", "Ok");
+            }
+            else
+            {
+                await DisplayAlert("Błąd!", "Nie istnieje szef o wprowadzonyn kodzie", "Ok");
             }
         }
     }

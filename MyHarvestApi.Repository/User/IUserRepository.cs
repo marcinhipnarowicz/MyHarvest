@@ -21,7 +21,7 @@ namespace MyHarvestApi.Repository
 
         void AddUser(User user);
 
-        void EditUser(User user, int id);
+        void EditUser(User user);
 
         bool IfExistsUser(string email);
 

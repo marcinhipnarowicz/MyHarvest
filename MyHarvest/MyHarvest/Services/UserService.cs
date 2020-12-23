@@ -15,6 +15,7 @@ namespace MyHarvest.Services
         private const string getBossForUser = "GetBossForUser";
         private const string getUser = "GetUser";
         private const string removeBossOfEmployee = "RemoveBossOfEmployee";
+        private const string addNewBossForEmployee = "AddNewBossForEmployee";
 
         public async static Task<LoginVm> Login(LoginVm user)
         {
@@ -54,8 +55,21 @@ namespace MyHarvest.Services
 
         public async static void RemoveBossOfEmployee(int id)
         {
-            var adress = Api.BuildAdress(userControler, removeBossOfEmployee, "?id=", id.ToString());
+            var adress = Api.BuildAdress(userControler, removeBossOfEmployee, "?id=", id.ToString(), "&token=");
             await Api.Request(RestSharp.Method.POST, adress);
+        }
+
+        public async static void AddNewBossForEmployee(int id)
+        {
+            var adress = Api.BuildAdress(userControler, addNewBossForEmployee, "?id=", id.ToString(), "&token=");
+            await Api.Request(RestSharp.Method.POST, adress);
+        }
+
+        public async static Task<UserVm> AddNewBossForEmployee(UserVm userVm, int id)
+        {
+            var address = Api.BuildAdress(userControler, addNewBossForEmployee, "?id=", id.ToString(), "&token=");
+            var response = await Api.RequestAndSerialize<UserVm>(RestSharp.Method.POST, address, userVm);
+            return response;
         }
     }
 }
