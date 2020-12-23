@@ -10,5 +10,7 @@ namespace MyHarvestApi.Repository
     public interface IUserInformationRepository
     {
         void AddUserInformation(UserInformation userInformation);
+
+        List<UserInformation> GetInformationAboutTaskList(int id);
     }
 }

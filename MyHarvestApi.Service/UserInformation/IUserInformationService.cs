@@ -1,4 +1,5 @@
-﻿using MyHarvestApi.Service.ViewModel;
+﻿using MyHarvestApi.Entity.Model;
+using MyHarvestApi.Service.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,7 @@ namespace MyHarvestApi.Service
     public interface IUserInformationService
     {
         void AddUserInformation(UserInformationVm userInformationVm);
+
+        List<UserInformationVm> GetAllInformationAboutTaskList(int id);
     }
 }

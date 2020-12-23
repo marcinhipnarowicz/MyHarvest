@@ -22,5 +22,11 @@ namespace MyHarvestApi.Repository
             _db.UsersInformation.Add(userInformation);
             _db.SaveChanges();
         }
+
+        public List<UserInformation> GetInformationAboutTaskList(int id)
+        {
+            var infoAboutTaskList = _db.UsersInformation.Where(x => x.IdUser.Equals(id)).ToList();
+            return infoAboutTaskList;
+        }
     }
 }

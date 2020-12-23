@@ -35,5 +35,13 @@ namespace MyHarvestApi.Api.Controllers
                 return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, null));
             }
         }
+
+        [HttpGet]
+        [Route("GetInformationAboutTask")]
+        public IActionResult Get(int id, string token)
+        {
+            var userInformationDb = _service.GetAllInformationAboutTaskList(id);
+            return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, userInformationDb));
+        }
     }
 }

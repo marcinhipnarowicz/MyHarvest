@@ -21,5 +21,25 @@ namespace MyHarvestApi.Service
                 Area = usInfoVm.Area
             };
         }
+
+        public static List<UserInformationVm> MapList(List<UserInformation> userInformation)
+        {
+            var userInformationList = new List<UserInformationVm>();
+
+            foreach (var item in userInformation)
+            {
+                var userInfo = new UserInformationVm();
+
+                userInfo.IdUserInformation = item.IdUserInformation;
+                userInfo.IdTask = item.IdTask;
+                userInfo.IdUser = item.IdUser;
+                userInfo.IdTaskStatus = item.IdTaskStatus;
+                userInfo.Area = item.Area;
+
+                userInformationList.Add(userInfo);
+            }
+
+            return userInformationList;
+        }
     }
 }

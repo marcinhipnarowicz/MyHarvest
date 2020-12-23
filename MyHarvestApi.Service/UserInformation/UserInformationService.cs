@@ -1,4 +1,5 @@
-﻿using MyHarvestApi.Repository;
+﻿using MyHarvestApi.Entity.Model;
+using MyHarvestApi.Repository;
 using MyHarvestApi.Service.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,18 @@ namespace MyHarvestApi.Service
         {
             var userInformation = UserInformationMapper.MapFromVm(userInformationVm);
             _repo.AddUserInformation(userInformation);
+        }
+
+        public List<UserInformationVm> GetAllInformationAboutTaskList(int id)
+        {
+            var userInformationList = new List<UserInformationVm>();
+
+            var infoAboutTaskById = _repo.GetInformationAboutTaskList(id);
+
+            if (infoAboutTaskById != null)
+                userInformationList = UserInformationMapper.MapList(infoAboutTaskById.ToList());
+
+            return userInformationList;
         }
     }
 }
