@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oRaj9bawiqf1CjmBcLE0dnFEgM7eaayetXtnBFq4Q3Mq4oIrHKeC2gWQlU4LobowEMiKL5po/HgHOmUwKxMZjw==",
+  "dgSpecHash": "+mNyl/74LcIH+aofp545Ov8Vbr6O7dA/0YkGtuCayZjZzxc8wsBZwPlKNHv4mrz+8u1HjpYt1R8yKk048DZ3kg==",
   "success": true,
   "projectFilePath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvest\\MyHarvest\\MyHarvest.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\marhi\\.nuget\\packages\\acr.userdialogs\\7.1.0.470\\acr.userdialogs.7.1.0.470.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\plugin.permissions\\6.0.1\\plugin.permissions.6.0.1.nupkg.sha512",

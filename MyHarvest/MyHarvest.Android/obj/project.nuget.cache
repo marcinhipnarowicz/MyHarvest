@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "BrvT0fVWZyj16OpgsE7J86ZIKQC5Ul92boUw6skFlRnT0Iw4yewS4FdcRYbbrTRDckrii5V32pL4N3giZQzMeA==",
+  "dgSpecHash": "IlYFjWtDwuincpfwtjW+JYSPsrLtHNBdU+IsdNhF4z+CzfSWzcXda/XjITtNmY9dT3DPKzOF3X5V1uAbKpm4MQ==",
   "success": true,
   "projectFilePath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvest\\MyHarvest.Android\\MyHarvest.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\marhi\\.nuget\\packages\\acr.userdialogs\\7.1.0.470\\acr.userdialogs.7.1.0.470.nupkg.sha512",
+    "C:\\Users\\marhi\\.nuget\\packages\\andhud\\1.4.2\\andhud.1.4.2.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\plugin.permissions\\6.0.1\\plugin.permissions.6.0.1.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\plugin.toast\\2.2.0\\plugin.toast.2.2.0.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",

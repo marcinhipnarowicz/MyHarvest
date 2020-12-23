@@ -19,14 +19,12 @@ namespace MyHarvestApi.Api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private IUserRepository _userRepository;
         private IUserService _userService;
 
         public int FromQuery { get; private set; }
 
-        public UserController(IUserRepository userRepo, IUserService userService)
+        public UserController(IUserService userService)
         {
-            _userRepository = userRepo;
             _userService = userService;
         }
 
@@ -120,11 +118,14 @@ namespace MyHarvestApi.Api.Controllers
         }
 
         [HttpGet]
-        [Route("Get")]
-        public IActionResult Get()
+        [Route("GetUser")]
+        [TokenAuthoriseAttribute]
+        public IActionResult GetUser(string email, string token)
         {
-            var usersDb = _userRepository.GetUsers();
-            return Ok(usersDb); //sam konwertuje na jsona. Ok oznacza status 200
+            var usersDb = _userService.GetByEmail(email);
+            return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, usersDb));
+
+            //return Ok(usersDb); //sam konwertuje na jsona. Ok oznacza status 200
         }
 
         [HttpGet]
@@ -159,6 +160,15 @@ namespace MyHarvestApi.Api.Controllers
             {
                 return Ok(ResponseManager.GenerateResponse("Błąd: \n" + ex.Message, (int)MessageType.Error, null));
             }
+        }
+
+        [HttpPost]
+        [Route("RemoveBossOfEmployee")]
+        [TokenAuthoriseAttribute]
+        public IActionResult RemoveBossOfEmployee([FromQuery] int id, string token)
+        {
+            _userService.RemoveBossOfEmployee(id);
+            return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, null));
         }
     }
 }

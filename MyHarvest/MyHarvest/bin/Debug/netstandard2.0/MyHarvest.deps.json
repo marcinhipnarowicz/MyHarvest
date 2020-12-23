@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "MyHarvest/1.0.0": {
         "dependencies": {
+          "Acr.UserDialogs": "7.1.0.470",
           "NETStandard.Library": "2.0.3",
           "Plugin.Permissions": "6.0.1",
           "Plugin.Toast": "2.2.0",
@@ -21,6 +22,14 @@
         },
         "runtime": {
           "MyHarvest.dll": {}
+        }
+      },
+      "Acr.UserDialogs/7.1.0.470": {
+        "runtime": {
+          "lib/netstandard2.0/Acr.UserDialogs.dll": {
+            "assemblyVersion": "7.1.0.470",
+            "fileVersion": "7.1.0.470"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -132,6 +141,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Acr.UserDialogs/7.1.0.470": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SJUfml6uyBScadNtyVvGy8YKbzb6p5uMLqPJNmWtTgVqAD2fFYr9Z94m1QNEE8PHKN+36u3tcfnxYegAxw5KBA==",
+      "path": "acr.userdialogs/7.1.0.470",
+      "hashPath": "acr.userdialogs.7.1.0.470.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",

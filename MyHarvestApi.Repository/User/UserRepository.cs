@@ -93,5 +93,17 @@ namespace MyHarvestApi.Repository
             var maxIdUser = _db.Users.OrderByDescending(m => m.IdUser).FirstOrDefault();
             return maxIdUser.IdUser;
         }
+
+        public User GetUserById(int id)
+        {
+            var userDb = _db.Users.FirstOrDefault(x => x.IdUser.Equals(id));
+            return userDb;
+        }
+
+        public void EditUser(User user, int id)
+        {
+            //_db.Users.Add(user);
+            //_db.SaveChanges();
+        }
     }
 }

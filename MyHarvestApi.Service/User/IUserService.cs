@@ -36,5 +36,7 @@ namespace MyHarvestApi.Service
         string GetHash(HashAlgorithm hashAlgorithm, string password);
 
         int GetMaxId();
+
+        void RemoveBossOfEmployee(int id);
     }
 }

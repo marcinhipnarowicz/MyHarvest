@@ -175,5 +175,17 @@ namespace MyHarvestApi.Service
             UserVm bossVm = UserMapper.MapToVm(boss, null);
             return bossVm;
         }
+
+        public void RemoveBossOfEmployee(int id)
+        {
+            var user = _repo.GetUserById(id);
+
+            if (user != null)
+            {
+                user.IdBoss = null;
+                user.IsVerified = false;
+                //dać metodę z Repo, która będzie zmieniała te dane.
+            }
+        }
     }
 }

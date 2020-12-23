@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.470" />
     <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
     <PackageReference Include="Plugin.Toast" Version="2.2.0" />
     <PackageReference Include="RestSharp" Version="106.11.7" />
@@ -24,6 +25,9 @@
   <ItemGroup>
     <Compile Update="Views\AddTaskPage.xaml.cs">
       <DependentUpon>AddTaskPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ProfilPage.xaml.cs">
+      <DependentUpon>ProfilPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\TaskPage.xaml.cs">
       <DependentUpon>TaskPage.xaml</DependentUpon>
