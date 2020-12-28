@@ -26,6 +26,14 @@ namespace MyHarvest.Views
 
         public async void Init()
         {
+            if (LocalConfig.LoginModel.IdAccountType == 1)
+            {
+                addButton.IsVisible = true;
+            }
+            else if (LocalConfig.LoginModel.IdAccountType == 2)
+            {
+                addButton.IsVisible = false;
+            }
             var data = await GetData();
             _userVm = data;
 
@@ -56,15 +64,6 @@ namespace MyHarvest.Views
             {
                 employeesStackLayout.Children.Add(new Label { Text = "Nie posiadasz żadnych pracowników", TextColor = Color.Red }); ;
             }
-
-            var check = new CheckBox();
-
-            var labelTap = new TapGestureRecognizer();
-            labelTap.Tapped += (s, e) =>
-            {
-            };
-            var label1 = new Label();
-            label1.GestureRecognizers.Add(labelTap);
         }
 
         protected async virtual Task<List<UserVm>> GetData()

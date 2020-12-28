@@ -36,7 +36,8 @@
                     VerticalOptions="EndAndExpand"
                     CornerRadius="{StaticResource radiusCountButton}"
                     BackgroundColor="{StaticResource backgroundButtonColor}"
-                    Clicked="addButton_Clicked" />
+                    Clicked="addButton_Clicked"
+                    IsVisible="false" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

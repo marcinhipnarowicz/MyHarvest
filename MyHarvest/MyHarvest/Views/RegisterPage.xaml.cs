@@ -19,6 +19,7 @@ namespace MyHarvest.Views
         public RegisterPage()
         {
             InitializeComponent();
+            Shell.SetTabBarIsVisible(this, false);
 
             SetValueInPickerAsync();
         }

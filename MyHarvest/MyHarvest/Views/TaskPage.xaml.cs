@@ -11,24 +11,67 @@ using MyHarvest.Models;
 using MyHarvest.Views;
 using MyHarvest.ViewModels;
 using MyHarvest.Base;
+using MyHarvest.Services;
 
 namespace MyHarvest.Views
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TaskPage : ContentPage
     {
-        private ItemsViewModel _viewModel;
+        //private ItemsViewModel _viewModel;
+
+        protected TaskListVm _taskList;
+        private List<UserInformationVm> _userInformation;
+        private int disappearingTabIndex;
+        private int appearingIndex;
 
         public TaskPage()
         {
             InitializeComponent();
+            _taskList = new TaskListVm();
 
-            BindingContext = _viewModel = new ItemsViewModel();
+            BindingContext = _taskList;
+
+            //BindingContext = _viewModel = new ItemsViewModel();
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            _viewModel.OnAppearing();
+
+            //numberOfElements.Text = "";
+
+            SetData();
+            //_viewModel.OnAppearing();
+        }
+
+        private async void SetData()
+        {
+            await Task.Run(async () =>
+            {
+                var data = await GetData();
+
+                _userInformation = data;
+
+                _taskList.Tasks.Clear();
+
+                if (data != null)
+                {
+                    foreach (var item in data)
+                    {
+                        _taskList.Tasks.Add(item);
+                    }
+                }
+            });
+        }
+
+        protected async virtual Task<List<UserInformationVm>> GetData()
+        {
+            List<UserInformationVm> data = new List<UserInformationVm>();
+
+            data = await UserInformationService.GetUserInformationList(LocalConfig.LoginModel.Id);
+
+            return data;
         }
 
         private async void ToolbarItem_Clicked(object sender, EventArgs e)
@@ -42,6 +85,40 @@ namespace MyHarvest.Views
             {
                 await DisplayAlert("Uwaga!", "Nie masz uprawnień do dodawania zadań", "Ok");
             }
+        }
+
+        private void TasksListView_ItemAppearing(object sender, ItemVisibilityEventArgs e)
+        {
+            var element = e.Item as UserInformationVm;
+
+            if (disappearingTabIndex > appearingIndex)
+            {
+                var index = disappearingTabIndex;
+                //numberOfElements.Text = index + "/" + _taskList.Tasks.Count();
+            }
+            else
+            {
+                var index = _taskList.Tasks.IndexOf(element) + 1;
+                //numberOfElements.Text = index + "/" + _taskList.Tasks.Count();
+            }
+
+            appearingIndex = _taskList.Tasks.IndexOf(element) + 1;
+        }
+
+        private void TasksListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Xamarin.Forms.Device.BeginInvokeOnMainThread(async () =>
+            {
+                var task = e.SelectedItem as UserInformationVm;
+
+                await Navigation.PushAsync(new AddTaskPage());//w tym miejscu chyba zrobić w konstruktorze strony argument, żeby przekazywać do niej obiekt
+            });
+        }
+
+        private void TasksListView_ItemDisappearing(object sender, ItemVisibilityEventArgs e)
+        {
+            var element = e.Item as UserInformationVm;
+            disappearingTabIndex = _taskList.Tasks.IndexOf(element) + 1;
         }
     }
 }

@@ -1,45 +1,87 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyHarvest.Views.TaskPage"
-             Title="{Binding Title}"
-             xmlns:local="clr-namespace:MyHarvest.ViewModels"
-             xmlns:model="clr-namespace:MyHarvest.Models"
-             x:Name="BrowseTaskPage">
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="MyHarvest.Views.TaskPage"
+			 Title="{Binding Title}"
+			 xmlns:local="clr-namespace:MyHarvest.ViewModels"
+			 xmlns:model="clr-namespace:MyHarvest.Models">
+    <!--x:Name="BrowseTaskPage"-->
 
-    <ContentPage.ToolbarItems >
+    <ContentPage.ToolbarItems>
         <ToolbarItem Text="+"
-                     Clicked="ToolbarItem_Clicked" />
+					 Clicked="ToolbarItem_Clicked" />
     </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+
+            <StackLayout>
+
+                <ListView x:Name="TasksListView"
+				  HasUnevenRows="true"
+				  ItemsSource="{Binding Tasks}"
+				  ItemAppearing="TasksListView_ItemAppearing"
+				  ItemSelected="TasksListView_ItemSelected"
+				  ItemDisappearing="TasksListView_ItemDisappearing">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="15, 10, 15, 20"
+							 Margin="0, 0, 0, 10"
+							 HorizontalOptions="FillAndExpand"
+							 x:Name="stackList">
+                                    <Label VerticalOptions="FillAndExpand"
+							   VerticalTextAlignment="Center"
+							   Text="{Binding Area}" />
+                                    <Label VerticalOptions="FillAndExpand"
+							   VerticalTextAlignment="Center"
+							   Text="{Binding IdTask}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!--<Label AbsoluteLayout.LayoutFlags="PositionProportional"
+					 AbsoluteLayout.LayoutBounds="0.93, 1, AutoSize, AutoSize"
+			         TextColor="{StaticResource TextColor}"
+			         Text=""
+			          x:Name="numberOfElements">
+                </Label>-->
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+
     <!--
-      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
-      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
-    -->
-    <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
-        <CollectionView x:Name="ItemsListView"
-                ItemsSource="{Binding Items}"
-                SelectionMode="None">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout Padding="10" x:DataType="model:Item">
-                        <Label Text="{Binding Text}"
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemTextStyle}"
-                            FontSize="16" />
-                        <Label Text="{Binding Description}"
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer
-                                NumberOfTapsRequired="1"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"
-                                CommandParameter="{Binding .}">
-                            </TapGestureRecognizer>
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </RefreshView>
+	  x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+	  https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+	-->
+    <!--<RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+		<CollectionView x:Name="ItemsListView"
+				ItemsSource="{Binding Items}"
+				SelectionMode="None">
+			<CollectionView.ItemTemplate>
+				<DataTemplate>
+					<StackLayout Padding="10" x:DataType="model:Item">
+						<Label Text="{Binding Text}"
+							LineBreakMode="NoWrap"
+							Style="{DynamicResource ListItemTextStyle}"
+							FontSize="16" />
+						<Label Text="{Binding Description}"
+							LineBreakMode="NoWrap"
+							Style="{DynamicResource ListItemDetailTextStyle}"
+							FontSize="13" />
+						<StackLayout.GestureRecognizers>
+							<TapGestureRecognizer
+								NumberOfTapsRequired="1"
+								Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"
+								CommandParameter="{Binding .}">
+							</TapGestureRecognizer>
+						</StackLayout.GestureRecognizers>
+					</StackLayout>
+				</DataTemplate>
+			</CollectionView.ItemTemplate>
+		</CollectionView>-->
+    <!--</RefreshView>-->
 </ContentPage>
