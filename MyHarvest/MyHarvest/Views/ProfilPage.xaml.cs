@@ -27,9 +27,14 @@ namespace MyHarvest.Views
         {
             if (LocalConfig.LoginModel.IdAccountType == 1)
             {
+                BossKeyLabel.Text = "Hasło dostępu do Twojej brygady";
+                BossKeyEntry.Placeholder = "";
+                BossKeyEntry.IsReadOnly = true;
+                GetData();
             }
             else if (LocalConfig.LoginModel.IdAccountType == 2)
             {
+                BossKeyEntry.Text = "";
                 if (GetData().Result.IdBoss != null)
                 {
                     DeleteBossButton.IsVisible = true;
@@ -37,8 +42,6 @@ namespace MyHarvest.Views
                 else
                 {
                     DeleteBossButton.IsVisible = false;
-                    BossKeyLabel.IsVisible = true;
-                    BossKeyEntry.IsVisible = true;
                     AddBossButton.IsVisible = true;
                 }
             }
@@ -52,6 +55,7 @@ namespace MyHarvest.Views
 
             FirstNameEntry.Text = worker.FirstName;
             SurnameEntry.Text = worker.Surname;
+            BossKeyEntry.Text = worker.BossKey;
 
             return worker;
         }

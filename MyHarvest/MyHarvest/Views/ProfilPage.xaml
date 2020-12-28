@@ -24,10 +24,10 @@
         <Label x:Name="BossKeyLabel"
                Text="Klucz szefa"
                FontSize="Medium"
-               IsVisible="False" />
+               IsVisible="true" />
         <Entry x:Name="BossKeyEntry"
                Placeholder="Wpisz 6 znaków specjalnych szefa"
-               IsVisible="False" />
+               IsVisible="true" />
         <Button x:Name="AddBossButton"
                 Margin="0,50,0,0"
                 Text="Dodaj nowego szefa"
