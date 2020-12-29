@@ -17,5 +17,7 @@ namespace MyHarvestApi.Service.ViewModel
         public int? IdTask { get; set; }
 
         public int? IdTaskStatus { get; set; }
+
+        public string UserName { get; set; }
     }
 }

@@ -20,6 +20,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using MyHarvestApi.Service;
 using MyHarvestApi.Entity.AppSettingsHelp;
+using GeoAPI.Geometries;
 
 namespace MyHarvestApi.Api
 {
@@ -39,7 +40,8 @@ namespace MyHarvestApi.Api
 
             var cs = Configuration.GetConnectionString("DbConnectionString");
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs, b => b.MigrationsAssembly("MyHarvestApi.Api"))); //pierwsza wersja działająca
-            //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs, x => x.UseNetTopologySuite()));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs, x => x.UseNetTopologySuite()));
+            services.AddSingleton<IGeometryFactory>(_ => GeoAPI.GeometryServiceProvider.Instance.CreateGeometryFactory(4326));
 
             //repository
             services.AddScoped<IUserRepository, UserRepository>();

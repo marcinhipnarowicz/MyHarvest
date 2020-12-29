@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "GeoAPI.CoordinateSystems/1.7.5": {
+        "type": "package",
+        "dependencies": {
+          "GeoAPI.Core": "1.7.5"
+        },
+        "compile": {
+          "lib/net45/GeoAPI.CoordinateSystems.dll": {}
+        },
+        "runtime": {
+          "lib/net45/GeoAPI.CoordinateSystems.dll": {}
+        }
+      },
       "GeoAPI.Core/1.7.5": {
         "type": "package",
         "compile": {
@@ -1587,6 +1599,25 @@
           }
         }
       },
+      "NetTopologySuite/1.15.1": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite.CoordinateSystems": "1.15.1",
+          "NetTopologySuite.Core": "1.15.1"
+        }
+      },
+      "NetTopologySuite.CoordinateSystems/1.15.1": {
+        "type": "package",
+        "dependencies": {
+          "GeoAPI.CoordinateSystems": "1.7.5"
+        },
+        "compile": {
+          "lib/net45/NetTopologySuite.CoordinateSystems.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NetTopologySuite.CoordinateSystems.dll": {}
+        }
+      },
       "NetTopologySuite.Core/1.15.1": {
         "type": "package",
         "dependencies": {
@@ -2528,6 +2559,18 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win7-x86": {
+      "GeoAPI.CoordinateSystems/1.7.5": {
+        "type": "package",
+        "dependencies": {
+          "GeoAPI.Core": "1.7.5"
+        },
+        "compile": {
+          "lib/net45/GeoAPI.CoordinateSystems.dll": {}
+        },
+        "runtime": {
+          "lib/net45/GeoAPI.CoordinateSystems.dll": {}
+        }
+      },
       "GeoAPI.Core/1.7.5": {
         "type": "package",
         "compile": {
@@ -4080,6 +4123,25 @@
           "runtimes/win/lib/net461/Microsoft.Win32.Registry.dll": {}
         }
       },
+      "NetTopologySuite/1.15.1": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite.CoordinateSystems": "1.15.1",
+          "NetTopologySuite.Core": "1.15.1"
+        }
+      },
+      "NetTopologySuite.CoordinateSystems/1.15.1": {
+        "type": "package",
+        "dependencies": {
+          "GeoAPI.CoordinateSystems": "1.7.5"
+        },
+        "compile": {
+          "lib/net45/NetTopologySuite.CoordinateSystems.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NetTopologySuite.CoordinateSystems.dll": {}
+        }
+      },
       "NetTopologySuite.Core/1.15.1": {
         "type": "package",
         "dependencies": {
@@ -4920,6 +4982,87 @@
     }
   },
   "libraries": {
+    "GeoAPI.CoordinateSystems/1.7.5": {
+      "sha512": "JBcvkeQFjCW9NTfkII5WiJNmnv0ZtYA/VTVljbIqDFWBJ8kHwu2UHd2MVStD/VVHVnLoyNcDIapsuTENdlyF3g==",
+      "type": "package",
+      "path": "geoapi.coordinatesystems/1.7.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "geoapi.coordinatesystems.1.7.5.nupkg.sha512",
+        "geoapi.coordinatesystems.nuspec",
+        "lib/net20/GeoAPI.CoordinateSystems.dll",
+        "lib/net20/GeoAPI.CoordinateSystems.pdb",
+        "lib/net20/GeoAPI.CoordinateSystems.xml",
+        "lib/net35-cf/GeoAPI.CoordinateSystems.dll",
+        "lib/net35-cf/GeoAPI.CoordinateSystems.pdb",
+        "lib/net35-cf/GeoAPI.CoordinateSystems.xml",
+        "lib/net35-client/GeoAPI.CoordinateSystems.dll",
+        "lib/net35-client/GeoAPI.CoordinateSystems.pdb",
+        "lib/net35-client/GeoAPI.CoordinateSystems.xml",
+        "lib/net40-client/GeoAPI.CoordinateSystems.dll",
+        "lib/net40-client/GeoAPI.CoordinateSystems.pdb",
+        "lib/net40-client/GeoAPI.CoordinateSystems.xml",
+        "lib/net403-client/GeoAPI.CoordinateSystems.dll",
+        "lib/net403-client/GeoAPI.CoordinateSystems.pdb",
+        "lib/net403-client/GeoAPI.CoordinateSystems.xml",
+        "lib/net45/GeoAPI.CoordinateSystems.dll",
+        "lib/net45/GeoAPI.CoordinateSystems.pdb",
+        "lib/net45/GeoAPI.CoordinateSystems.xml",
+        "lib/netstandard1.0/GeoAPI.CoordinateSystems.deps.json",
+        "lib/netstandard1.0/GeoAPI.CoordinateSystems.dll",
+        "lib/netstandard1.0/GeoAPI.CoordinateSystems.pdb",
+        "lib/netstandard1.0/GeoAPI.CoordinateSystems.xml",
+        "lib/netstandard2.0/GeoAPI.CoordinateSystems.deps.json",
+        "lib/netstandard2.0/GeoAPI.CoordinateSystems.dll",
+        "lib/netstandard2.0/GeoAPI.CoordinateSystems.pdb",
+        "lib/netstandard2.0/GeoAPI.CoordinateSystems.xml",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/GeoAPI.CoordinateSystems.dll",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/GeoAPI.CoordinateSystems.pdb",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/GeoAPI.CoordinateSystems.xml",
+        "lib/portable40-net403+sl5+win8+wp8+wpa81/GeoAPI.CoordinateSystems.dll",
+        "lib/portable40-net403+sl5+win8+wp8+wpa81/GeoAPI.CoordinateSystems.pdb",
+        "lib/portable40-net403+sl5+win8+wp8+wpa81/GeoAPI.CoordinateSystems.xml",
+        "src/CoordinateSystems/AxisInfo.cs",
+        "src/CoordinateSystems/AxisOrientationEnum.cs",
+        "src/CoordinateSystems/DatumType.cs",
+        "src/CoordinateSystems/IAngularUnit.cs",
+        "src/CoordinateSystems/ICompoundCoordinateSystem.cs",
+        "src/CoordinateSystems/ICoordinateSystem.cs",
+        "src/CoordinateSystems/ICoordinateSystemAuthorityFactory.cs",
+        "src/CoordinateSystems/ICoordinateSystemFactory.cs",
+        "src/CoordinateSystems/IDatum.cs",
+        "src/CoordinateSystems/IEllipsoid.cs",
+        "src/CoordinateSystems/IFittedCoordinateSystem.cs",
+        "src/CoordinateSystems/IGeocentricCoordinateSystem.cs",
+        "src/CoordinateSystems/IGeodeticSpatialReference.cs",
+        "src/CoordinateSystems/IGeographicCoordinateSystem.cs",
+        "src/CoordinateSystems/IGeographicTransform.cs",
+        "src/CoordinateSystems/IHorizontalCoordinateSystem.cs",
+        "src/CoordinateSystems/IHorizontalDatum.cs",
+        "src/CoordinateSystems/IInfo.cs",
+        "src/CoordinateSystems/ILinearUnit.cs",
+        "src/CoordinateSystems/ILocalCoordinateSystem.cs",
+        "src/CoordinateSystems/ILocalDatum.cs",
+        "src/CoordinateSystems/IParameterInfo.cs",
+        "src/CoordinateSystems/IPrimeMeridian.cs",
+        "src/CoordinateSystems/IProjectedCoordinateSystem.cs",
+        "src/CoordinateSystems/IProjection.cs",
+        "src/CoordinateSystems/IUnit.cs",
+        "src/CoordinateSystems/IVerticalCoordinateSystem.cs",
+        "src/CoordinateSystems/IVerticalDatum.cs",
+        "src/CoordinateSystems/Parameter.cs",
+        "src/CoordinateSystems/ProjectionParameter.cs",
+        "src/CoordinateSystems/Transformations/DomainFlags.cs",
+        "src/CoordinateSystems/Transformations/ICoordinateTransformation.cs",
+        "src/CoordinateSystems/Transformations/ICoordinateTransformationFactory.cs",
+        "src/CoordinateSystems/Transformations/IMathTransform.cs",
+        "src/CoordinateSystems/Transformations/IMathTransformFactory.cs",
+        "src/CoordinateSystems/Transformations/TransformType.cs",
+        "src/CoordinateSystems/WGS84ConversionInfo.cs",
+        "src/ICoordinateSystemServices.cs"
+      ]
+    },
     "GeoAPI.Core/1.7.5": {
       "sha512": "Dy/YkgZ1szgx+xbVWqMi+4++Fm6v3szbVdei1LKPRZ3meSvgNSMZxqhar5IAeaTj5LcUHLtLGdfyUtkjnYbg3A==",
       "type": "package",
@@ -6621,6 +6764,59 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "NetTopologySuite/1.15.1": {
+      "sha512": "Yi34erRtBXhoBd5L/6kg+1/6k7gM4dkom4OkeguLsOm4IYgMPWrjdsyu/G+t77VL1aVzWco8Eqp2Mmqn3Aw/wQ==",
+      "type": "package",
+      "path": "nettopologysuite/1.15.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "nettopologysuite.1.15.1.nupkg.sha512",
+        "nettopologysuite.nuspec"
+      ]
+    },
+    "NetTopologySuite.CoordinateSystems/1.15.1": {
+      "sha512": "IpDGYzD/5xLkr1ivlj2tfGu7FkahZKTpYpQ+PY5S87oeUogFCAwHxXpGK0AHrJNfeIYSelqrLgtnzFEIuxLCiQ==",
+      "type": "package",
+      "path": "nettopologysuite.coordinatesystems/1.15.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35-client/NetTopologySuite.CoordinateSystems.dll",
+        "lib/net35-client/NetTopologySuite.CoordinateSystems.pdb",
+        "lib/net35-client/NetTopologySuite.CoordinateSystems.xml",
+        "lib/net40-client/NetTopologySuite.CoordinateSystems.dll",
+        "lib/net40-client/NetTopologySuite.CoordinateSystems.pdb",
+        "lib/net40-client/NetTopologySuite.CoordinateSystems.xml",
+        "lib/net403-client/NetTopologySuite.CoordinateSystems.dll",
+        "lib/net403-client/NetTopologySuite.CoordinateSystems.pdb",
+        "lib/net403-client/NetTopologySuite.CoordinateSystems.xml",
+        "lib/net45/NetTopologySuite.CoordinateSystems.dll",
+        "lib/net45/NetTopologySuite.CoordinateSystems.pdb",
+        "lib/net45/NetTopologySuite.CoordinateSystems.xml",
+        "lib/netcoreapp2.0/NetTopologySuite.CoordinateSystems.dll",
+        "lib/netcoreapp2.0/NetTopologySuite.CoordinateSystems.pdb",
+        "lib/netcoreapp2.0/NetTopologySuite.CoordinateSystems.xml",
+        "lib/netstandard1.0/NetTopologySuite.CoordinateSystems.deps.json",
+        "lib/netstandard1.0/NetTopologySuite.CoordinateSystems.dll",
+        "lib/netstandard1.0/NetTopologySuite.CoordinateSystems.pdb",
+        "lib/netstandard1.0/NetTopologySuite.CoordinateSystems.xml",
+        "lib/netstandard1.3/NetTopologySuite.CoordinateSystems.deps.json",
+        "lib/netstandard1.3/NetTopologySuite.CoordinateSystems.dll",
+        "lib/netstandard1.3/NetTopologySuite.CoordinateSystems.pdb",
+        "lib/netstandard1.3/NetTopologySuite.CoordinateSystems.xml",
+        "lib/netstandard2.0/NetTopologySuite.CoordinateSystems.deps.json",
+        "lib/netstandard2.0/NetTopologySuite.CoordinateSystems.dll",
+        "lib/netstandard2.0/NetTopologySuite.CoordinateSystems.pdb",
+        "lib/netstandard2.0/NetTopologySuite.CoordinateSystems.xml",
+        "nettopologysuite.coordinatesystems.1.15.1.nupkg.sha512",
+        "nettopologysuite.coordinatesystems.nuspec",
+        "src/NetTopologySuite.Common.props",
+        "src/NetTopologySuite.CoordinateSystems/NetTopologySuite.CoordinateSystems.csproj",
+        "src/NetTopologySuite.CoordinateSystems/Transformations/GeometryTransform.cs",
+        "src/SharedAssemblyVersion.cs"
       ]
     },
     "NetTopologySuite.Core/1.15.1": {
@@ -10134,6 +10330,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "GeoAPI.Core >= 1.7.5",
       "Microsoft.AspNetCore >= 2.1.7",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 2.2.0",
       "Microsoft.AspNetCore.HttpsPolicy >= 2.1.1",
@@ -10144,7 +10341,10 @@
       "Microsoft.EntityFrameworkCore.Tools >= 2.2.6",
       "MyHarvestApi.Entity >= 1.0.0",
       "MyHarvestApi.Repository >= 1.0.0",
-      "MyHarvestApi.Service >= 1.0.0"
+      "MyHarvestApi.Service >= 1.0.0",
+      "NetTopologySuite >= 1.15.1",
+      "NetTopologySuite.Core >= 1.15.1",
+      "NetTopologySuite.IO.SqlServerBytes >= 1.15.0"
     ]
   },
   "packageFolders": {
@@ -10201,6 +10401,10 @@
     "frameworks": {
       "net472": {
         "dependencies": {
+          "GeoAPI.Core": {
+            "target": "Package",
+            "version": "[1.7.5, )"
+          },
           "Microsoft.AspNetCore": {
             "target": "Package",
             "version": "[2.1.7, )"
@@ -10234,6 +10438,18 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.2.6, )"
+          },
+          "NetTopologySuite": {
+            "target": "Package",
+            "version": "[1.15.1, )"
+          },
+          "NetTopologySuite.Core": {
+            "target": "Package",
+            "version": "[1.15.1, )"
+          },
+          "NetTopologySuite.IO.SqlServerBytes": {
+            "target": "Package",
+            "version": "[1.15.0, )"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
