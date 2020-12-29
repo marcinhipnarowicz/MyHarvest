@@ -33,6 +33,7 @@ namespace MyHarvest.Views
             else if (LocalConfig.LoginModel.IdAccountType == 2)
             {
                 addButton.IsVisible = false;
+                taskForLabel.IsVisible = false;
             }
             var data = await GetData();
             _userVm = data;

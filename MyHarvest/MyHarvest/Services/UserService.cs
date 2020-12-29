@@ -13,7 +13,8 @@ namespace MyHarvest.Services
         private const string register = "Register";
         private const string getUserFromBoss = "GetForBoss";
         private const string getBossForUser = "GetBossForUser";
-        private const string getUser = "GetUser";
+        private const string getUserByEmail = "GetUser";
+        private const string getUserById = "GetUserById";
         private const string removeBossOfEmployee = "RemoveBossOfEmployee";
         private const string addNewBossForEmployee = "AddNewBossForEmployee";
 
@@ -48,7 +49,7 @@ namespace MyHarvest.Services
 
         public async static Task<UserVm> GetUser(string email)
         {
-            var address = Api.BuildAdress(userControler, getUser, "?email=", email, "&token=");
+            var address = Api.BuildAdress(userControler, getUserByEmail, "?email=", email, "&token=");
             var response = await Api.RequestAndSerialize<UserVm>(RestSharp.Method.GET, address);
             return response;
         }
@@ -69,6 +70,13 @@ namespace MyHarvest.Services
         {
             var address = Api.BuildAdress(userControler, addNewBossForEmployee, "?id=", id.ToString(), "&token=");
             var response = await Api.RequestAndSerialize<UserVm>(RestSharp.Method.POST, address, userVm);
+            return response;
+        }
+
+        public async static Task<List<UserVm>> GetUserToTask(int? idUser)
+        {
+            var address = Api.BuildAdress(userControler, getUserById, "?idUser=", idUser.ToString(), "&token=");
+            var response = await Api.RequestAndSerialize<List<UserVm>>(RestSharp.Method.GET, address);
             return response;
         }
     }

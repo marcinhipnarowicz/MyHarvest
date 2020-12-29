@@ -25,7 +25,8 @@
                 <Entry x:Name="taskAreaEditor"
                     FontSize="Medium"
                     Margin="0" />
-                <Label Text="Zadanie dla:"
+                <Label x:Name="taskForLabel"
+                    Text="Zadanie dla:"
                    FontSize="Medium" />
                 <StackLayout x:Name="employeesStackLayout">
                 </StackLayout>

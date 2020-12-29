@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 x:Class="MyHarvest.Views.TaskPage"
-			 Title="{Binding Title}"
+			 Title="Lista zadań"
 			 xmlns:local="clr-namespace:MyHarvest.ViewModels"
 			 xmlns:model="clr-namespace:MyHarvest.Models">
     <!--x:Name="BrowseTaskPage"-->
@@ -19,24 +19,24 @@
             <StackLayout>
 
                 <ListView x:Name="TasksListView"
-				  HasUnevenRows="true"
-				  ItemsSource="{Binding Tasks}"
-				  ItemAppearing="TasksListView_ItemAppearing"
-				  ItemSelected="TasksListView_ItemSelected"
-				  ItemDisappearing="TasksListView_ItemDisappearing">
+						  HasUnevenRows="true"
+						  ItemsSource="{Binding UserInformations}"
+						  ItemAppearing="TasksListView_ItemAppearing"
+						  ItemSelected="TasksListView_ItemSelected"
+						  ItemDisappearing="TasksListView_ItemDisappearing">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Padding="15, 10, 15, 20"
-							 Margin="0, 0, 0, 10"
-							 HorizontalOptions="FillAndExpand"
-							 x:Name="stackList">
+											 Margin="0, 0, 0, 10"
+											 HorizontalOptions="FillAndExpand"
+											 x:Name="stackList">
                                     <Label VerticalOptions="FillAndExpand"
-							   VerticalTextAlignment="Center"
-							   Text="{Binding Area}" />
+										   VerticalTextAlignment="Center"
+										   Text="{Binding Area}" />
                                     <Label VerticalOptions="FillAndExpand"
-							   VerticalTextAlignment="Center"
-							   Text="{Binding IdTask}" />
+										   VerticalTextAlignment="Center"
+										   Text="{Binding IdTask}" />
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

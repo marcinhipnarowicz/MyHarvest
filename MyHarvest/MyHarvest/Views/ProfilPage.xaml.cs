@@ -38,9 +38,13 @@ namespace MyHarvest.Views
                 if (GetData().Result.IdBoss != null)
                 {
                     DeleteBossButton.IsVisible = true;
+                    BossKeyLabel.IsVisible = false;
+                    BossKeyEntry.IsVisible = false;
                 }
                 else
                 {
+                    BossKeyLabel.IsVisible = true;
+                    BossKeyEntry.IsVisible = true;
                     DeleteBossButton.IsVisible = false;
                     AddBossButton.IsVisible = true;
                 }
@@ -72,18 +76,19 @@ namespace MyHarvest.Views
 
         private async void changePasswordButton_Clicked(object sender, EventArgs e)
         {
-            if (!passwordEntry.IsVisible)
+            if (!oldPasswordEntry.IsVisible)
             {
-                passwordEntry.IsVisible = true;
-                confirmPasswordEntry.IsVisible = true;
+                oldPasswordEntry.IsVisible = true;
+                newPasswordEntry.IsVisible = true;
+                confirmNewPasswordEntry.IsVisible = true;
             }
             else
             {
-                if (passwordEntry.Text == confirmPasswordEntry.Text)
+                if (newPasswordEntry.Text == confirmNewPasswordEntry.Text)
                 {
                     var userVm = new UserVm()
                     {
-                        Password = passwordEntry.Text
+                        Password = newPasswordEntry.Text
                     };
 
                     //metoda z UserService, która zmieni hasło w bazie

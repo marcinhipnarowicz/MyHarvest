@@ -15,7 +15,7 @@
                IsReadOnly="True" />
 
         <Button x:Name="DeleteBossButton"
-                Margin="0,50,0,0"
+                Margin="0,20,0,0"
                 Text="Zrezygnuj z szefa"
                 CornerRadius="{StaticResource radiusCountButton}"
                 BackgroundColor="Red"
@@ -29,20 +29,24 @@
                Placeholder="Wpisz 6 znaków specjalnych szefa"
                IsVisible="true" />
         <Button x:Name="AddBossButton"
-                Margin="0,50,0,0"
+                Margin="0,20,0,20"
                 Text="Dodaj nowego szefa"
                 CornerRadius="{StaticResource radiusCountButton}"
                 BackgroundColor="{StaticResource backgroundButtonColor}"
                 Clicked="AddBossButton_Clicked"
-                IsVisible="False" />
-        <Entry x:Name="passwordEntry"
-               Placeholder="Hasło"
+                IsVisible="false" />
+        <Entry x:Name="oldPasswordEntry"
+               Placeholder="Obecne hasło"
                IsPassword="True"
-               IsVisible="False" />
-        <Entry x:Name="confirmPasswordEntry"
-               Placeholder="Powtórz hasło"
+               IsVisible="false" />
+        <Entry x:Name="newPasswordEntry"
+               Placeholder="Nowe hasło"
                IsPassword="True"
-               IsVisible="False" />
+               IsVisible="false" />
+        <Entry x:Name="confirmNewPasswordEntry"
+               Placeholder="Powtórz nowe hasło"
+               IsPassword="True"
+               IsVisible="false" />
 
         <Button x:Name="changePasswordButton"
                 Margin="0,20,0,0"

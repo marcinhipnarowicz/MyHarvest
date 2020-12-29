@@ -9,11 +9,14 @@ namespace MyHarvest.ViewModels
 {
     public class TaskListVm : INotifyPropertyChanged
     {
-        public ObservableCollection<UserInformationVm> Tasks { get; set; }
+        public ObservableCollection<UserInformationVm> UserInformations { get; set; }
+
+        public ObservableCollection<UserVm> Users { get; set; }
 
         public TaskListVm()
         {
-            Tasks = new ObservableCollection<UserInformationVm>();
+            UserInformations = new ObservableCollection<UserInformationVm>();
+            Users = new ObservableCollection<UserVm>();
         }
 
         #region INotifyPropertyChanged Implementation

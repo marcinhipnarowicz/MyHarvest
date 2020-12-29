@@ -31,15 +31,11 @@ namespace MyHarvest.Views
             _taskList = new TaskListVm();
 
             BindingContext = _taskList;
-
-            //BindingContext = _viewModel = new ItemsViewModel();
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
-            //numberOfElements.Text = "";
 
             SetData();
             //_viewModel.OnAppearing();
@@ -53,16 +49,34 @@ namespace MyHarvest.Views
 
                 _userInformation = data;
 
-                _taskList.Tasks.Clear();
+                _taskList.UserInformations.Clear();
 
                 if (data != null)
                 {
                     foreach (var item in data)
                     {
-                        _taskList.Tasks.Add(item);
+                        _taskList.UserInformations.Add(item);
                     }
                 }
             });
+        }
+
+        //o to zapytać , bo to nie wiem jak do końca zrobić...
+        protected async virtual Task<List<UserVm>> GetUsers()
+        {
+            List<UserVm> data = new List<UserVm>();
+
+            var userInformation = await GetData();
+
+            if (userInformation != null)
+            {
+                foreach (var item in userInformation)
+                {
+                    data = await UserService.GetUserToTask(item.IdUser);
+                }
+            }
+
+            return data;
         }
 
         protected async virtual Task<List<UserInformationVm>> GetData()
@@ -98,11 +112,11 @@ namespace MyHarvest.Views
             }
             else
             {
-                var index = _taskList.Tasks.IndexOf(element) + 1;
+                var index = _taskList.UserInformations.IndexOf(element) + 1;
                 //numberOfElements.Text = index + "/" + _taskList.Tasks.Count();
             }
 
-            appearingIndex = _taskList.Tasks.IndexOf(element) + 1;
+            appearingIndex = _taskList.UserInformations.IndexOf(element) + 1;
         }
 
         private void TasksListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -118,7 +132,7 @@ namespace MyHarvest.Views
         private void TasksListView_ItemDisappearing(object sender, ItemVisibilityEventArgs e)
         {
             var element = e.Item as UserInformationVm;
-            disappearingTabIndex = _taskList.Tasks.IndexOf(element) + 1;
+            disappearingTabIndex = _taskList.UserInformations.IndexOf(element) + 1;
         }
     }
 }
