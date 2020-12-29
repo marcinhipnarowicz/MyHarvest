@@ -18,6 +18,13 @@ namespace MyHarvestApi.Service.ViewModel
 
         public int? IdTaskStatus { get; set; }
 
-        public string UserName { get; set; }
+        public string UserFistName { get; set; }
+        public string UserSurname { get; set; }
+
+        public string StatusOfTaskName { get; set; }
+
+        public string TaskName { get; set; }
+
+        public string TaskDescripton { get; set; }
     }
 }

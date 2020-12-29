@@ -11,12 +11,9 @@ namespace MyHarvest.ViewModels
     {
         public ObservableCollection<UserInformationVm> UserInformations { get; set; }
 
-        public ObservableCollection<UserVm> Users { get; set; }
-
         public TaskListVm()
         {
             UserInformations = new ObservableCollection<UserInformationVm>();
-            Users = new ObservableCollection<UserVm>();
         }
 
         #region INotifyPropertyChanged Implementation

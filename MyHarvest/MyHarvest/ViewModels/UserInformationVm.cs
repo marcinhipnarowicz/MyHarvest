@@ -18,5 +18,22 @@ namespace MyHarvest.ViewModels
         public int? IdTask { get; set; }
 
         public int? IdTaskStatus { get; set; }
+
+        public string UserFistName { get; set; }
+        public string UserSurname { get; set; }
+
+        public string UserFullName
+        {
+            get
+            {
+                return String.Format($"{UserFistName} {UserSurname}");
+            }
+        }
+
+        public string StatusOfTaskName { get; set; }
+
+        public string TaskName { get; set; }
+
+        public string TaskDescripton { get; set; }
     }
 }

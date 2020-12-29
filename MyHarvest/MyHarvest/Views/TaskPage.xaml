@@ -33,10 +33,16 @@
 											 x:Name="stackList">
                                     <Label VerticalOptions="FillAndExpand"
 										   VerticalTextAlignment="Center"
-										   Text="{Binding Area}" />
+                                           FontAttributes="Bold"
+                                           FontSize="Large"
+										   Text="{Binding UserFullName}" />
                                     <Label VerticalOptions="FillAndExpand"
 										   VerticalTextAlignment="Center"
-										   Text="{Binding IdTask}" />
+										   Text="{Binding TaskName}" />
+                                    <Label VerticalOptions="FillAndExpand"
+										   VerticalTextAlignment="Center"
+                                           TextColor="Red"
+										   Text="{Binding StatusOfTaskName}" />
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

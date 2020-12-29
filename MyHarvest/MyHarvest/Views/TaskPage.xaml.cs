@@ -61,24 +61,6 @@ namespace MyHarvest.Views
             });
         }
 
-        //o to zapytać , bo to nie wiem jak do końca zrobić...
-        protected async virtual Task<List<UserVm>> GetUsers()
-        {
-            List<UserVm> data = new List<UserVm>();
-
-            var userInformation = await GetData();
-
-            if (userInformation != null)
-            {
-                foreach (var item in userInformation)
-                {
-                    data = await UserService.GetUserToTask(item.IdUser);
-                }
-            }
-
-            return data;
-        }
-
         protected async virtual Task<List<UserInformationVm>> GetData()
         {
             List<UserInformationVm> data = new List<UserInformationVm>();

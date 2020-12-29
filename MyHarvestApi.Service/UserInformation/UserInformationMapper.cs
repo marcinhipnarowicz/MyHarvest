@@ -36,6 +36,12 @@ namespace MyHarvestApi.Service
                 userInfo.IdTaskStatus = item.IdTaskStatus;
                 userInfo.Area = item.Area;
 
+                userInfo.UserFistName = item.User.FirstName;
+                userInfo.UserSurname = item.User.Surname;
+                userInfo.TaskName = item.Task.Name;
+                userInfo.TaskDescripton = item.Task.Description;
+                userInfo.StatusOfTaskName = item.StatusOfTask.Name;
+
                 userInformationList.Add(userInfo);
             }
 
