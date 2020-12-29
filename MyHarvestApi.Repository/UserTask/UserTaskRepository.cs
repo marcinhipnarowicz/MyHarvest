@@ -1,4 +1,5 @@
 ﻿using MyHarvestApi.Entity.Context;
+using MyHarvestApi.Entity.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,18 @@ namespace MyHarvestApi.Repository
         public UserTaskRepository(ApplicationDbContext db)
         {
             _db = db;
+        }
+
+        public void AddUserTask(UserTask userTask)
+        {
+            _db.UsersTasks.Add(userTask);
+            _db.SaveChanges();
+        }
+
+        public List<UserTask> GetInformationAboutTaskList(int id)
+        {
+            var infoAboutTaskList = _db.UsersTasks.Where(x => x.IdUser.Equals(id)).ToList();
+            return infoAboutTaskList;
         }
     }
 }

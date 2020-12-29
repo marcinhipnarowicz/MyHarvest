@@ -228,6 +228,9 @@
     <Compile Include="Task\TaskMapper.cs" />
     <Compile Include="Task\TaskService.cs" />
     <Compile Include="UserInformation\UserInformationMapper.cs" />
+    <Compile Include="UserTask\IUserTaskService.cs" />
+    <Compile Include="UserTask\UserTaskMapper.cs" />
+    <Compile Include="UserTask\UserTaskService.cs" />
     <Compile Include="ViewModel\TaskVm.cs" />
     <Compile Include="UserInformation\IUserInformationService.cs" />
     <Compile Include="UserInformation\UserInformationService.cs" />
@@ -240,6 +243,7 @@
     <Compile Include="ViewModel\PlotVm.cs" />
     <Compile Include="ViewModel\RegisterVm.cs" />
     <Compile Include="ViewModel\UserInformationVm.cs" />
+    <Compile Include="ViewModel\UserTaskVm.cs" />
     <Compile Include="ViewModel\UserVm.cs" />
   </ItemGroup>
   <ItemGroup>
