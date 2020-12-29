@@ -160,3 +160,5 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\b
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\NetTopologySuite.IO.SqlServerBytes.dll
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\System.IdentityModel.Tokens.Jwt.dll
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\obj\Release\net472\EFCoreSqlServerNetTopologySuite.cs
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\GeoAPI.CoordinateSystems.dll
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Api\bin\Release\net472\NetTopologySuite.CoordinateSystems.dll

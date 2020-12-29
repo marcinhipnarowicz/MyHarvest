@@ -20,7 +20,7 @@ namespace MyHarvestApi.Entity.Model
 
         //public NetTopologySuite.Geometries.Geometry Coordinates { get; set; }
 
-        //public DbGeography Coordinates { get; set; }
+        public DbGeography Coordinates { get; set; }
 
         //public Geography Coordinates { get; set; }//dla tego typu dodany nugget system.Spatial
     }

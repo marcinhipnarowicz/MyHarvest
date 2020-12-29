@@ -53,6 +53,10 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "GeoAPI.Core": {
+              "target": "Package",
+              "version": "[1.7.5, )"
+            },
             "Microsoft.AspNetCore": {
               "target": "Package",
               "version": "[2.1.7, )"
@@ -86,6 +90,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.6, )"
+            },
+            "NetTopologySuite": {
+              "target": "Package",
+              "version": "[1.15.1, )"
+            },
+            "NetTopologySuite.Core": {
+              "target": "Package",
+              "version": "[1.15.1, )"
+            },
+            "NetTopologySuite.IO.SqlServerBytes": {
+              "target": "Package",
+              "version": "[1.15.0, )"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"

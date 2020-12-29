@@ -24,6 +24,7 @@
     ".NETFramework,Version=v4.7.2": {
       "MyHarvestApi.Api/1.0.0": {
         "dependencies": {
+          "GeoAPI.Core": "1.7.5",
           "Microsoft.AspNetCore": "2.1.7",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "2.2.0",
           "Microsoft.AspNetCore.HttpsPolicy": "2.1.1",
@@ -35,6 +36,9 @@
           "MyHarvestApi.Entity": "1.0.0",
           "MyHarvestApi.Repository": "1.0.0",
           "MyHarvestApi.Service": "1.0.0",
+          "NetTopologySuite": "1.15.1",
+          "NetTopologySuite.Core": "1.15.1",
+          "NetTopologySuite.IO.SqlServerBytes": "1.15.0",
           "Microsoft.CSharp.Reference": "4.0.0.0",
           "mscorlib": "4.0.0.0",
           "System.ComponentModel.Composition": "4.0.0.0",
@@ -776,6 +780,14 @@
       "System.Xml.XPath.XDocument.Reference/0.0.0.0": {
         "compile": {
           ".NETFramework/v4.7.2/Facades/System.Xml.XPath.XDocument.dll": {}
+        }
+      },
+      "GeoAPI.CoordinateSystems/1.7.5": {
+        "dependencies": {
+          "GeoAPI.Core": "1.7.5"
+        },
+        "compile": {
+          "lib/net45/GeoAPI.CoordinateSystems.dll": {}
         }
       },
       "GeoAPI.Core/1.7.5": {
@@ -1829,6 +1841,20 @@
           "ref/net461/Microsoft.Win32.Registry.dll": {}
         }
       },
+      "NetTopologySuite/1.15.1": {
+        "dependencies": {
+          "NetTopologySuite.CoordinateSystems": "1.15.1",
+          "NetTopologySuite.Core": "1.15.1"
+        }
+      },
+      "NetTopologySuite.CoordinateSystems/1.15.1": {
+        "dependencies": {
+          "GeoAPI.CoordinateSystems": "1.7.5"
+        },
+        "compile": {
+          "lib/net45/NetTopologySuite.CoordinateSystems.dll": {}
+        }
+      },
       "NetTopologySuite.Core/1.15.1": {
         "dependencies": {
           "GeoAPI.Core": "1.7.5"
@@ -2078,6 +2104,7 @@
     ".NETFramework,Version=v4.7.2/win7-x86": {
       "MyHarvestApi.Api/1.0.0": {
         "dependencies": {
+          "GeoAPI.Core": "1.7.5",
           "Microsoft.AspNetCore": "2.1.7",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "2.2.0",
           "Microsoft.AspNetCore.HttpsPolicy": "2.1.1",
@@ -2089,6 +2116,9 @@
           "MyHarvestApi.Entity": "1.0.0",
           "MyHarvestApi.Repository": "1.0.0",
           "MyHarvestApi.Service": "1.0.0",
+          "NetTopologySuite": "1.15.1",
+          "NetTopologySuite.Core": "1.15.1",
+          "NetTopologySuite.IO.SqlServerBytes": "1.15.0",
           "Microsoft.CSharp.Reference": "4.0.0.0",
           "mscorlib": "4.0.0.0",
           "System.ComponentModel.Composition": "4.0.0.0",
@@ -2215,6 +2245,14 @@
         },
         "runtime": {
           "MyHarvestApi.Api.exe": {}
+        }
+      },
+      "GeoAPI.CoordinateSystems/1.7.5": {
+        "dependencies": {
+          "GeoAPI.Core": "1.7.5"
+        },
+        "runtime": {
+          "lib/net45/GeoAPI.CoordinateSystems.dll": {}
         }
       },
       "GeoAPI.Core/1.7.5": {
@@ -3275,6 +3313,20 @@
           "runtimes/win/lib/net461/Microsoft.Win32.Registry.dll": {}
         }
       },
+      "NetTopologySuite/1.15.1": {
+        "dependencies": {
+          "NetTopologySuite.CoordinateSystems": "1.15.1",
+          "NetTopologySuite.Core": "1.15.1"
+        }
+      },
+      "NetTopologySuite.CoordinateSystems/1.15.1": {
+        "dependencies": {
+          "GeoAPI.CoordinateSystems": "1.7.5"
+        },
+        "runtime": {
+          "lib/net45/NetTopologySuite.CoordinateSystems.dll": {}
+        }
+      },
       "NetTopologySuite.Core/1.15.1": {
         "dependencies": {
           "GeoAPI.Core": "1.7.5"
@@ -3531,6 +3583,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "GeoAPI.CoordinateSystems/1.7.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JBcvkeQFjCW9NTfkII5WiJNmnv0ZtYA/VTVljbIqDFWBJ8kHwu2UHd2MVStD/VVHVnLoyNcDIapsuTENdlyF3g==",
+      "path": "geoapi.coordinatesystems/1.7.5",
+      "hashPath": "geoapi.coordinatesystems.1.7.5.nupkg.sha512"
     },
     "GeoAPI.Core/1.7.5": {
       "type": "package",
@@ -4287,6 +4346,20 @@
       "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "NetTopologySuite/1.15.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Yi34erRtBXhoBd5L/6kg+1/6k7gM4dkom4OkeguLsOm4IYgMPWrjdsyu/G+t77VL1aVzWco8Eqp2Mmqn3Aw/wQ==",
+      "path": "nettopologysuite/1.15.1",
+      "hashPath": "nettopologysuite.1.15.1.nupkg.sha512"
+    },
+    "NetTopologySuite.CoordinateSystems/1.15.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IpDGYzD/5xLkr1ivlj2tfGu7FkahZKTpYpQ+PY5S87oeUogFCAwHxXpGK0AHrJNfeIYSelqrLgtnzFEIuxLCiQ==",
+      "path": "nettopologysuite.coordinatesystems/1.15.1",
+      "hashPath": "nettopologysuite.coordinatesystems.1.15.1.nupkg.sha512"
     },
     "NetTopologySuite.Core/1.15.1": {
       "type": "package",

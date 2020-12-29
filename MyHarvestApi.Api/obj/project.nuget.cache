@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CHl6qRX/uUs2t1VCXqmVG5HOP5QA1cLvMPC6WbAj7Ne64tAoHsPdVJaXAdNPowGM3C0bzbGIWHleV/KctCx0UQ==",
+  "dgSpecHash": "Wi/EFkb9+3ZMpjxFW7X+s/bfnj8kg1/YiX6A7ryStmjwjobx2VEHfZ/UXtZtPNpSxUDOucH7cxIWyznwV/i0UQ==",
   "success": true,
   "projectFilePath": "D:\\dysk\\STUDIA\\VII_semestr\\MyHarvest\\Github Desktop\\MyHarvest\\MyHarvestApi.Api\\MyHarvestApi.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\marhi\\.nuget\\packages\\geoapi.coordinatesystems\\1.7.5\\geoapi.coordinatesystems.1.7.5.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\geoapi.core\\1.7.5\\geoapi.core.1.7.5.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\microsoft.aspnetcore\\2.1.7\\microsoft.aspnetcore.2.1.7.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.antiforgery\\2.1.1\\microsoft.aspnetcore.antiforgery.2.1.1.nupkg.sha512",
@@ -112,6 +113,8 @@
     "C:\\Users\\marhi\\.nuget\\packages\\microsoft.identitymodel.tokens\\5.3.0\\microsoft.identitymodel.tokens.5.3.0.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\marhi\\.nuget\\packages\\nettopologysuite\\1.15.1\\nettopologysuite.1.15.1.nupkg.sha512",
+    "C:\\Users\\marhi\\.nuget\\packages\\nettopologysuite.coordinatesystems\\1.15.1\\nettopologysuite.coordinatesystems.1.15.1.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\nettopologysuite.core\\1.15.1\\nettopologysuite.core.1.15.1.nupkg.sha512",
     "C:\\Users\\marhi\\.nuget\\packages\\nettopologysuite.io.sqlserverbytes\\1.15.0\\nettopologysuite.io.sqlserverbytes.1.15.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
