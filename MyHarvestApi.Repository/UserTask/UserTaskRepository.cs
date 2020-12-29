@@ -1,4 +1,5 @@
 ﻿using MyHarvestApi.Entity.Context;
+using Microsoft.EntityFrameworkCore;
 using MyHarvestApi.Entity.Model;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,9 @@ namespace MyHarvestApi.Repository
 
         public List<UserTask> GetInformationAboutTaskList(int id)
         {
-            var infoAboutTaskList = _db.UsersTasks.Where(x => x.IdUser.Equals(id)).ToList();
+            //var infoAboutTaskList = _db.UsersTasks.Where(x => x.IdUser.Equals(id)).ToList();
+
+            var infoAboutTaskList = _db.UsersTasks.Where(x => x.IdUser.Equals(id)).Include(x => x.Task).ToList();
             return infoAboutTaskList;
         }
     }

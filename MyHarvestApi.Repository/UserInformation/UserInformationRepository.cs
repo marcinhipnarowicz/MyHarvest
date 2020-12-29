@@ -24,10 +24,24 @@ namespace MyHarvestApi.Repository
             _db.SaveChanges();
         }
 
-        public List<UserInformation> GetInformationAboutTaskList(int id)
+        public List<UserInformation> GetInformationAboutTaskListForBoss(int id)
+        {
+            var infoAboutTaskList = _db.UsersInformation.Where(x => x.User.IdBoss.Equals(id))
+                                                        .Include(x => x.User)
+                                                        .Include(x => x.Task)
+                                                        .Include(x => x.StatusOfTask).ToList();
+
+            return infoAboutTaskList;
+        }
+
+        public List<UserInformation> GetInformationAboutTaskListForEmployee(int id)
         {
             //var infoAboutTaskList = _db.UsersInformation.Where(x => x.IdUser.Equals(id)).ToList();
-            var infoAboutTaskList = _db.UsersInformation.Where(x => x.IdUser.Equals(id)).Include(x => x.User).Include(x => x.Task).Include(x => x.StatusOfTask).ToList();
+            var infoAboutTaskList = _db.UsersInformation.Where(x => x.IdUser.Equals(id))
+                                                        .Include(x => x.User)
+                                                        .Include(x => x.Task)
+                                                        .Include(x => x.StatusOfTask).ToList();
+
             return infoAboutTaskList;
         }
     }

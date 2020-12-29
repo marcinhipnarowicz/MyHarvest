@@ -10,7 +10,8 @@ namespace MyHarvest.Services
     {
         private const string userInformationController = "UserInformation/";
         private const string addUserInformation = "AddUserInformation";
-        private const string getInformationAboutTask = "GetInformationAboutTask";
+        private const string getInformationAboutTaskForEmployee = "GetInformationAboutTaskForEmployee";
+        private const string getInformationAboutTaskForBoss = "GetInformationAboutTaskForBoss";
 
         public async static void AddUserInformation(UserInformationVm userInformation)
         {
@@ -18,9 +19,16 @@ namespace MyHarvest.Services
             await Api.Request(RestSharp.Method.POST, address, userInformation);
         }
 
-        public async static Task<List<UserInformationVm>> GetUserInformationList(int id)
+        public async static Task<List<UserInformationVm>> GetUserInformationListForEmployee(int id)
         {
-            var address = Api.BuildAdress(userInformationController, getInformationAboutTask, "?id=", id.ToString(), "&token=");
+            var address = Api.BuildAdress(userInformationController, getInformationAboutTaskForEmployee, "?id=", id.ToString(), "&token=");
+            var response = await Api.RequestAndSerialize<List<UserInformationVm>>(RestSharp.Method.GET, address);
+            return response;
+        }
+
+        public async static Task<List<UserInformationVm>> GetUserInformationListForBoss(int id)
+        {
+            var address = Api.BuildAdress(userInformationController, getInformationAboutTaskForBoss, "?id=", id.ToString(), "&token=");
             var response = await Api.RequestAndSerialize<List<UserInformationVm>>(RestSharp.Method.GET, address);
             return response;
         }

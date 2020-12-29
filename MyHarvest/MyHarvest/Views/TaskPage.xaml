@@ -15,6 +15,10 @@
     <ContentPage.Content>
         <AbsoluteLayout VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand">
+            <Grid>
+            <ScrollView>
+                
+            
 
             <StackLayout>
 
@@ -28,19 +32,26 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Padding="15, 10, 15, 20"
-											 Margin="0, 0, 0, 10"
+											 Margin="5, 5, 5, 5"
+                                             BackgroundColor="#F3ECDB"
 											 HorizontalOptions="FillAndExpand"
 											 x:Name="stackList">
                                     <Label VerticalOptions="FillAndExpand"
 										   VerticalTextAlignment="Center"
+                                           TextColor="{StaticResource Primary}"
                                            FontAttributes="Bold"
                                            FontSize="Large"
-										   Text="{Binding UserFullName}" />
-                                    <Label VerticalOptions="FillAndExpand"
-										   VerticalTextAlignment="Center"
 										   Text="{Binding TaskName}" />
+                                    <Label x:Name="fullNameEmployeeLabel"
+										   VerticalOptions="FillAndExpand"
+										   VerticalTextAlignment="Center"
+                                           
+                                           FontSize="Medium"
+										   Text="{Binding UserFullName}"
+                                           IsVisible="true" />
                                     <Label VerticalOptions="FillAndExpand"
 										   VerticalTextAlignment="Center"
+                                           HorizontalOptions="End"
                                            TextColor="Red"
 										   Text="{Binding StatusOfTaskName}" />
                                 </StackLayout>
@@ -56,6 +67,8 @@
 			          x:Name="numberOfElements">
                 </Label>-->
             </StackLayout>
+            </ScrollView>
+            </Grid>
         </AbsoluteLayout>
     </ContentPage.Content>
 

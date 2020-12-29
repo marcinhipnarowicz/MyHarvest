@@ -41,6 +41,14 @@ namespace MyHarvest.Views
             //_viewModel.OnAppearing();
         }
 
+        private void Init()
+        {
+            if (LocalConfig.LoginModel.IdAccountType == 2)
+            {
+                //fullNameEmployeeLabel.IsVisible = false;
+            }
+        }
+
         private async void SetData()
         {
             await Task.Run(async () =>
@@ -64,8 +72,14 @@ namespace MyHarvest.Views
         protected async virtual Task<List<UserInformationVm>> GetData()
         {
             List<UserInformationVm> data = new List<UserInformationVm>();
-
-            data = await UserInformationService.GetUserInformationList(LocalConfig.LoginModel.Id);
+            if (LocalConfig.LoginModel.IdAccountType == 2)
+            {
+                data = await UserInformationService.GetUserInformationListForEmployee(LocalConfig.LoginModel.Id);
+            }
+            else if (LocalConfig.LoginModel.IdAccountType == 1)
+            {
+                data = await UserInformationService.GetUserInformationListForBoss(LocalConfig.LoginModel.Id);
+            }
 
             return data;
         }

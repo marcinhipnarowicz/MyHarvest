@@ -11,6 +11,8 @@ namespace MyHarvestApi.Repository
     {
         void AddUserInformation(UserInformation userInformation);
 
-        List<UserInformation> GetInformationAboutTaskList(int id);
+        List<UserInformation> GetInformationAboutTaskListForEmployee(int id);
+
+        List<UserInformation> GetInformationAboutTaskListForBoss(int id);
     }
 }

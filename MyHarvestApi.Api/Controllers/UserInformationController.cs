@@ -37,10 +37,18 @@ namespace MyHarvestApi.Api.Controllers
         }
 
         [HttpGet]
-        [Route("GetInformationAboutTask")]
-        public IActionResult Get(int id, string token)
+        [Route("GetInformationAboutTaskForEmployee")]
+        public IActionResult GetTaskListForEmployee(int id, string token)
         {
-            var userInformationDb = _service.GetAllInformationAboutTaskList(id);
+            var userInformationDb = _service.GetAllInformationAboutTaskListForEmployee(id);
+            return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, userInformationDb));
+        }
+
+        [HttpGet]
+        [Route("GetInformationAboutTaskForBoss")]
+        public IActionResult GetTaskListForBoss(int id, string token)
+        {
+            var userInformationDb = _service.GetAllInformationAboutTaskListForBoss(id);
             return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, userInformationDb));
         }
     }

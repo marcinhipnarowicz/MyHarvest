@@ -24,11 +24,23 @@ namespace MyHarvestApi.Service
             _repo.AddUserInformation(userInformation);
         }
 
-        public List<UserInformationVm> GetAllInformationAboutTaskList(int id)
+        public List<UserInformationVm> GetAllInformationAboutTaskListForBoss(int id)
         {
             var userInformationList = new List<UserInformationVm>();
 
-            var infoAboutTaskById = _repo.GetInformationAboutTaskList(id);
+            var infoAboutTaskById = _repo.GetInformationAboutTaskListForBoss(id);
+
+            if (infoAboutTaskById != null)
+                userInformationList = UserInformationMapper.MapList(infoAboutTaskById.ToList());
+
+            return userInformationList;
+        }
+
+        public List<UserInformationVm> GetAllInformationAboutTaskListForEmployee(int id)
+        {
+            var userInformationList = new List<UserInformationVm>();
+
+            var infoAboutTaskById = _repo.GetInformationAboutTaskListForEmployee(id);
 
             if (infoAboutTaskById != null)
                 userInformationList = UserInformationMapper.MapList(infoAboutTaskById.ToList());

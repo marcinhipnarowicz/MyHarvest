@@ -12,6 +12,8 @@ namespace MyHarvestApi.Service
     {
         void AddUserInformation(UserInformationVm userInformationVm);
 
-        List<UserInformationVm> GetAllInformationAboutTaskList(int id);
+        List<UserInformationVm> GetAllInformationAboutTaskListForEmployee(int id);
+
+        List<UserInformationVm> GetAllInformationAboutTaskListForBoss(int id);
     }
 }
