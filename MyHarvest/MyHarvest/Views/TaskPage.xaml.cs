@@ -121,7 +121,7 @@ namespace MyHarvest.Views
             {
                 var task = e.SelectedItem as UserInformationVm;
 
-                await Navigation.PushAsync(new AddTaskPage());//w tym miejscu chyba zrobić w konstruktorze strony argument, żeby przekazywać do niej obiekt
+                await Navigation.PushAsync(new AddTaskPage(task));//w tym miejscu chyba zrobić w konstruktorze strony argument, żeby przekazywać do niej obiekt
             });
         }
 

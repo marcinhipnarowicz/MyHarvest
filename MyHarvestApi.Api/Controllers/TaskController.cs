@@ -58,6 +58,17 @@ namespace MyHarvestApi.Api.Controllers
             }
         }
 
+        //RemoveTask
+
+        [HttpPost]
+        [Route("RemoveTask")]
+        [TokenAuthoriseAttribute]
+        public IActionResult RemoveTask([FromQuery] int id, string token)
+        {
+            _taskService.RemoveTask(id);
+            return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, null));
+        }
+
         //PUT api/task/1
         [HttpPut("{id}")]
         public ActionResult<Task> Edit(int id, Task task)

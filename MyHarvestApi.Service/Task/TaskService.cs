@@ -27,5 +27,15 @@ namespace MyHarvestApi.Service
             int maxId = _repo.GetMaxId();
             return maxId;
         }
+
+        public void RemoveTask(int id)
+        {
+            var task = _repo.GetOneTask(id);
+
+            if (task != null)
+            {
+                _repo.RemoveTask(task);
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyHarvestApi.Entity.Context;
+using MyHarvestApi.Entity.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,6 +53,28 @@ namespace MyHarvestApi.Repository
         public bool IfTaskExist(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public void RemoveTask(Task task)
+        {
+            var userInformationList = GetUserInformationForTaskToRemove(task);
+
+            if (userInformationList != null)
+            {
+                foreach (var item in userInformationList)
+                {
+                    _db.UsersInformation.Remove(item);
+                }
+            }
+
+            _db.Tasks.Remove(task);
+            _db.SaveChanges();
+        }
+
+        public List<UserInformation> GetUserInformationForTaskToRemove(Task task)
+        {
+            var userInformationList = _db.UsersInformation.Where(x => x.Task.Equals(task)).ToList();
+            return userInformationList;
         }
 
         private bool MovieExists(long id) =>

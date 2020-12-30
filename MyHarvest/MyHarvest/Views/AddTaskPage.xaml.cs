@@ -1,5 +1,7 @@
-﻿using MyHarvest.Base;
+﻿using Acr.UserDialogs;
+using MyHarvest.Base;
 using MyHarvest.Services;
+using MyHarvest.Services.Enum;
 using MyHarvest.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -17,6 +19,7 @@ namespace MyHarvest.Views
     {
         private List<UserVm> _userVm = new List<UserVm>();
         private List<EmployeeItemList> _employeeCheckBoxList = new List<EmployeeItemList>();
+        private int idTask;
 
         public AddTaskPage()
         {
@@ -24,17 +27,56 @@ namespace MyHarvest.Views
             Init();
         }
 
+        public AddTaskPage(UserInformationVm userInformationVm)
+        {
+            idTask = (int)userInformationVm.IdTask;
+            InitializeComponent();
+            InitEdit(userInformationVm);
+        }
+
+        public void InitEdit(UserInformationVm userInformationVm)
+        {
+            if (LocalConfig.LoginModel.IdAccountType == (int)AccountType.Boss)
+            {
+                taskForEditor.IsVisible = true;
+                addButton.IsVisible = true;
+                deleteButton.IsVisible = true;
+
+                taskNameEditor.Text = userInformationVm.TaskName;
+                taskDescriptionEditor.Text = userInformationVm.TaskDescripton;
+                taskAreaEditor.Text = userInformationVm.Area;
+                taskForEditor.Text = userInformationVm.UserFullName;
+            }
+            else if (LocalConfig.LoginModel.IdAccountType == (int)AccountType.Employee)
+            {
+                addButton.IsVisible = true;
+                taskForLabel.IsVisible = false;
+                employeesStackLayout.IsVisible = false;
+                taskNameEditor.IsReadOnly = true;
+                taskDescriptionEditor.IsReadOnly = true;
+
+                taskNameEditor.Text = userInformationVm.TaskName;
+                taskDescriptionEditor.Text = userInformationVm.TaskDescripton;
+                taskAreaEditor.Text = userInformationVm.Area;
+            }
+        }
+
         public async void Init()
         {
-            if (LocalConfig.LoginModel.IdAccountType == 1)
+            if (LocalConfig.LoginModel.IdAccountType == (int)AccountType.Boss)
             {
                 addButton.IsVisible = true;
             }
-            else if (LocalConfig.LoginModel.IdAccountType == 2)
+            else if (LocalConfig.LoginModel.IdAccountType == (int)AccountType.Employee)
             {
                 addButton.IsVisible = false;
                 taskForLabel.IsVisible = false;
             }
+
+            slider.IsVisible = false;
+            statusLabel.IsVisible = false;
+            statusOfTaskLabel.IsVisible = false;
+
             var data = await GetData();
             _userVm = data;
 
@@ -145,6 +187,42 @@ namespace MyHarvest.Views
             else
             {
                 await DisplayAlert("Uwaga!", "Nie wybrałeś pracownika do wykonania zadania", "Ok");
+            }
+        }
+
+        private async void deleteButton_Clicked(object sender, EventArgs e)
+        {
+            if (await UserDialogs.Instance.ConfirmAsync("Czy na pewno chcesz usunąć zadanie?", "Potwierdź", "Tak", "Anuluj"))
+            {
+                TaskService.RemoveTask(idTask);
+
+                await DisplayAlert("Potwierdzenie", "Zadanie zostało usunięte", "Ok");
+                await Navigation.PushAsync(new TaskPage());
+            }
+        }
+
+        private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            int value = (int)Math.Round(e.NewValue);
+            slider.Value = value;
+
+            if (value == 0)
+            {
+                statusLabel.Text = "Do zrobienia";
+                slider.ThumbColor = Color.Red;
+                slider.MinimumTrackColor = Color.Red;
+            }
+            else if (value == 1)
+            {
+                statusLabel.Text = "W realizacji";
+                slider.ThumbColor = Color.Yellow;
+                slider.MinimumTrackColor = Color.Yellow;
+            }
+            else if (value == 2)
+            {
+                statusLabel.Text = "Wykonane";
+                slider.ThumbColor = Color.Green;
+                slider.MinimumTrackColor = Color.Green;
             }
         }
     }

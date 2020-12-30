@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyHarvestApi.Entity.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,5 +21,9 @@ namespace MyHarvestApi.Repository
         bool IfTaskExist(int id);
 
         int GetMaxId();
+
+        void RemoveTask(Task task);
+
+        List<UserInformation> GetUserInformationForTaskToRemove(Task task);
     }
 }

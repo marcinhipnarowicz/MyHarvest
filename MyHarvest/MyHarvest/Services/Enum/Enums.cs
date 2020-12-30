@@ -10,4 +10,11 @@ namespace MyHarvest.Services.Enum
         Warning = 2,
         Error = 3,
     }
+
+    public enum AccountType
+    {
+        Invalid = 0,
+        Boss = 1,
+        Employee,
+    }
 }

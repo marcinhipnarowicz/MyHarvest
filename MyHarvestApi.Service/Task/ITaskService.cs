@@ -11,5 +11,7 @@ namespace MyHarvestApi.Service
         void AddTask(TaskVm taskVm);
 
         int GetMaxId();
+
+        void RemoveTask(int id);
     }
 }
