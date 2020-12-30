@@ -25,6 +25,8 @@ namespace MyHarvest.Views
         private int disappearingTabIndex;
         private int appearingIndex;
 
+        private bool isEmployee;
+
         public TaskPage()
         {
             InitializeComponent();
@@ -39,13 +41,15 @@ namespace MyHarvest.Views
 
             SetData();
             //_viewModel.OnAppearing();
+            Init();
         }
 
         private void Init()
         {
             if (LocalConfig.LoginModel.IdAccountType == 2)
             {
-                //fullNameEmployeeLabel.IsVisible = false;
+                isEmployee = true;
+                ToolbarItem.Text = "";
             }
         }
 
@@ -86,14 +90,9 @@ namespace MyHarvest.Views
 
         private async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            if (LocalConfig.LoginModel.IdAccountType == 1)
+            if (isEmployee == false)
             {
-                //await Navigation.PushAsync(new AddTaskPage());
                 await Shell.Current.GoToAsync("AddTaskPage");
-            }
-            else
-            {
-                await DisplayAlert("Uwaga!", "Nie masz uprawnień do dodawania zadań", "Ok");
             }
         }
 

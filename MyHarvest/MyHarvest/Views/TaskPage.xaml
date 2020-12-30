@@ -9,6 +9,7 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+"
+                     x:Name="ToolbarItem"
 					 Clicked="ToolbarItem_Clicked" />
     </ContentPage.ToolbarItems>
 
