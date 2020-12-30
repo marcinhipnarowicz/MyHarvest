@@ -24,6 +24,12 @@ namespace MyHarvestApi.Repository
             _db.SaveChanges();
         }
 
+        public void EditUserInformation(UserInformation userInformation)
+        {
+            _db.Entry(userInformation).State = EntityState.Modified;
+            _db.SaveChanges();
+        }
+
         public List<UserInformation> GetInformationAboutTaskListForBoss(int id)
         {
             var infoAboutTaskList = _db.UsersInformation.Where(x => x.User.IdBoss.Equals(id))

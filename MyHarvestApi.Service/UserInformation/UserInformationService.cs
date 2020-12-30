@@ -24,6 +24,12 @@ namespace MyHarvestApi.Service
             _repo.AddUserInformation(userInformation);
         }
 
+        public void EditUserInformation(UserInformationVm userInformationVm)
+        {
+            var userInformation = UserInformationMapper.MapFromVm(userInformationVm);
+            _repo.EditUserInformation(userInformation);
+        }
+
         public List<UserInformationVm> GetAllInformationAboutTaskListForBoss(int id)
         {
             var userInformationList = new List<UserInformationVm>();

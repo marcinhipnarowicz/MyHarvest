@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\AddTaskPage.xaml.cs">
-      <DependentUpon>AddTaskPage.xaml</DependentUpon>
+    <Compile Update="Views\AddEditTaskPage.xaml.cs">
+      <DependentUpon>AddEditTaskPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ProfilPage.xaml.cs">
       <DependentUpon>ProfilPage.xaml</DependentUpon>
@@ -35,7 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\AddTaskPage.xaml">
+    <EmbeddedResource Update="Views\AddEditTaskPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MapPage.xaml">

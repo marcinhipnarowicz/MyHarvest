@@ -22,37 +22,37 @@
                     <StackLayout>
 
                         <ListView x:Name="TasksListView"
-						  HasUnevenRows="true"
-						  ItemsSource="{Binding UserInformations}"
-						  ItemAppearing="TasksListView_ItemAppearing"
-						  ItemSelected="TasksListView_ItemSelected"
-						  ItemDisappearing="TasksListView_ItemDisappearing">
+								  HasUnevenRows="true"
+								  ItemsSource="{Binding UserInformations}"
+								  ItemAppearing="TasksListView_ItemAppearing"
+								  ItemSelected="TasksListView_ItemSelected"
+								  ItemDisappearing="TasksListView_ItemDisappearing">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
                                         <StackLayout Padding="15, 10, 15, 20"
-											 Margin="5, 5, 5, 5"
-                                             BackgroundColor="#F3ECDB"
-											 HorizontalOptions="FillAndExpand"
-											 x:Name="stackList">
+													 Margin="5, 5, 5, 5"
+													 BackgroundColor="#F3ECDB"
+													 HorizontalOptions="FillAndExpand"
+													 x:Name="stackList">
                                             <Label VerticalOptions="FillAndExpand"
-										   VerticalTextAlignment="Center"
-                                           TextColor="{StaticResource Primary}"
-                                           FontAttributes="Bold"
-                                           FontSize="Large"
-										   Text="{Binding TaskName}" />
+												   VerticalTextAlignment="Center"
+												   TextColor="{StaticResource Primary}"
+												   FontAttributes="Bold"
+												   FontSize="Large"
+												   Text="{Binding TaskName}" />
                                             <Label x:Name="fullNameEmployeeLabel"
-										   VerticalOptions="FillAndExpand"
-										   VerticalTextAlignment="Center"
-
-                                           FontSize="Medium"
-										   Text="{Binding UserFullName}"
-                                           IsVisible="true" />
-                                            <Label VerticalOptions="FillAndExpand"
-										   VerticalTextAlignment="Center"
-                                           HorizontalOptions="End"
-                                           TextColor="Red"
-										   Text="{Binding StatusOfTaskName}" />
+												   VerticalOptions="FillAndExpand"
+												   VerticalTextAlignment="Center"
+												   FontSize="Medium"
+												   Text="{Binding UserFullName}"
+												   IsVisible="true" />
+                                            <Label x:Name="statusOfTaskLabel"
+												   VerticalOptions="FillAndExpand"
+												   VerticalTextAlignment="Center"
+												   HorizontalOptions="End"
+												   TextColor="Red"
+												   Text="{Binding StatusOfTaskName}" />
                                         </StackLayout>
                                     </ViewCell>
                                 </DataTemplate>

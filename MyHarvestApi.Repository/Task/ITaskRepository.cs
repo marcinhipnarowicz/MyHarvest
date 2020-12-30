@@ -25,5 +25,7 @@ namespace MyHarvestApi.Repository
         void RemoveTask(Task task);
 
         List<UserInformation> GetUserInformationForTaskToRemove(Task task);
+
+        void EditTask(Task task);
     }
 }

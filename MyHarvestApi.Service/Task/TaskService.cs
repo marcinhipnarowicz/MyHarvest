@@ -22,6 +22,12 @@ namespace MyHarvestApi.Service
             _repo.AddTask(task);
         }
 
+        public void EditTask(TaskVm taskVm)
+        {
+            var task = TaskMapper.MapFromVm(taskVm);
+            _repo.EditTask(task);
+        }
+
         public int GetMaxId()
         {
             int maxId = _repo.GetMaxId();

@@ -28,7 +28,6 @@ namespace MyHarvestApi.Repository
         public void EditTask(int id, Task task)
         {
             _db.Entry(task).State = EntityState.Modified;
-
             _db.SaveChanges();
         }
 
@@ -79,5 +78,11 @@ namespace MyHarvestApi.Repository
 
         private bool MovieExists(long id) =>
          _db.Tasks.Any(e => e.IdTask == id);
+
+        public void EditTask(Task task)
+        {
+            _db.Entry(task).State = EntityState.Modified;
+            _db.SaveChanges();
+        }
     }
 }

@@ -36,6 +36,21 @@ namespace MyHarvestApi.Api.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("EditUserInformation")]
+        public IActionResult Edit(UserInformationVm userInformation, string token)
+        {
+            if (userInformation == null)
+            {
+                return Ok(ResponseManager.GenerateResponse("Błąd: Informacje dla użytkownika są puste", (int)MessageType.Error, null));
+            }
+            else
+            {
+                _service.EditUserInformation(userInformation);
+                return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, null));
+            }
+        }
+
         [HttpGet]
         [Route("GetInformationAboutTaskForEmployee")]
         public IActionResult GetTaskListForEmployee(int id, string token)

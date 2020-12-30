@@ -15,23 +15,27 @@ using Xamarin.Forms.Xaml;
 namespace MyHarvest.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AddTaskPage : ContentPage
+    public partial class AddEditTaskPage : ContentPage
     {
         private List<UserVm> _userVm = new List<UserVm>();
         private List<EmployeeItemList> _employeeCheckBoxList = new List<EmployeeItemList>();
-        private int idTask;
+        private UserInformationVm userInfoVm = new UserInformationVm();
+        private int idStatusOfTask;
+        private bool isEdit = false;
 
-        public AddTaskPage()
+        public AddEditTaskPage()
         {
             InitializeComponent();
             Init();
         }
 
-        public AddTaskPage(UserInformationVm userInformationVm)
+        public AddEditTaskPage(UserInformationVm userInformationVm)
         {
-            idTask = (int)userInformationVm.IdTask;
+            userInfoVm = userInformationVm;
             InitializeComponent();
             InitEdit(userInformationVm);
+            isEdit = true;
+            slider.Value = (double)userInformationVm.IdTaskStatus - 1;
         }
 
         public void InitEdit(UserInformationVm userInformationVm)
@@ -39,7 +43,7 @@ namespace MyHarvest.Views
             if (LocalConfig.LoginModel.IdAccountType == (int)AccountType.Boss)
             {
                 taskForEditor.IsVisible = true;
-                addButton.IsVisible = true;
+                taskForEditor.IsReadOnly = true;
                 deleteButton.IsVisible = true;
 
                 taskNameEditor.Text = userInformationVm.TaskName;
@@ -49,7 +53,6 @@ namespace MyHarvest.Views
             }
             else if (LocalConfig.LoginModel.IdAccountType == (int)AccountType.Employee)
             {
-                addButton.IsVisible = true;
                 taskForLabel.IsVisible = false;
                 employeesStackLayout.IsVisible = false;
                 taskNameEditor.IsReadOnly = true;
@@ -59,6 +62,7 @@ namespace MyHarvest.Views
                 taskDescriptionEditor.Text = userInformationVm.TaskDescripton;
                 taskAreaEditor.Text = userInformationVm.Area;
             }
+            addButton.IsVisible = true;
         }
 
         public async void Init()
@@ -133,68 +137,103 @@ namespace MyHarvest.Views
             return result;
         }
 
-        private async void addButton_Clicked(object sender, EventArgs e)
+        private async void AddButton_Clicked(object sender, EventArgs e)
         {
-            bool isTaskNameEditor = string.IsNullOrEmpty(taskNameEditor.Text);
-            List<int> IdEmployeesList = GetCheckEmployees();
-
-            if (IdEmployeesList.Count != 0)
+            if (!isEdit)
             {
+                bool isTaskNameEditor = string.IsNullOrEmpty(taskNameEditor.Text);
+                List<int> IdEmployeesList = GetCheckEmployees();
+
+                if (IdEmployeesList.Count != 0)
+                {
+                    if (isTaskNameEditor)
+                    {
+                        await DisplayAlert("Uwaga!", "Nazwa zadania jest pusta", "Ok");
+                    }
+                    else
+                    {
+                        var taskVm = new TaskVm()
+                        {
+                            Name = taskNameEditor.Text,
+                            Description = taskDescriptionEditor.Text
+                        };
+
+                        var data = await TaskService.AddTask(taskVm);
+
+                        if (IdEmployeesList.Count == 0)
+                        {
+                            await DisplayAlert("Uwaga!", "Nie wybrałeś pracownika do wykonania zadania", "Ok");
+                        }
+                        else
+                        {
+                            foreach (var item in IdEmployeesList)
+                            {
+                                var userInformationVm = new UserInformationVm
+                                {
+                                    IdUser = item,
+                                    IdTask = data.IdTask,
+                                    Area = taskAreaEditor.Text,
+                                    IdTaskStatus = 1
+                                };
+
+                                var userTaskVm = new UserTaskVm
+                                {
+                                    IdTask = data.IdTask,
+                                    IdUser = LocalConfig.LoginModel.Id
+                                };
+
+                                UserInformationService.AddUserInformation(userInformationVm);
+                                UserTaskService.AddUserTask(userTaskVm);
+                                await DisplayAlert("OK!", "Pomyślnie dodano zadania!", "Ok");
+                                await Shell.Current.GoToAsync("..");//cofajnie do poprzedniej strony
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    await DisplayAlert("Uwaga!", "Nie wybrałeś pracownika do wykonania zadania", "Ok");
+                }
+            }
+            else
+            {
+                bool isTaskNameEditor = string.IsNullOrEmpty(taskNameEditor.Text);
+
                 if (isTaskNameEditor)
                 {
                     await DisplayAlert("Uwaga!", "Nazwa zadania jest pusta", "Ok");
                 }
                 else
                 {
+                    var userInformationVm = new UserInformationVm
+                    {
+                        IdUserInformation = userInfoVm.IdUserInformation,
+                        IdTask = userInfoVm.IdTask,
+                        IdUser = userInfoVm.IdUser,
+                        Area = taskAreaEditor.Text,
+                        IdTaskStatus = idStatusOfTask
+                    };
+
                     var taskVm = new TaskVm()
                     {
+                        IdTask = (int)userInfoVm.IdTask,
                         Name = taskNameEditor.Text,
                         Description = taskDescriptionEditor.Text
                     };
 
-                    var data = await TaskService.AddTask(taskVm);
-
-                    if (IdEmployeesList.Count == 0)
-                    {
-                        await DisplayAlert("Uwaga!", "Nie wybrałeś pracownika do wykonania zadania", "Ok");
-                    }
-                    else
-                    {
-                        foreach (var item in IdEmployeesList)
-                        {
-                            var userInformationVm = new UserInformationVm
-                            {
-                                IdUser = item,
-                                IdTask = data.IdTask,
-                                Area = taskAreaEditor.Text,
-                                IdTaskStatus = 1
-                            };
-
-                            var userTaskVm = new UserTaskVm
-                            {
-                                IdTask = data.IdTask,
-                                IdUser = LocalConfig.LoginModel.Id
-                            };
-
-                            UserInformationService.AddUserInformation(userInformationVm);
-                            UserTaskService.AddUserTask(userTaskVm);
-                            await DisplayAlert("OK!", "Pomyślnie dodano zadania!", "Ok");
-                            await Shell.Current.GoToAsync("..");//cofajnie do poprzedniej strony
-                        }
-                    }
+                    UserInformationService.EditUserInformation(userInformationVm);
+                    TaskService.EditTask(taskVm);
+                    await DisplayAlert("OK!", "Pomyślnie zapisano zadanie!", "Ok");
+                    await Shell.Current.GoToAsync("..");
                 }
-            }
-            else
-            {
-                await DisplayAlert("Uwaga!", "Nie wybrałeś pracownika do wykonania zadania", "Ok");
             }
         }
 
-        private async void deleteButton_Clicked(object sender, EventArgs e)
+        private async void DeleteButton_Clicked(object sender, EventArgs e)
         {
             if (await UserDialogs.Instance.ConfirmAsync("Czy na pewno chcesz usunąć zadanie?", "Potwierdź", "Tak", "Anuluj"))
             {
-                TaskService.RemoveTask(idTask);
+                TaskService.RemoveTask((int)userInfoVm.IdTask);
 
                 await DisplayAlert("Potwierdzenie", "Zadanie zostało usunięte", "Ok");
                 await Navigation.PushAsync(new TaskPage());
@@ -211,18 +250,21 @@ namespace MyHarvest.Views
                 statusLabel.Text = "Do zrobienia";
                 slider.ThumbColor = Color.Red;
                 slider.MinimumTrackColor = Color.Red;
+                idStatusOfTask = 1;
             }
             else if (value == 1)
             {
                 statusLabel.Text = "W realizacji";
                 slider.ThumbColor = Color.Yellow;
                 slider.MinimumTrackColor = Color.Yellow;
+                idStatusOfTask = 2;
             }
             else if (value == 2)
             {
                 statusLabel.Text = "Wykonane";
                 slider.ThumbColor = Color.Green;
                 slider.MinimumTrackColor = Color.Green;
+                idStatusOfTask = 3;
             }
         }
     }

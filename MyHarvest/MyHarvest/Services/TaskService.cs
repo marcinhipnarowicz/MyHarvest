@@ -10,6 +10,7 @@ namespace MyHarvest.Services
     {
         private const string taskController = "Task/";
         private const string addTask = "AddTask";
+        private const string editTask = "EditTask";
         private const string removeTask = "RemoveTask";
 
         public async static Task<TaskVm> AddTask(TaskVm task)
@@ -23,6 +24,12 @@ namespace MyHarvest.Services
         {
             var adress = Api.BuildAdress(taskController, removeTask, "?id=", id.ToString(), "&token=");
             await Api.Request(RestSharp.Method.POST, adress);
+        }
+
+        public async static void EditTask(TaskVm task)
+        {
+            var address = Api.BuildAdress(taskController, editTask, null, null, "?token=");//
+            await Api.Request(RestSharp.Method.POST, address, task);
         }
     }
 }

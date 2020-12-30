@@ -17,28 +17,11 @@ namespace MyHarvestApi.Api.Controllers
     [ApiController]
     public class TaskController : ControllerBase
     {
-        private ITaskRepository _taskRepository;//wyrzucić
         private ITaskService _taskService;
 
-        public TaskController(ITaskRepository taskRepo, ITaskService taskService)
+        public TaskController(ITaskService taskService)
         {
-            _taskRepository = taskRepo;
             _taskService = taskService;
-        }
-
-        [HttpGet]
-        public IActionResult Get()
-        {
-            var tasksDb = _taskRepository.GetTasks();
-            return Ok(tasksDb);
-        }
-
-        // GET api/task/1
-        [HttpGet("{id}")]
-        public IActionResult GetOne(int id)
-        {
-            var singleTask = _taskRepository.GetOneTask(id);
-            return Ok(singleTask);
         }
 
         [HttpPost]
@@ -58,8 +41,6 @@ namespace MyHarvestApi.Api.Controllers
             }
         }
 
-        //RemoveTask
-
         [HttpPost]
         [Route("RemoveTask")]
         [TokenAuthoriseAttribute]
@@ -69,32 +50,20 @@ namespace MyHarvestApi.Api.Controllers
             return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, null));
         }
 
-        //PUT api/task/1
-        [HttpPut("{id}")]
-        public ActionResult<Task> Edit(int id, Task task)
+        [HttpPost]
+        [Route("EditTask")]
+        [TokenAuthoriseAttribute]
+        public IActionResult EditTask(TaskVm task, string token)
         {
-            if (id != task.IdTask)
+            if (task == null)
             {
-                return BadRequest();
+                return Ok(ResponseManager.GenerateResponse("Błąd: Informacje dla użytkownika są puste", (int)MessageType.Error, null));
             }
-            _taskRepository.EditTask(id, task);
-
-            try
+            else
             {
+                _taskService.EditTask(task);
+                return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, null)); ;
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!_taskRepository.IfTaskExist(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return Ok();
         }
     }
 }

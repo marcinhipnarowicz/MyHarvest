@@ -10,6 +10,7 @@ namespace MyHarvest.Services
     {
         private const string userInformationController = "UserInformation/";
         private const string addUserInformation = "AddUserInformation";
+        private const string editUserInformation = "EditUserInformation";
         private const string getInformationAboutTaskForEmployee = "GetInformationAboutTaskForEmployee";
         private const string getInformationAboutTaskForBoss = "GetInformationAboutTaskForBoss";
 
@@ -31,6 +32,12 @@ namespace MyHarvest.Services
             var address = Api.BuildAdress(userInformationController, getInformationAboutTaskForBoss, "?id=", id.ToString(), "&token=");
             var response = await Api.RequestAndSerialize<List<UserInformationVm>>(RestSharp.Method.GET, address);
             return response;
+        }
+
+        public async static void EditUserInformation(UserInformationVm userInformation)
+        {
+            var address = Api.BuildAdress(userInformationController, editUserInformation, null, null, "?token=");//
+            await Api.Request(RestSharp.Method.POST, address, userInformation);
         }
     }
 }
