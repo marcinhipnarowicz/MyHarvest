@@ -16,9 +16,6 @@ namespace MyHarvestApi.Entity.Model
         [Key]
         public int IdUserInformation { get; set; }
 
-        //public DbGeography Route { get; set; }
-        //public Geography Route { get; set; }//dla tego typu dodany nugget system.Spatial
-
         public string Area { get; set; }
 
         public int? IdUser { get; set; }

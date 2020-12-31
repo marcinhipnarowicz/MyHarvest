@@ -135,12 +135,14 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Context\ApplicationDbContext.cs" />
     <Compile Include="Model\AccountType.cs" />
+    <Compile Include="Model\PointOnTheMap.cs" />
     <Compile Include="Model\Plot.cs" />
     <Compile Include="Model\Task.cs" />
     <Compile Include="Model\StatusOfTask.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserInformation.cs" />
     <Compile Include="Model\UserTask.cs" />
+    <Compile Include="Model\Waypoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

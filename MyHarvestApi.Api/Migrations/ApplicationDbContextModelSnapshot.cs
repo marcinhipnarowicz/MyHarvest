@@ -46,6 +46,21 @@ namespace MyHarvestApi.Api.Migrations
                     b.ToTable("Plots");
                 });
 
+            modelBuilder.Entity("MyHarvestApi.Entity.Model.PointOnTheMap", b =>
+                {
+                    b.Property<int>("IdPointOnTheMap")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("XCoordinate");
+
+                    b.Property<double>("YCoordinate");
+
+                    b.HasKey("IdPointOnTheMap");
+
+                    b.ToTable("PointsOnTheMap");
+                });
+
             modelBuilder.Entity("MyHarvestApi.Entity.Model.StatusOfTask", b =>
                 {
                     b.Property<int>("IdStatus")
@@ -156,6 +171,25 @@ namespace MyHarvestApi.Api.Migrations
                     b.ToTable("UsersTasks");
                 });
 
+            modelBuilder.Entity("MyHarvestApi.Entity.Model.Waypoint", b =>
+                {
+                    b.Property<int>("IdWaypoint")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("IdPointOnTheMap");
+
+                    b.Property<int?>("IdUserInformation");
+
+                    b.HasKey("IdWaypoint");
+
+                    b.HasIndex("IdPointOnTheMap");
+
+                    b.HasIndex("IdUserInformation");
+
+                    b.ToTable("Waypoints");
+                });
+
             modelBuilder.Entity("MyHarvestApi.Entity.Model.Task", b =>
                 {
                     b.HasOne("MyHarvestApi.Entity.Model.Plot", "Plot")
@@ -199,6 +233,17 @@ namespace MyHarvestApi.Api.Migrations
                     b.HasOne("MyHarvestApi.Entity.Model.User", "User")
                         .WithMany()
                         .HasForeignKey("IdUser");
+                });
+
+            modelBuilder.Entity("MyHarvestApi.Entity.Model.Waypoint", b =>
+                {
+                    b.HasOne("MyHarvestApi.Entity.Model.PointOnTheMap", "PointOnTheMap")
+                        .WithMany()
+                        .HasForeignKey("IdPointOnTheMap");
+
+                    b.HasOne("MyHarvestApi.Entity.Model.UserInformation", "UserInformation")
+                        .WithMany()
+                        .HasForeignKey("IdUserInformation");
                 });
 #pragma warning restore 612, 618
         }

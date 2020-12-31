@@ -31,5 +31,7 @@ namespace MyHarvestApi.Entity.Context
         public DbSet<StatusOfTask> StatusOfTasks { get; set; }
         public DbSet<UserInformation> UsersInformation { get; set; }
         public DbSet<UserTask> UsersTasks { get; set; }
+        public DbSet<PointOnTheMap> PointsOnTheMap { get; set; }
+        public DbSet<Waypoint> Waypoints { get; set; }
     }
 }

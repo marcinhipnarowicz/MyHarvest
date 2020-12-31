@@ -6,6 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20201231113342_AddTableWaypointAndPOintOnTheMap2.cs" />
+    <Compile Remove="Migrations\20201231113342_AddTableWaypointAndPOintOnTheMap2.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

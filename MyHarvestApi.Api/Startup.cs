@@ -51,7 +51,9 @@ namespace MyHarvestApi.Api
             services.AddScoped<IStatusOfTaskRepository, StatusOfTaskRepository>();
             services.AddScoped<IUserInformationRepository, UserInformationRepository>();
             services.AddScoped<IUserTaskRepository, UserTaskRepository>();
-            //a
+            services.AddScoped<IWaypointRepository, WaypointRepository>();
+            services.AddScoped<IPointOnTheMapRepository, PointOnTheMapRepository>();
+
             //service
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAccountTypeService, AccountTypeService>();
@@ -60,6 +62,8 @@ namespace MyHarvestApi.Api
             services.AddScoped<ITaskService, TaskService>();
             services.AddScoped<IUserInformationService, UserInformationService>();
             services.AddScoped<IUserTaskService, UserTaskService>();
+            services.AddScoped<IWaypointService, WaypointService>();
+            services.AddScoped<IPointOnTheMapService, PointOnTheMapService>();
 
             //do tokenu
             var appSettingsSection = Configuration.GetSection("AppSettings");
