@@ -4,10 +4,67 @@
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              x:Class="MyHarvest.Views.MapPage"
              Title="Mapa">
-
-    <maps:Map x:Name="locationsMap"
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Button x:Name="EditButton"
+                        Text="Edytuj"
+                        WidthRequest="150"
+                        Margin="5"
+                        Clicked="EditButton_Clicked" />
+                <Button x:Name="DeleteButton"
+                        Text="Usuń"
+                        WidthRequest="150"
+                        Margin="5"
+                        Clicked="DeleteButton_Clicked" />
+            </StackLayout>
+            <maps:Map x:Name="locationsMap"
               IsShowingUser="True"
               HorizontalOptions="FillAndExpand"
               VerticalOptions="FillAndExpand"
-              MapType="Hybrid" />
+              MapType="Hybrid"
+              MapClicked="locationsMap_MapClicked">
+
+                <!--<maps:Map.MapElements>
+            <maps:Polyline StrokeColor="Red"
+                            StrokeWidth="20">
+                <maps:Polyline.Geopath>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.6631001</x:Double>
+                            <x:Double>17.9031356</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.6631200</x:Double>
+                            <x:Double>17.9031356</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.6631091</x:Double>
+                            <x:Double>17.9041398</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                </maps:Polyline.Geopath>
+            </maps:Polyline>
+        </maps:Map.MapElements>
+        <maps:Map.Pins>
+            <maps:Pin Label="cos"
+                       Type="SearchResult">
+                <maps:Pin.Position>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.6631001</x:Double>
+                            <x:Double>17.9031356</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                </maps:Pin.Position>
+            </maps:Pin>
+        </maps:Map.Pins>-->
+            </maps:Map>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

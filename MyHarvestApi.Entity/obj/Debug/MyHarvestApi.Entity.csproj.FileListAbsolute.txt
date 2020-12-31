@@ -71,3 +71,4 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entit
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\GeoAPI.CoordinateSystems.xml
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\NetTopologySuite.CoordinateSystems.pdb
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\bin\Debug\NetTopologySuite.CoordinateSystems.xml
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvestApi.Entity\obj\Debug\MyHarvestApi.Entity.csprojAssemblyReference.cache
