@@ -77,6 +77,13 @@
                     BackgroundColor="Red"
                     Clicked="DeleteButton_Clicked"
                     IsVisible="false" />
+                <Button x:Name="mapsButton"
+                        Margin="0,10,0,10"
+                        Text="Trasa"
+                        CornerRadius="{StaticResource radiusCountButton}"
+                        BackgroundColor="{StaticResource backgroundButtonColor}"
+                        Clicked="mapsButton_Clicked"
+                        IsVisible="false" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

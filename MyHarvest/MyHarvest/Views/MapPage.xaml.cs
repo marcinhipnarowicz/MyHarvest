@@ -200,7 +200,7 @@ namespace MyHarvest.Views
             }
             else
             {
-                await DisplayAlert("Uwaga!", "Wybierz punkt, który chcesz edytować.", "Ok");
+                await DisplayAlert("Uwaga!", "Wybierz punkt, który chcesz edytować. Jeśli nie istnieje, dodaj go, klikając na mapę.", "Ok");
             }
         }
 

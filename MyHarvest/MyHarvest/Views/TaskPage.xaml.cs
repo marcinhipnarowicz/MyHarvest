@@ -92,7 +92,7 @@ namespace MyHarvest.Views
         {
             if (isEmployee == false)
             {
-                await Shell.Current.GoToAsync("AddTaskPage");
+                await Shell.Current.GoToAsync("AddEditTaskPage");
             }
         }
 

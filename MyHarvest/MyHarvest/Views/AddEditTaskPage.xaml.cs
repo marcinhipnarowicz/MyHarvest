@@ -63,6 +63,7 @@ namespace MyHarvest.Views
                 taskAreaEditor.Text = userInformationVm.Area;
             }
             addButton.IsVisible = true;
+            mapsButton.IsVisible = true;
         }
 
         public async void Init()
@@ -77,6 +78,7 @@ namespace MyHarvest.Views
                 taskForLabel.IsVisible = false;
             }
 
+            mapsButton.IsVisible = false;
             slider.IsVisible = false;
             statusLabel.IsVisible = false;
             statusOfTaskLabel.IsVisible = false;
@@ -250,6 +252,7 @@ namespace MyHarvest.Views
                 statusLabel.Text = "Do zrobienia";
                 slider.ThumbColor = Color.Red;
                 slider.MinimumTrackColor = Color.Red;
+                statusLabel.TextColor = Color.Red;
                 idStatusOfTask = 1;
             }
             else if (value == 1)
@@ -257,6 +260,7 @@ namespace MyHarvest.Views
                 statusLabel.Text = "W realizacji";
                 slider.ThumbColor = Color.Yellow;
                 slider.MinimumTrackColor = Color.Yellow;
+                statusLabel.TextColor = Color.Yellow;
                 idStatusOfTask = 2;
             }
             else if (value == 2)
@@ -264,8 +268,14 @@ namespace MyHarvest.Views
                 statusLabel.Text = "Wykonane";
                 slider.ThumbColor = Color.Green;
                 slider.MinimumTrackColor = Color.Green;
+                statusLabel.TextColor = Color.Green;
                 idStatusOfTask = 3;
             }
+        }
+
+        private void mapsButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MapPage());
         }
     }
 }

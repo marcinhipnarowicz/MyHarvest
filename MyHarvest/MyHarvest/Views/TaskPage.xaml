@@ -51,7 +51,7 @@
 												   VerticalOptions="FillAndExpand"
 												   VerticalTextAlignment="Center"
 												   HorizontalOptions="End"
-												   TextColor="Red"
+												   TextColor="{Binding ColorText}"
 												   Text="{Binding StatusOfTaskName}" />
                                         </StackLayout>
                                     </ViewCell>

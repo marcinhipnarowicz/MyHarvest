@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace MyHarvest.ViewModels
@@ -27,6 +28,27 @@ namespace MyHarvest.ViewModels
             get
             {
                 return String.Format($"{UserFistName} {UserSurname}");
+            }
+        }
+
+        public Color ColorText
+        {
+            get
+            {
+                switch (IdTaskStatus)
+                {
+                    case 1:
+                        return Color.Red;
+
+                    case 2:
+                        return Color.Yellow;
+
+                    case 3:
+                        return Color.Green;
+
+                    default:
+                        return Color.White;
+                }
             }
         }
 
