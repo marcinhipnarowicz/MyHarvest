@@ -275,7 +275,7 @@ namespace MyHarvest.Views
 
         private void mapsButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MapPage());
+            Navigation.PushAsync(new MapPage(userInfoVm.IdUserInformation));
         }
     }
 }

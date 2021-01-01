@@ -1,4 +1,8 @@
 ﻿using Acr.UserDialogs;
+using MyHarvest.Base;
+using MyHarvest.Services;
+using MyHarvest.Services.Enum;
+using MyHarvest.ViewModels;
 using Plugin.Geolocator;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
@@ -21,6 +25,7 @@ namespace MyHarvest.Views
         private bool hasLocationPermission = false;
         private List<Pin> _pinList = new List<Pin>();
         private Pin _pin;
+        private int idUserInfo;
 
         private bool isEdited = false;
 
@@ -28,6 +33,15 @@ namespace MyHarvest.Views
         {
             InitializeComponent();
             GetPermissions();
+            Init();
+        }
+
+        public MapPage(int idUserInformation)
+        {
+            idUserInfo = idUserInformation;
+            InitializeComponent();
+            GetPermissions();
+            Init();
         }
 
         private void DrawPolyline()
@@ -37,7 +51,7 @@ namespace MyHarvest.Views
             Polyline polyline = new Polyline
             {
                 StrokeColor = Color.Red,
-                StrokeWidth = 20
+                StrokeWidth = 15
             };
             foreach (var item in _pinList)
             {
@@ -74,6 +88,14 @@ namespace MyHarvest.Views
                 //    Position = new Xamarin.Forms.Maps.Position(50.6631001, 17.9031356)
                 //};
                 //locationsMap.Pins.Add(pin);
+            }
+        }
+
+        private void Init()
+        {
+            if (LocalConfig.LoginModel.Id == (int)AccountType.Boss)
+            {
+                SaveButton.IsVisible = true;
             }
         }
 
@@ -154,11 +176,11 @@ namespace MyHarvest.Views
         private void MoveMap(Position position)
         {
             var center = new Xamarin.Forms.Maps.Position(position.Latitude, position.Longitude);
-            var span = new Xamarin.Forms.Maps.MapSpan(center, 0.01, 0.01);//0.01  1 - oznacza ile stóp w lewo i w góre ustawia się mapa od lokalizacji
+            var span = new Xamarin.Forms.Maps.MapSpan(center, 0.001, 0.001);//  1 - oznacza ile stóp w lewo i w góre ustawia się mapa od lokalizacji
             locationsMap.MoveToRegion(span);
         }
 
-        private void locationsMap_MapClicked(object sender, MapClickedEventArgs e)
+        private void LocationsMap_MapClicked(object sender, MapClickedEventArgs e)
         {
             if (!isEdited)
             {
@@ -215,6 +237,42 @@ namespace MyHarvest.Views
             else
             {
                 await DisplayAlert("Uwaga!", "Wybierz punkt, który chcesz usunąć.", "Ok");
+            }
+        }
+
+        private async void SaveButton_Clicked(object sender, EventArgs e)
+        {
+            if (_pinList == null)
+            {
+                await DisplayAlert("Błąd!", "Nie dodano żadnych punktów trasy na mapie", "Ok");
+            }
+            else
+            {
+                var pointOnTheMapListVm = new PointOnTheMapListVm();
+
+                foreach (var item in _pinList)
+                {
+                    var pointOnTheMapVm = new PointOnTheMapVm();
+                    pointOnTheMapVm.XCoordinate = item.Position.Latitude;
+                    pointOnTheMapVm.YCoordinate = item.Position.Longitude;
+                    pointOnTheMapListVm.PointsOnTheMap.Add(pointOnTheMapVm);
+                }
+
+                var data = await PointOnTheMapService.AddPointOnTheMap(pointOnTheMapListVm);
+
+                var waypointListVm = new WaypointListVm();
+                foreach (var item in data)
+                {
+                    foreach (var item2 in item.PointsOnTheMap)
+                    {
+                        var waypointVm = new WaypointVm();
+                        waypointVm.IdPointOnTheMap = item2.IdPointOnTheMap;
+                        waypointVm.IdUserInformation = idUserInfo;
+                        waypointListVm.Waypoints.Add(waypointVm);
+                    }
+                }
+
+                WaypointService.AddWaypoint(waypointListVm);
             }
         }
     }

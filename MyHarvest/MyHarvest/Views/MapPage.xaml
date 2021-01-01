@@ -18,13 +18,19 @@
                         WidthRequest="150"
                         Margin="5"
                         Clicked="DeleteButton_Clicked" />
+                <Button x:Name="SaveButton"
+                        Text="Zapisz trasę"
+                        WidthRequest="150"
+                        Margin="5"
+                        Clicked="SaveButton_Clicked"
+                        IsVisible="false" />
             </StackLayout>
             <maps:Map x:Name="locationsMap"
               IsShowingUser="True"
               HorizontalOptions="FillAndExpand"
               VerticalOptions="FillAndExpand"
               MapType="Hybrid"
-              MapClicked="locationsMap_MapClicked">
+              MapClicked="LocationsMap_MapClicked">
 
                 <!--<maps:Map.MapElements>
             <maps:Polyline StrokeColor="Red"
