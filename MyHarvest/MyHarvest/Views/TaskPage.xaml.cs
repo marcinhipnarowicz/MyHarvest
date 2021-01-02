@@ -6,8 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-using MyHarvest.Models;
 using MyHarvest.Views;
 using MyHarvest.ViewModels;
 using MyHarvest.Base;

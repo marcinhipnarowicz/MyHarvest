@@ -18,11 +18,6 @@ namespace MyHarvest.Services
             return $"{ApiConfig.ConnectionString + controller + controllerMethod}";
         }
 
-        //public static string LogErrorAddress(string controller, string controllerMethod, string message, string logLevel)
-        //{
-        //    return $"{ApiConfig.ConnectionString + controller + controllerMethod + "?message=" + message + "&logLevel=" + logLevel + "&token=" + LocalConfig.LoginModel.Token}";
-        //}
-
         public static string BuildAdress(string controller, string controllerMethod)
         {
             return BuildAdress(controller, controllerMethod, null, null);
@@ -37,11 +32,6 @@ namespace MyHarvest.Services
         {
             return $"{ApiConfig.ConnectionString + controller + controllerMethod + parameterName + parameterValue + secondParameterName + LocalConfig.LoginModel.Token}";//+ secondParameterName + LocalConfig.LoginModel.Token
         }
-
-        //public static string BuildAdress(string controller, string controllerMethod)
-        //{
-        //    return $"{ApiConfig.ConnectionString + controller + controllerMethod}";
-        //}
 
         public async static Task<T> RequestAndSerialize<T>(Method requestMethod, string apiAddress)
         {

@@ -15,7 +15,7 @@ namespace MyHarvest.Services
 
         public async static Task<TaskVm> AddTask(TaskVm task)
         {
-            var address = Api.BuildAdress(taskController, addTask, null, null, "?token=");//
+            var address = Api.BuildAdress(taskController, addTask, null, null, "?token=");
             var response = await Api.RequestAndSerialize<TaskVm>(RestSharp.Method.POST, address, task);
             return response;
         }
@@ -28,7 +28,7 @@ namespace MyHarvest.Services
 
         public async static void EditTask(TaskVm task)
         {
-            var address = Api.BuildAdress(taskController, editTask, null, null, "?token=");//
+            var address = Api.BuildAdress(taskController, editTask, null, null, "?token=");
             await Api.Request(RestSharp.Method.POST, address, task);
         }
     }

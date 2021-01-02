@@ -16,7 +16,7 @@ namespace MyHarvest.Services
 
         public async static void AddUserInformation(UserInformationVm userInformation)
         {
-            var address = Api.BuildAdress(userInformationController, addUserInformation, null, null, "?token=");//
+            var address = Api.BuildAdress(userInformationController, addUserInformation, null, null, "?token=");
             await Api.Request(RestSharp.Method.POST, address, userInformation);
         }
 
@@ -36,7 +36,7 @@ namespace MyHarvest.Services
 
         public async static void EditUserInformation(UserInformationVm userInformation)
         {
-            var address = Api.BuildAdress(userInformationController, editUserInformation, null, null, "?token=");//
+            var address = Api.BuildAdress(userInformationController, editUserInformation, null, null, "?token=");
             await Api.Request(RestSharp.Method.POST, address, userInformation);
         }
     }

@@ -13,7 +13,7 @@ namespace MyHarvest.Services
 
         public async static Task<List<PointOnTheMapVm>> AddPointOnTheMap(List<PointOnTheMapVm> pointOnTheMapList)
         {
-            var address = Api.BuildAdress(pointOnTheMapController, addPointOnTheMap, null, null, "?token=");//
+            var address = Api.BuildAdress(pointOnTheMapController, addPointOnTheMap, null, null, "?token=");
             var response = await Api.RequestAndSerialize<List<PointOnTheMapVm>>(RestSharp.Method.POST, address, pointOnTheMapList);
             return response;
         }
