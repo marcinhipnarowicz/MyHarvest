@@ -259,7 +259,7 @@ namespace MyHarvest.Views
                 statusLabel.Text = "W realizacji";
                 slider.ThumbColor = Color.Yellow;
                 slider.MinimumTrackColor = Color.Yellow;
-                statusLabel.TextColor = Color.Yellow;
+                statusLabel.TextColor = Color.Orange;
                 idStatusOfTask = 2;
             }
             else if (value == 2)

@@ -38,7 +38,7 @@ namespace MyHarvest.ViewModels
                         return Color.Red;
 
                     case 2:
-                        return Color.Yellow;
+                        return Color.Orange;
 
                     case 3:
                         return Color.Green;

@@ -10,6 +10,7 @@ using MyHarvest.Views;
 using MyHarvest.ViewModels;
 using MyHarvest.Base;
 using MyHarvest.Services;
+using MyHarvest.Services.Enum;
 
 namespace MyHarvest.Views
 {
@@ -40,7 +41,7 @@ namespace MyHarvest.Views
 
         private void Init()
         {
-            if (LocalConfig.LoginModel.IdAccountType == 2)
+            if (LocalConfig.LoginModel.IdAccountType == (int)AccountType.Employee)
             {
                 isEmployee = true;
                 ToolbarItem.Text = "";
@@ -70,11 +71,11 @@ namespace MyHarvest.Views
         protected async virtual Task<List<UserInformationVm>> GetData()
         {
             List<UserInformationVm> data = new List<UserInformationVm>();
-            if (LocalConfig.LoginModel.IdAccountType == 2)
+            if (LocalConfig.LoginModel.IdAccountType == (int)AccountType.Employee)
             {
                 data = await UserInformationService.GetUserInformationListForEmployee(LocalConfig.LoginModel.Id);
             }
-            else if (LocalConfig.LoginModel.IdAccountType == 1)
+            else if (LocalConfig.LoginModel.IdAccountType == (int)AccountType.Boss)
             {
                 data = await UserInformationService.GetUserInformationListForBoss(LocalConfig.LoginModel.Id);
             }

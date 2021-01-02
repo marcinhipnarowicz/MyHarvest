@@ -3,8 +3,7 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 x:Class="MyHarvest.Views.TaskPage"
 			 Title="Lista zadań"
-			 xmlns:local="clr-namespace:MyHarvest.ViewModels"
-			 xmlns:model="clr-namespace:MyHarvest.Models">
+			 xmlns:local="clr-namespace:MyHarvest.ViewModels">
     <!--x:Name="BrowseTaskPage"-->
 
     <ContentPage.ToolbarItems>
