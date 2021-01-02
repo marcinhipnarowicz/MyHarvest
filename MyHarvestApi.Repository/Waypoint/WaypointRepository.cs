@@ -1,4 +1,6 @@
-﻿using MyHarvestApi.Entity.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using MyHarvestApi.Entity.Context;
+using MyHarvestApi.Entity.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,24 @@ namespace MyHarvestApi.Repository
         public WaypointRepository(ApplicationDbContext db)
         {
             _db = db;
+        }
+
+        public void AddWaypoint(List<Waypoint> waypointList)
+        {
+            foreach (var item in waypointList)
+            {
+                _db.Waypoints.Add(item);
+            }
+
+            _db.SaveChanges();
+        }
+
+        public List<Waypoint> GetWaypointList(int idUserInformation)
+        {
+            var waypointList = _db.Waypoints.Where(x => x.UserInformation.IdUserInformation.Equals(idUserInformation))
+                                                        .Include(x => x.PointOnTheMap).ToList();
+
+            return waypointList;
         }
     }
 }

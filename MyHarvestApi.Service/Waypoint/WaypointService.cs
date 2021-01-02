@@ -1,4 +1,5 @@
 ﻿using MyHarvestApi.Repository;
+using MyHarvestApi.Service.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,23 @@ namespace MyHarvestApi.Service
         public WaypointService(IWaypointRepository repo)
         {
             _repo = repo;
+        }
+
+        public void AddWaypoint(List<WaypointVm> waypointVmList)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<WaypointVm> GetWaypointList(int idUserInformation)
+        {
+            var waypointVmList = new List<WaypointVm>();
+
+            var waypointList = _repo.GetWaypointList(idUserInformation);
+
+            if (waypointList != null)
+                waypointVmList = WaypointMapper.MapListToVm(waypointList.ToList());
+
+            return waypointVmList;
         }
     }
 }

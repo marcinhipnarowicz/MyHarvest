@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyHarvestApi.Service.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace MyHarvestApi.Service
 {
     public interface IPointOnTheMapService
     {
+        void AddPointOnTheMap(List<PointOnTheMapVm> pointOnTheMapVmList);
     }
 }

@@ -222,6 +222,7 @@
     <Compile Include="Plot\PlotMapper.cs" />
     <Compile Include="Plot\PlotService.cs" />
     <Compile Include="PointOnTheMap\IPointOnTheMapService.cs" />
+    <Compile Include="PointOnTheMap\PointOnTheMapMapper.cs" />
     <Compile Include="PointOnTheMap\PointOnTheMapService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatusOfTask\IStatusOfTaskService.cs" />
@@ -233,6 +234,7 @@
     <Compile Include="UserTask\IUserTaskService.cs" />
     <Compile Include="UserTask\UserTaskMapper.cs" />
     <Compile Include="UserTask\UserTaskService.cs" />
+    <Compile Include="ViewModel\PointOnTheMapVm.cs" />
     <Compile Include="ViewModel\TaskVm.cs" />
     <Compile Include="UserInformation\IUserInformationService.cs" />
     <Compile Include="UserInformation\UserInformationService.cs" />
@@ -247,7 +249,9 @@
     <Compile Include="ViewModel\UserInformationVm.cs" />
     <Compile Include="ViewModel\UserTaskVm.cs" />
     <Compile Include="ViewModel\UserVm.cs" />
+    <Compile Include="ViewModel\WaypointVm.cs" />
     <Compile Include="Waypoint\IWaypointService.cs" />
+    <Compile Include="Waypoint\WaypointMapper.cs" />
     <Compile Include="Waypoint\WaypointService.cs" />
   </ItemGroup>
   <ItemGroup>

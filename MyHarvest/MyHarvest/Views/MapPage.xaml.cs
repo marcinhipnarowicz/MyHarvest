@@ -42,6 +42,37 @@ namespace MyHarvest.Views
             InitializeComponent();
             GetPermissions();
             Init();
+            DrawPolyline2();
+        }
+
+        private async void DrawPolyline2()
+        {
+            locationsMap.MapElements.Clear();
+
+            Polyline polyline = new Polyline
+            {
+                StrokeColor = Color.Red,
+                StrokeWidth = 15
+            };
+
+            List<WaypointVm> data = new List<WaypointVm>();
+            data = await WaypointService.GetWaypoints(idUserInfo);
+            if (data != null)
+            {
+                foreach (var item in data)
+                {
+                    Pin newPin = new Pin();
+
+                    newPin.Position = new Xamarin.Forms.Maps.Position(item.XCoordinate, item.YCoordinate);
+
+                    _pinList.Add(newPin);
+                }
+                foreach (var item in _pinList)
+                {
+                    polyline.Geopath.Add(item.Position);
+                    locationsMap.MapElements.Add(polyline);
+                }
+            }
         }
 
         private void DrawPolyline()
@@ -57,45 +88,16 @@ namespace MyHarvest.Views
             {
                 polyline.Geopath.Add(item.Position);
                 locationsMap.MapElements.Add(polyline);
-
-                //item.MarkerClicked += async (s, args) =>
-                //{
-                //    args.HideInfoWindow = true;
-                //    string pinName = ((Pin)s).Label;
-                //    await DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
-                //};
-            }
-            {
-                //Polyline polyline = new Polyline
-                //{
-                //    StrokeColor = Color.Red,
-                //    StrokeWidth = 20,
-
-                //    Geopath =
-                //    {
-                //        new Xamarin.Forms.Maps.Position(50.6631001, 17.9031356),
-                //        new Xamarin.Forms.Maps.Position(50.6631200, 17.9031356),
-                //        new Xamarin.Forms.Maps.Position(50.6631091, 17.9041398)
-                //    }
-                //};
-                ////polyline.Geopath.Add(new Xamarin.Forms.Maps.Position(50.6631001, 17.9031356));
-                //locationsMap.MapElements.Add(polyline);// add the polyline to the map's MapElements collection
-
-                //Pin pin = new Pin
-                //{
-                //    Label = "cos",
-                //    Type = PinType.Place,
-                //    Position = new Xamarin.Forms.Maps.Position(50.6631001, 17.9031356)
-                //};
-                //locationsMap.Pins.Add(pin);
             }
         }
 
         private void Init()
         {
-            if (LocalConfig.LoginModel.Id == (int)AccountType.Boss)
+            if (LocalConfig.LoginModel.Id == (int)AccountType.Employee)
             {
-                SaveButton.IsVisible = true;
+                EditButton.IsVisible = false;
+                DeleteButton.IsVisible = false;
+                SaveButton.IsVisible = false;
             }
         }
 
@@ -176,7 +178,7 @@ namespace MyHarvest.Views
         private void MoveMap(Position position)
         {
             var center = new Xamarin.Forms.Maps.Position(position.Latitude, position.Longitude);
-            var span = new Xamarin.Forms.Maps.MapSpan(center, 0.001, 0.001);//  1 - oznacza ile stóp w lewo i w góre ustawia się mapa od lokalizacji
+            var span = new Xamarin.Forms.Maps.MapSpan(center, 0.005, 0.005);//  1 - oznacza ile stóp w lewo i w góre ustawia się mapa od lokalizacji
             locationsMap.MoveToRegion(span);
         }
 
