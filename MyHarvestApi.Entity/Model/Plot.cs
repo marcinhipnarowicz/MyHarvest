@@ -17,11 +17,5 @@ namespace MyHarvestApi.Entity.Model
         public int IdPlot { get; set; }
 
         public string Name { get; set; }
-
-        //public NetTopologySuite.Geometries.Geometry Coordinates { get; set; }
-
-        //public DbGeography Coordinates { get; set; }
-
-        //public Geography Coordinates { get; set; }//dla tego typu dodany nugget system.Spatial
     }
 }

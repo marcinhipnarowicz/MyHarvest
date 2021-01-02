@@ -9,9 +9,7 @@ namespace MyHarvestApi.Service.ViewModel
     public class UserTaskVm
     {
         public int IdUserTask { get; set; }
-
         public int? IdUser { get; set; }
-
         public int? IdTask { get; set; }
     }
 }

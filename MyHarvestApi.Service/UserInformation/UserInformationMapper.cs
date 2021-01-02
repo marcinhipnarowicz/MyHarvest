@@ -19,8 +19,6 @@ namespace MyHarvestApi.Service
                 IdTaskStatus = usInfoVm.IdTaskStatus,
                 IdUser = usInfoVm.IdUser,
                 Area = usInfoVm.Area
-
-                //taskName, TaskDescription
             };
         }
 

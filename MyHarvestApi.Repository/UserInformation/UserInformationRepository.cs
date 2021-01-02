@@ -42,7 +42,6 @@ namespace MyHarvestApi.Repository
 
         public List<UserInformation> GetInformationAboutTaskListForEmployee(int id)
         {
-            //var infoAboutTaskList = _db.UsersInformation.Where(x => x.IdUser.Equals(id)).ToList();
             var infoAboutTaskList = _db.UsersInformation.Where(x => x.IdUser == id)
                                                         .Include(x => x.User)
                                                         .Include(x => x.Task)

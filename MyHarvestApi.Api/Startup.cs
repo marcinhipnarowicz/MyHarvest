@@ -39,9 +39,7 @@ namespace MyHarvestApi.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             var cs = Configuration.GetConnectionString("DbConnectionString");
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs, b => b.MigrationsAssembly("MyHarvestApi.Api"))); //pierwsza wersja działająca
-            //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs, x => x.UseNetTopologySuite()));
-            //services.AddSingleton<IGeometryFactory>(_ => GeoAPI.GeometryServiceProvider.Instance.CreateGeometryFactory(4326));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(cs, b => b.MigrationsAssembly("MyHarvestApi.Api")));
 
             //repository
             services.AddScoped<IUserRepository, UserRepository>();

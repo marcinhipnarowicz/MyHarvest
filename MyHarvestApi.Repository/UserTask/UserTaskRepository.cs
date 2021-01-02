@@ -26,8 +26,6 @@ namespace MyHarvestApi.Repository
 
         public List<UserTask> GetInformationAboutTaskList(int id)
         {
-            //var infoAboutTaskList = _db.UsersTasks.Where(x => x.IdUser.Equals(id)).ToList();
-
             var infoAboutTaskList = _db.UsersTasks.Where(x => x.IdUser == id).Include(x => x.Task).ToList();
             return infoAboutTaskList;
         }

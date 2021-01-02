@@ -18,9 +18,7 @@ namespace MyHarvestApi.Service
     public class UserService : IUserService
     {
         private IUserRepository _repo;
-
         private readonly AppSettings _appSettings;
-
         private List<User> _users;
 
         public UserService(IUserRepository repo, IOptions<AppSettings> appSettings)
@@ -149,16 +147,6 @@ namespace MyHarvestApi.Service
             return sBuilder.ToString();//zwraca hexadecymalny string
         }
 
-        //chyba tego nie użyje
-        public bool VeryfiHash(HashAlgorithm hashAlgorithm, string password, string hash)
-        {
-            var hashOfPassword = GetHash(hashAlgorithm, password);
-
-            StringComparer comparer = StringComparer.OrdinalIgnoreCase; //tworzenie StringCompareer w celu porownania z hashowanym
-
-            return comparer.Compare(hashOfPassword, hash) == 0;
-        }
-
         public List<UserVm> GetEmployeeForBoss(int idUser)
         {
             var employeeList = new List<UserVm>();
@@ -195,8 +183,6 @@ namespace MyHarvestApi.Service
         public void AddNewBossForEmployee(UserVm userVm, int id)
         {
             var user = _repo.GetUserById(id);
-
-            //var newUser = UserMapper.MapToVm(user);
             var newUser = UserMapper.MapFromVm(userVm);
 
             if (user != null)
