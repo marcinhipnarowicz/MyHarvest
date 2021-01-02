@@ -28,7 +28,7 @@ namespace MyHarvestApi.Repository
         {
             //var infoAboutTaskList = _db.UsersTasks.Where(x => x.IdUser.Equals(id)).ToList();
 
-            var infoAboutTaskList = _db.UsersTasks.Where(x => x.IdUser.Equals(id)).Include(x => x.Task).ToList();
+            var infoAboutTaskList = _db.UsersTasks.Where(x => x.IdUser == id).Include(x => x.Task).ToList();
             return infoAboutTaskList;
         }
     }

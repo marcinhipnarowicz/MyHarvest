@@ -40,6 +40,9 @@ namespace MyHarvestApi.Service
                 waypointVm.IdPointOnTheMap = item.IdPointOnTheMap;
                 waypointVm.IdUserInformation = item.IdUserInformation;
 
+                waypointVm.XCoordinate = item.PointOnTheMap.XCoordinate;
+                waypointVm.YCoordinate = item.PointOnTheMap.YCoordinate;
+
                 waypointVmList.Add(waypointVm);
             }
 

@@ -35,8 +35,8 @@ namespace MyHarvestApi.Api.Controllers
             }
             else
             {
-                _taskService.AddTask(task);
-                task.IdTask = _taskService.GetMaxId();
+                var idTask = _taskService.AddTask(task);
+                task.IdTask = idTask;
                 return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, task));
             }
         }

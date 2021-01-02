@@ -23,16 +23,22 @@ namespace MyHarvestApi.Api.Controllers
 
         [HttpPost]
         [Route("AddPointOnTheMap")]
-        public IActionResult Add(List<PointOnTheMapVm> pointOnTheMapList, string token)
+        public IActionResult Add([FromBody] List<PointOnTheMapVm> pointOnTheMapList, string token)//frombody - to oznacza, ze
         {
-            if (pointOnTheMapList == null)
+            if (pointOnTheMapList.Count == 0)
             {
                 return Ok(ResponseManager.GenerateResponse("Błąd: Brak punktów", (int)MessageType.Error, null));
             }
             else
             {
-                _service.AddPointOnTheMap(pointOnTheMapList);
-                return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, null));
+                var idPointsList = _service.AddPointOnTheMap(pointOnTheMapList);
+
+                for (int i = 0; i < pointOnTheMapList.Count; i++)
+                {
+                    pointOnTheMapList[i].IdPointOnTheMap = idPointsList[i];
+                }
+
+                return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, pointOnTheMapList));
             }
         }
     }

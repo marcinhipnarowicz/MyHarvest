@@ -30,10 +30,16 @@ namespace MyHarvestApi.Repository
 
         public List<Waypoint> GetWaypointList(int idUserInformation)
         {
-            var waypointList = _db.Waypoints.Where(x => x.UserInformation.IdUserInformation.Equals(idUserInformation))
+            var temp = _db.Waypoints.FirstOrDefault(x => x.IdUserInformation.Equals(idUserInformation));
+            if (temp != null)
+            {
+                var waypointList = _db.Waypoints.Where(x => x.UserInformation.IdUserInformation == idUserInformation)
                                                         .Include(x => x.PointOnTheMap).ToList();
 
-            return waypointList;
+                return waypointList;
+            }
+            else
+                return null;
         }
     }
 }

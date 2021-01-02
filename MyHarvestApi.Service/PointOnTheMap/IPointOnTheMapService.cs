@@ -9,6 +9,6 @@ namespace MyHarvestApi.Service
 {
     public interface IPointOnTheMapService
     {
-        void AddPointOnTheMap(List<PointOnTheMapVm> pointOnTheMapVmList);
+        List<int> AddPointOnTheMap(List<PointOnTheMapVm> pointOnTheMapVmList);
     }
 }

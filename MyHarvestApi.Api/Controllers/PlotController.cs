@@ -13,13 +13,18 @@ namespace MyHarvestApi.Api.Controllers
     [ApiController]
     public class PlotController : ControllerBase
     {
-        private IPlotService _plotService;
+        private IPlotService _service;
+
+        public PlotController(IPlotService service)
+        {
+            _service = service;
+        }
 
         [HttpPost]
         [Route("Add")]
         public IActionResult AddPlot(PlotVm plot)
         {
-            _plotService.AddPlot(plot);
+            _service.AddPlot(plot);
             return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, plot));
         }
     }

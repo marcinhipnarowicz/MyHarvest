@@ -39,7 +39,7 @@ namespace MyHarvest.Views
                 _employeeList.Employees.Clear();
                 lvTitleLabel.Text = "Lista pracowników";
 
-                if (data != null)
+                if (data.Count != 0)
                 {
                     foreach (var item in data)
                     {

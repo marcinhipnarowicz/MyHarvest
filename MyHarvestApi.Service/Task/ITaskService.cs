@@ -8,7 +8,7 @@ namespace MyHarvestApi.Service
 {
     public interface ITaskService
     {
-        void AddTask(TaskVm taskVm);
+        int AddTask(TaskVm taskVm);
 
         int GetMaxId();
 

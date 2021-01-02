@@ -21,7 +21,7 @@ namespace MyHarvestApi.Service
 
         UserVm GetByEmail(string email);
 
-        void AddUser(UserVm userVm);
+        int AddUser(UserVm userVm);
 
         bool IfExistsUser(string email);
 

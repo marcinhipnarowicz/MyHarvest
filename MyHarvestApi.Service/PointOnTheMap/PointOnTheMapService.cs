@@ -17,10 +17,18 @@ namespace MyHarvestApi.Service
             _repo = repo;
         }
 
-        public void AddPointOnTheMap(List<PointOnTheMapVm> pointOnTheMapVmList)
+        public List<int> AddPointOnTheMap(List<PointOnTheMapVm> pointOnTheMapVmList)
         {
             var pointOnTheMapList = PointOnTheMapMapper.MapList(pointOnTheMapVmList);
             _repo.AddPointOnTheMap(pointOnTheMapList);
+
+            List<int> idPointsList = new List<int>();
+
+            foreach (var item in pointOnTheMapList)
+            {
+                idPointsList.Add(item.IdPointOnTheMap);
+            }
+            return idPointsList;
         }
     }
 }

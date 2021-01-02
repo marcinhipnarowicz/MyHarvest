@@ -16,10 +16,13 @@ namespace MyHarvestApi.Service
             _repo = repo;
         }
 
-        public void AddTask(TaskVm taskVm)
+        public int AddTask(TaskVm taskVm)
         {
             var task = TaskMapper.MapFromVm(taskVm);
             _repo.AddTask(task);
+            var idTask = task.IdTask;
+
+            return idTask;
         }
 
         public void EditTask(TaskVm taskVm)

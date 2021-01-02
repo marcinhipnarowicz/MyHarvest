@@ -23,7 +23,7 @@ namespace MyHarvestApi.Api.Controllers
 
         [HttpPost]
         [Route("AddWaypoint")]
-        public IActionResult Add(List<WaypointVm> waypointList, string token)
+        public IActionResult Add([FromBody] List<WaypointVm> waypointList, string token)
         {
             if (waypointList == null)
             {
@@ -40,8 +40,27 @@ namespace MyHarvestApi.Api.Controllers
         [Route("GetWaypoints")]
         public IActionResult GetWaypointList(int idUserInformation, string token)
         {
-            var waypointListDb = _service.GetWaypointList(idUserInformation);
-            return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, waypointListDb));
+            //var waypointListDb = _service.GetWaypointList(idUserInformation);
+
+            //if (waypointListDb.Count == 0)
+            //{
+            //    return Ok(ResponseManager.GenerateResponse("Błąd: Brak punktów do wyznaczenia trasy", (int)MessageType.Error, null));
+            //}
+            //else
+            //{
+            //    return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, waypointListDb));
+            //}
+
+            try
+            {
+                var waypointListVm = _service.GetWaypointList(idUserInformation);
+
+                return Ok(ResponseManager.GenerateResponse(null, (int)MessageType.Ok, waypointListVm));
+            }
+            catch (Exception ex)
+            {
+                return Ok(ResponseManager.GenerateResponse("Błąd: \n" + ex.Message, (int)MessageType.Error, null));
+            }
         }
     }
 }

@@ -104,8 +104,8 @@ namespace MyHarvestApi.Api.Controllers
                         var hash = _userService.GetHash(sha256Hash, user.Password);
                         user.Password = hash;
 
-                        _userService.AddUser(user);
-                        user.Id = _userService.GetMaxId();
+                        var idUser = _userService.AddUser(user);
+                        user.Id = idUser;
                         //var token = _userService.Authenticate(user.Email);
                         RegisterVm registerVm = RegisterMapper.MapToVm(user);
 

@@ -12,7 +12,7 @@ namespace MyHarvest.Services
         private const string addWaipoint = "AddWaypoint";
         private const string getWaipoints = "GetWaypoints";
 
-        public async static void AddWaypoint(WaypointListVm waypointList)
+        public async static void AddWaypoint(List<WaypointVm> waypointList)
         {
             var address = Api.BuildAdress(waypointController, addWaipoint, null, null, "?token=");
             await Api.Request(RestSharp.Method.POST, address, waypointList);

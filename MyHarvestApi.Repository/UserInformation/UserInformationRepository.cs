@@ -32,7 +32,7 @@ namespace MyHarvestApi.Repository
 
         public List<UserInformation> GetInformationAboutTaskListForBoss(int id)
         {
-            var infoAboutTaskList = _db.UsersInformation.Where(x => x.User.IdBoss.Equals(id))
+            var infoAboutTaskList = _db.UsersInformation.Where(x => x.User.IdBoss == id)
                                                         .Include(x => x.User)
                                                         .Include(x => x.Task)
                                                         .Include(x => x.StatusOfTask).ToList();
@@ -43,7 +43,7 @@ namespace MyHarvestApi.Repository
         public List<UserInformation> GetInformationAboutTaskListForEmployee(int id)
         {
             //var infoAboutTaskList = _db.UsersInformation.Where(x => x.IdUser.Equals(id)).ToList();
-            var infoAboutTaskList = _db.UsersInformation.Where(x => x.IdUser.Equals(id))
+            var infoAboutTaskList = _db.UsersInformation.Where(x => x.IdUser == id)
                                                         .Include(x => x.User)
                                                         .Include(x => x.Task)
                                                         .Include(x => x.StatusOfTask).ToList();

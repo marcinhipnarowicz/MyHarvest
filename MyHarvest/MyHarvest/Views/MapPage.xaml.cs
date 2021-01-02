@@ -42,10 +42,10 @@ namespace MyHarvest.Views
             InitializeComponent();
             GetPermissions();
             Init();
-            DrawPolyline2();
+            DrawRoute();
         }
 
-        private async void DrawPolyline2()
+        private async void DrawRoute()
         {
             locationsMap.MapElements.Clear();
 
@@ -61,11 +61,21 @@ namespace MyHarvest.Views
             {
                 foreach (var item in data)
                 {
-                    Pin newPin = new Pin();
+                    Pin newPin = new Pin()
+                    {
+                        Label = "punkt",
+                        Type = PinType.Place
+                    };
 
                     newPin.Position = new Xamarin.Forms.Maps.Position(item.XCoordinate, item.YCoordinate);
 
                     _pinList.Add(newPin);
+                    locationsMap.Pins.Add(newPin);
+
+                    newPin.MarkerClicked += (s, args) =>
+                    {
+                        ClickedPin(newPin);
+                    };
                 }
                 foreach (var item in _pinList)
                 {
@@ -93,7 +103,7 @@ namespace MyHarvest.Views
 
         private void Init()
         {
-            if (LocalConfig.LoginModel.Id == (int)AccountType.Employee)
+            if (LocalConfig.LoginModel.IdAccountType == (int)AccountType.Employee)
             {
                 EditButton.IsVisible = false;
                 DeleteButton.IsVisible = false;
@@ -251,30 +261,30 @@ namespace MyHarvest.Views
             else
             {
                 var pointOnTheMapListVm = new PointOnTheMapListVm();
+                var list = new List<PointOnTheMapVm>();
 
                 foreach (var item in _pinList)
                 {
                     var pointOnTheMapVm = new PointOnTheMapVm();
                     pointOnTheMapVm.XCoordinate = item.Position.Latitude;
                     pointOnTheMapVm.YCoordinate = item.Position.Longitude;
-                    pointOnTheMapListVm.PointsOnTheMap.Add(pointOnTheMapVm);
+                    list.Add(pointOnTheMapVm);
                 }
 
-                var data = await PointOnTheMapService.AddPointOnTheMap(pointOnTheMapListVm);
+                var data = await PointOnTheMapService.AddPointOnTheMap(list);
 
                 var waypointListVm = new WaypointListVm();
+                var ListVm = new List<WaypointVm>();
                 foreach (var item in data)
                 {
-                    foreach (var item2 in item.PointsOnTheMap)
-                    {
-                        var waypointVm = new WaypointVm();
-                        waypointVm.IdPointOnTheMap = item2.IdPointOnTheMap;
-                        waypointVm.IdUserInformation = idUserInfo;
-                        waypointListVm.Waypoints.Add(waypointVm);
-                    }
+                    var waypointVm = new WaypointVm();
+                    waypointVm.IdPointOnTheMap = item.IdPointOnTheMap;
+                    waypointVm.IdUserInformation = idUserInfo;
+                    ListVm.Add(waypointVm);
                 }
 
-                WaypointService.AddWaypoint(waypointListVm);
+                WaypointService.AddWaypoint(ListVm);
+                await DisplayAlert("Informacja!", "Zapisano nową trasę.", "Ok");
             }
         }
     }

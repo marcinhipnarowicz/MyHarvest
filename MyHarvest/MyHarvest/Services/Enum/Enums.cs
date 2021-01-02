@@ -15,6 +15,6 @@ namespace MyHarvest.Services.Enum
     {
         Invalid = 0,
         Boss = 1,
-        Employee,
+        Employee = 2,
     }
 }

@@ -11,10 +11,10 @@ namespace MyHarvest.Services
         private const string pointOnTheMapController = "PointOnTheMap/";
         private const string addPointOnTheMap = "AddPointOnTheMap";
 
-        public async static Task<List<PointOnTheMapListVm>> AddPointOnTheMap(PointOnTheMapListVm pointOnTheMapList)
+        public async static Task<List<PointOnTheMapVm>> AddPointOnTheMap(List<PointOnTheMapVm> pointOnTheMapList)
         {
             var address = Api.BuildAdress(pointOnTheMapController, addPointOnTheMap, null, null, "?token=");//
-            var response = await Api.RequestAndSerialize<List<PointOnTheMapListVm>>(RestSharp.Method.POST, address, pointOnTheMapList);
+            var response = await Api.RequestAndSerialize<List<PointOnTheMapVm>>(RestSharp.Method.POST, address, pointOnTheMapList);
             return response;
         }
     }

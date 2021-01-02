@@ -19,7 +19,8 @@ namespace MyHarvestApi.Service
 
         public void AddWaypoint(List<WaypointVm> waypointVmList)
         {
-            throw new NotImplementedException();
+            var waypointList = WaypointMapper.MapList(waypointVmList);
+            _repo.AddWaypoint(waypointList);
         }
 
         public List<WaypointVm> GetWaypointList(int idUserInformation)

@@ -25,7 +25,7 @@ namespace MyHarvestApi.Repository
 
         public User GetUserByEmail(string email)
         {
-            var user = _db.Users.FirstOrDefault(u => u.Email.Equals(email));//napisz w pracy różnicę pomiędzy == a Equals()
+            var user = _db.Users.FirstOrDefault(u => u.Email.Equals(email));//napisz w pracy różnicę pomiędzy == a Equals() dla string
             return user;
         }
 
@@ -71,7 +71,7 @@ namespace MyHarvestApi.Repository
 
         public User GetBossFromUser(int idUser)
         {
-            var userDb = _db.Users.FirstOrDefault(x => x.IdUser.Equals(idUser));
+            var userDb = _db.Users.FirstOrDefault(x => x.IdUser == idUser);
 
             var bossDb = _db.Users.FirstOrDefault(x => x.IdUser.Equals(userDb.IdBoss));
 
@@ -84,7 +84,7 @@ namespace MyHarvestApi.Repository
 
         public List<User> GetUsers(int idUser)
         {
-            var usersDb = _db.Users.Where(x => x.IdBoss.Equals(idUser)).ToList();
+            var usersDb = _db.Users.Where(x => x.IdBoss == idUser).ToList();
             return usersDb;
         }
 
@@ -96,7 +96,7 @@ namespace MyHarvestApi.Repository
 
         public User GetUserById(int id)
         {
-            var userDb = _db.Users.FirstOrDefault(x => x.IdUser.Equals(id));
+            var userDb = _db.Users.FirstOrDefault(x => x.IdUser == id);
             return userDb;
         }
 
