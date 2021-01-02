@@ -260,7 +260,6 @@ namespace MyHarvest.Views
             }
             else
             {
-                var pointOnTheMapListVm = new PointOnTheMapListVm();
                 var list = new List<PointOnTheMapVm>();
 
                 foreach (var item in _pinList)
@@ -273,7 +272,6 @@ namespace MyHarvest.Views
 
                 var data = await PointOnTheMapService.AddPointOnTheMap(list);
 
-                var waypointListVm = new WaypointListVm();
                 var ListVm = new List<WaypointVm>();
                 foreach (var item in data)
                 {

@@ -191,7 +191,6 @@ namespace MyHarvest.Views
                             if (data != null)
                             {
                                 LocalConfig.UserModel = data;
-                                //await Shell.Current.GoToAsync("//AboutPage");
                                 await DisplayAlert("OK!", "Rejestracja powiodła się. Zaloguj się do swojego konta", "Ok");
                                 await Shell.Current.GoToAsync("//LoginPage");
                             }
@@ -208,15 +207,11 @@ namespace MyHarvest.Views
                     else
                     {
                         await DisplayAlert("Uwaga!", "Hasło musi zawierac osiem znaków, jedną dużą i małą literę, jedną cyfrę i  jeden znak specjalny", "Ok");
-                        //message.Text = "Hasło musi zawierac osiem znaków, jedną dużą i małą literę, jedną cyfrę i  jeden znak specjalny.";
-                        //message.IsVisible = true;
                     }
                 }
                 else
                 {
                     await DisplayAlert("Uwaga!", "Niepoprawny adres email", "Ok");
-                    //message.Text = "Niepoprawny adres email";
-                    //message.IsVisible = true;
                 }
             }
         }

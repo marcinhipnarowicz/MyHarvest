@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -119,7 +118,7 @@ namespace MyHarvest.Views
         {
             List<UserVm> data = new List<UserVm>();
 
-            data = await UserService.GeUserFromBossList(LocalConfig.LoginModel.Id);//dodać pobieranie id zalogowanego użytkownika
+            data = await UserService.GeUserFromBossList(LocalConfig.LoginModel.Id);
 
             return data;
         }
@@ -273,7 +272,7 @@ namespace MyHarvest.Views
             }
         }
 
-        private void mapsButton_Clicked(object sender, EventArgs e)
+        private void MapsButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MapPage(userInfoVm.IdUserInformation));
         }

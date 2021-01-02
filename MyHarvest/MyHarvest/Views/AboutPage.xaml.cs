@@ -86,10 +86,5 @@ namespace MyHarvest.Views
 
             return boss;
         }
-
-        private void mapsButton_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new MapPage());
-        }
     }
 }

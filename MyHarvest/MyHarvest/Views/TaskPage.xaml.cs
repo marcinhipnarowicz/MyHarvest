@@ -18,13 +18,10 @@ namespace MyHarvest.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TaskPage : ContentPage
     {
-        //private ItemsViewModel _viewModel;
-
         protected TaskListVm _taskList;
         private List<UserInformationVm> _userInformation;
         private int disappearingTabIndex;
         private int appearingIndex;
-
         private bool isEmployee;
 
         public TaskPage()
@@ -40,7 +37,6 @@ namespace MyHarvest.Views
             base.OnAppearing();
 
             SetData();
-            //_viewModel.OnAppearing();
             Init();
         }
 

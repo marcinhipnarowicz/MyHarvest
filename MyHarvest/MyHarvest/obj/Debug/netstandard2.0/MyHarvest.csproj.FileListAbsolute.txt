@@ -5,9 +5,7 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarves
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\App.xaml.g.cs
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
-D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
-D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\MyHarvest.AssemblyInfoInputs.cache
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\MyHarvest.AssemblyInfo.cs
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\MyHarvest.dll
@@ -23,3 +21,4 @@ D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarves
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\bin\Debug\netstandard2.0\Newtonsoft.Json.dll
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\bin\Debug\netstandard2.0\Newtonsoft.Json.xml
 D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\MyHarvest.csproj.CopyComplete
+D:\dysk\STUDIA\VII_semestr\MyHarvest\Github Desktop\MyHarvest\MyHarvest\MyHarvest\obj\Debug\netstandard2.0\MyHarvest.csprojAssemblyReference.cache

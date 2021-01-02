@@ -38,6 +38,6 @@
                 BackgroundColor="Transparent"
                 BorderColor="Transparent"
                 TextColor="Red"
-                Clicked="forgetPasswordButton_Clicked" />
+                Clicked="ForgetPasswordButton_Clicked" />
     </StackLayout>
 </ContentPage>

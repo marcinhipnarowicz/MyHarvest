@@ -46,7 +46,6 @@ namespace MyHarvest.Views
         private async void registerUserButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new RegisterPage());
-            //await Navigation.PushAsync(new AddTaskPage());
         }
 
         private async void loginButton_Clicked(object sender, EventArgs e)
@@ -82,13 +81,11 @@ namespace MyHarvest.Views
                 else
                 {
                     await DisplayAlert("Uwaga!", "Niepoprawny adres email", "Ok");
-                    //message.Text = "Niepoprawny adres email";
-                    //message.IsVisible = true;
                 }
             }
         }
 
-        private async void forgetPasswordButton_Clicked(object sender, EventArgs e)
+        private async void ForgetPasswordButton_Clicked(object sender, EventArgs e)
         {
             await DisplayAlert("Błąd!", "Zadanie nieobsługiwane", "Ok");
         }
