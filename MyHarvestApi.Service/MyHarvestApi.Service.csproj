@@ -231,9 +231,6 @@
     <Compile Include="Task\TaskMapper.cs" />
     <Compile Include="Task\TaskService.cs" />
     <Compile Include="UserInformation\UserInformationMapper.cs" />
-    <Compile Include="UserTask\IUserTaskService.cs" />
-    <Compile Include="UserTask\UserTaskMapper.cs" />
-    <Compile Include="UserTask\UserTaskService.cs" />
     <Compile Include="ViewModel\PointOnTheMapVm.cs" />
     <Compile Include="ViewModel\TaskVm.cs" />
     <Compile Include="UserInformation\IUserInformationService.cs" />

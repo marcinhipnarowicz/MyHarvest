@@ -177,14 +177,7 @@ namespace MyHarvest.Views
                                     IdTaskStatus = 1
                                 };
 
-                                var userTaskVm = new UserTaskVm
-                                {
-                                    IdTask = data.IdTask,
-                                    IdUser = LocalConfig.LoginModel.Id
-                                };
-
                                 UserInformationService.AddUserInformation(userInformationVm);
-                                UserTaskService.AddUserTask(userTaskVm);
                                 await DisplayAlert("OK!", "Pomyślnie dodano zadania!", "Ok");
                                 await Shell.Current.GoToAsync("..");//cofajnie do poprzedniej strony
                             }

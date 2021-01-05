@@ -17,5 +17,8 @@ namespace MyHarvestApi.Entity.Model
         public int IdPlot { get; set; }
 
         public string Name { get; set; }
+
+        public double XCoordinate { get; set; }
+        public double YCoordinate { get; set; }
     }
 }

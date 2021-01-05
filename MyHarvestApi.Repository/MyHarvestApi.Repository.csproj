@@ -125,8 +125,6 @@
     <Compile Include="Task\TaskRepository.cs" />
     <Compile Include="UserInformation\IUserInformationRepository.cs" />
     <Compile Include="UserInformation\UserInformationRepository.cs" />
-    <Compile Include="UserTask\IUserTaskRepository.cs" />
-    <Compile Include="UserTask\UserTaskRepository.cs" />
     <Compile Include="User\IUserRepository.cs" />
     <Compile Include="User\UserRepository.cs" />
     <Compile Include="Waypoint\IWaypointRepository.cs" />

@@ -48,7 +48,6 @@ namespace MyHarvestApi.Api
             services.AddScoped<IPlotRepository, PlotRepository>();
             services.AddScoped<IStatusOfTaskRepository, StatusOfTaskRepository>();
             services.AddScoped<IUserInformationRepository, UserInformationRepository>();
-            services.AddScoped<IUserTaskRepository, UserTaskRepository>();
             services.AddScoped<IWaypointRepository, WaypointRepository>();
             services.AddScoped<IPointOnTheMapRepository, PointOnTheMapRepository>();
 
@@ -59,7 +58,6 @@ namespace MyHarvestApi.Api
             services.AddScoped<IPlotService, PlotService>();
             services.AddScoped<ITaskService, TaskService>();
             services.AddScoped<IUserInformationService, UserInformationService>();
-            services.AddScoped<IUserTaskService, UserTaskService>();
             services.AddScoped<IWaypointService, WaypointService>();
             services.AddScoped<IPointOnTheMapService, PointOnTheMapService>();
 
