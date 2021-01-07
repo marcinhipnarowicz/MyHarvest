@@ -113,7 +113,6 @@
   <ItemGroup>
     <Compile Include="AccountType\AccountTypeRepository.cs" />
     <Compile Include="AccountType\IAccountTypeRepository.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Plot\IPlotRepository.cs" />
     <Compile Include="Plot\PlotRepository.cs" />
     <Compile Include="PointOnTheMap\IPointOnTheMapRepository.cs" />

@@ -132,7 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettingsHelp\AppSettings.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Context\ApplicationDbContext.cs" />
     <Compile Include="Model\AccountType.cs" />
     <Compile Include="Model\PointOnTheMap.cs" />

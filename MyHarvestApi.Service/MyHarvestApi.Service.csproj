@@ -216,7 +216,6 @@
   <ItemGroup>
     <Compile Include="AccountType\AccountTypeService.cs" />
     <Compile Include="AccountType\IAccountTypeService.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Enum\Enum.cs" />
     <Compile Include="Plot\IPlotService.cs" />
     <Compile Include="Plot\PlotMapper.cs" />
