@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MyHarvestApi.Repository.AccountTypeRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>AccountType\AccountTypeRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Repository.Class1" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Repository.PlotRepository" BaseTypeListCollapsed="true">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plot\PlotRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Repository.PointOnTheMapRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PointOnTheMap\PointOnTheMapRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Repository.StatusOfTaskRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StatusOfTask\StatusOfTaskRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Repository.TaskRepository" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAhigAAAAAAAAgAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Task\TaskRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Repository.UserRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAgAAIAAAAAAAAgAAAAAIAAIAAAEAgABAAAAAAAgA=</HashCode>
+      <FileName>User\UserRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Repository.UserInformationRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAABAAgAAAgAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserInformation\UserInformationRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Repository.WaypointRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAEAA=</HashCode>
+      <FileName>Waypoint\WaypointRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.355" Collapsed="true" />
+  </Class>
+  <Interface Name="MyHarvestApi.Repository.IAccountTypeRepository" Collapsed="true">
+    <Position X="0.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AccountType\IAccountTypeRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Repository.IPlotRepository" Collapsed="true">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plot\IPlotRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Repository.IPointOnTheMapRepository" Collapsed="true">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PointOnTheMap\IPointOnTheMapRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Repository.IStatusOfTaskRepository" Collapsed="true">
+    <Position X="0.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StatusOfTask\IStatusOfTaskRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Repository.ITaskRepository" Collapsed="true">
+    <Position X="2.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAhigAAAAAAAAgAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Task\ITaskRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Repository.IUserRepository">
+    <Position X="6.25" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAAgAAIAAAAAAAAgAAAAAIAAIAAAEAgABAAAAAAAgA=</HashCode>
+      <FileName>User\IUserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Repository.IUserInformationRepository" Collapsed="true">
+    <Position X="4.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAgAAAgAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserInformation\IUserInformationRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Repository.IWaypointRepository" Collapsed="true">
+    <Position X="2.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAEAA=</HashCode>
+      <FileName>Waypoint\IWaypointRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

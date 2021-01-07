@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MyHarvestApi.Service.AccountTypeService" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAQAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AccountType\AccountTypeService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Service.Class1" Collapsed="true">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.PlotMapper" Collapsed="true">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plot\PlotMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.PlotService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plot\PlotService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Service.PointOnTheMapMapper" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAACAAAA=</HashCode>
+      <FileName>PointOnTheMap\PointOnTheMapMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.PointOnTheMapService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PointOnTheMap\PointOnTheMapService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Service.StatusOfTaskService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAEAAAAAAAAA=</HashCode>
+      <FileName>StatusOfTask\StatusOfTaskService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Service.TaskMapper" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Task\TaskMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.TaskService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhCgAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Task\TaskService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Service.LoginMapper" Collapsed="true">
+    <Position X="4.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User\LoginMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.RegisterMapper" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User\RegisterMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.UserMapper" Collapsed="true">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>User\UserMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.UserService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAgAAAAAAAAAAAAAAAQCIAAICEAIAiQhAQABAAgAA=</HashCode>
+      <FileName>User\UserService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Service.UserInformationMapper" Collapsed="true">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>UserInformation\UserInformationMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.UserInformationService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAgQAAAACAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>UserInformation\UserInformationService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Service.TaskVm" Collapsed="true">
+    <Position X="6" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAACAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ViewModel\TaskVm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.WaypointMapper" Collapsed="true">
+    <Position X="9.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAACAAAA=</HashCode>
+      <FileName>Waypoint\WaypointMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.WaypointService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAIAAAAAAEAA=</HashCode>
+      <FileName>Waypoint\WaypointService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyHarvestApi.Service.ViewModel.LoginVm" Collapsed="true">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAEAAAAAAAAAAAAAAAAAACAAAAAAABAAA=</HashCode>
+      <FileName>ViewModel\LoginVm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.ViewModel.PlotVm" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\PlotVm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.ViewModel.PointOnTheMapVm" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAABIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\PointOnTheMapVm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.ViewModel.RegisterVm" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAEAAACAAEAAAAAAAAAAAFCAAAAACAAAAAAABAAA=</HashCode>
+      <FileName>ViewModel\RegisterVm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.ViewModel.UserInformationVm" Collapsed="true">
+    <Position X="0.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAADAgAABAAAIAAAACCAAIAAAAAAAQAAAAA=</HashCode>
+      <FileName>ViewModel\UserInformationVm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.ViewModel.UserTaskVm" Collapsed="true">
+    <Position X="6" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\UserTaskVm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.ViewModel.UserVm" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAEAAACAAEAAAAAAAAAAAFCAAAAACAAAAAAABAAA=</HashCode>
+      <FileName>ViewModel\UserVm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyHarvestApi.Service.ViewModel.WaypointVm" Collapsed="true">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAACAAAAABIAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\WaypointVm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MyHarvestApi.Service.IAccountTypeService" Collapsed="true">
+    <Position X="0.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AccountType\IAccountTypeService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Service.IPlotService" Collapsed="true">
+    <Position X="2.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plot\IPlotService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Service.IPointOnTheMapService" Collapsed="true">
+    <Position X="4.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PointOnTheMap\IPointOnTheMapService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Service.IStatusOfTaskService" Collapsed="true">
+    <Position X="6" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>StatusOfTask\IStatusOfTaskService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Service.ITaskService" Collapsed="true">
+    <Position X="7.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Task\ITaskService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Service.IUserService" Collapsed="true">
+    <Position X="0.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAgAAAAAAAAAAAAAAAACIAAICEAAAiQhAQAAAAgAA=</HashCode>
+      <FileName>User\IUserService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Service.IUserInformationService" Collapsed="true">
+    <Position X="9.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAgAAAAACAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>UserInformation\IUserInformationService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MyHarvestApi.Service.IWaypointService" Collapsed="true">
+    <Position X="2.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAEAA=</HashCode>
+      <FileName>Waypoint\IWaypointService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MyHarvestApi.Service.Enum.MessageType" Collapsed="true">
+    <Position X="0.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAABAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Enum\Enum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

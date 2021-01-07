@@ -25,12 +25,6 @@ namespace MyHarvestApi.Repository
             _db.SaveChanges();
         }
 
-        public void EditTask(int id, Task task)
-        {
-            _db.Entry(task).State = EntityState.Modified;
-            _db.SaveChanges();
-        }
-
         public int GetMaxId()
         {
             var maxIdTask = _db.Tasks.OrderByDescending(t => t.IdTask).FirstOrDefault();
@@ -75,9 +69,6 @@ namespace MyHarvestApi.Repository
             var userInformationList = _db.UsersInformation.Where(x => x.Task.Equals(task)).ToList();
             return userInformationList;
         }
-
-        private bool MovieExists(long id) =>
-         _db.Tasks.Any(e => e.IdTask == id);
 
         public void EditTask(Task task)
         {
